@@ -29,7 +29,7 @@ PygmentsStyle      = "monokai"
   enableReadingTime    = false
 
   [params.portrait]
-    path     = "/img/profile.jpg"
+    path     = "/img/profile.webp"
     alt      = "Leonardo F. Nascimento"
     maxWidth = "160px"
 
