@@ -4,7 +4,7 @@ title: "Contact"
 
 ## Get in touch
 
-Ou me escreva diretamente em [leofn3[at]gmail.com](mailto:leofn3@gmail.com).
+You can also reach me directly at [leofn3[at]gmail.com](mailto:leofn3@gmail.com).
 
 <form action="https://formspree.io/f/xwvngpab" method="POST" style="display:flex;flex-direction:column;gap:1rem;max-width:480px;margin-top:1.5rem;">
   <input type="text" name="_gotcha" style="display:none">
