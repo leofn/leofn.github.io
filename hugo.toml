@@ -6,6 +6,11 @@ theme = "hello-friend-ng"
 enableRobotsTXT = true
 enableEmoji     = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 PygmentsCodeFences = true
 PygmentsStyle      = "monokai"
 
