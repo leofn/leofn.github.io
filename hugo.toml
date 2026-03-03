@@ -1,0 +1,122 @@
+baseURL = "https://leofn.com/"
+title   = "Leonardo F. Nascimento"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+
+enableRobotsTXT = true
+enableEmoji     = true
+
+PygmentsCodeFences = true
+PygmentsStyle      = "monokai"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  description = "Computational Social Scientist at UFBA"
+  keywords    = "sociology, computational social science, digital methods, UFBA"
+  images      = [""]
+
+  homeSubtitle = "Computational Social Scientist at UFBA"
+
+  enableThemeToggle    = true
+  enableSharingButtons = false
+  enableReadingTime    = false
+
+  [params.portrait]
+    path     = "/img/profile.jpg"
+    alt      = "Leonardo F. Nascimento"
+    maxWidth = "160px"
+
+  [params.author]
+    name = "Leonardo F. Nascimento"
+
+  [params.logo]
+    logoMark     = ">"
+    logoText     = "$ leofn"
+    logoHomeLink = "/"
+
+  [params.footer]
+    trademark = 2024
+    rss       = false
+    copyright = true
+    author    = true
+    topText   = []
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Theme <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">Hello Friend NG</a>"
+    ]
+
+  [params.favicon.color]
+    mask          = "#1b1c1d"
+    msapplication = "#1b1c1d"
+    theme         = "#1b1c1d"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/leofn"
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/leofn"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:leofn@ufba.br"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/leofn/"
+
+[languages]
+  [languages.en]
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  [languages.en.params]
+    subtitle = "Computational Social Scientist at UFBA"
+
+[menu]
+  [[menu.main]]
+    identifier = "cv"
+    name       = "CV"
+    url        = "/cv/"
+    weight     = 1
+
+  [[menu.main]]
+    identifier = "publications"
+    name       = "Publications"
+    url        = "/publications/"
+    weight     = 2
+
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/projects/"
+    weight     = 3
+
+  [[menu.main]]
+    identifier = "talks"
+    name       = "Talks"
+    url        = "/talks/"
+    weight     = 4
+
+  [[menu.main]]
+    identifier = "teaching"
+    name       = "Teaching"
+    url        = "/teaching/"
+    weight     = 5
+
+  [[menu.main]]
+    identifier = "contact"
+    name       = "Contact"
+    url        = "/contact/"
+    weight     = 6
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"

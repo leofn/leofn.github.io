@@ -1,13 +1,8 @@
-name: Render and Deploy CV
+name: Build and Deploy Hugo Site
 
 on:
   push:
     branches: [main, master]
-    paths:
-      - '**.qmd'
-      - '**.bib'
-      - '**.css'
-      - '**.csl'
   workflow_dispatch:
 
 permissions:
@@ -22,34 +17,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    env:
+      HUGO_VERSION: "0.124.1"
+
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: r-lib/actions/setup-r@v2
+      - name: Checkout repository (with submodules)
+        uses: actions/checkout@v4
         with:
-          use-public-rspm: true
-      
-      - name: Install R packages
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Hugo
         run: |
-          install.packages(c("dplyr", "knitr", "glue"))
-        shell: Rscript {0}
-      
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-      
-      - name: Render CV
-        run: |
-          quarto render cv_leonardo_nascimento.qmd --output-dir _site
-      
-      - name: Rename to index.html
-        run: |
-          mv _site/cv_leonardo_nascimento.html _site/index.html
-      
+          wget -O hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+          rm hugo.deb
+
+      - name: Setup GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Build site
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: public
 
   deploy:
     needs: build
@@ -57,9 +51,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
