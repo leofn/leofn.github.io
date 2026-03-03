@@ -2,23 +2,12 @@
 title: "Contact"
 ---
 
-## Contact
-
-**Leonardo F. Nascimento**
-Associate Professor, Federal University of Bahia (UFBA)
-Coordinator, Digital Humanities Laboratory (LABHDUFBA)
-
-- **Email:** [leofn3@gmail.com](mailto:leofn3@gmail.com)
-- **GitHub:** [github.com/leofn](https://github.com/leofn)
-- **ORCID:** [0000-0003-2907-8338](https://orcid.org/0000-0003-2907-8338)
-- **Google Scholar:** [Profile](https://scholar.google.com/citations?user=essj6yQAAAAJ)
-- **LinkedIn:** [leofn-labhdufba](https://www.linkedin.com/in/leofn-labhdufba/)
-
----
-
 ## Get in touch
 
-<form action="https://formspree.io/f/xwvngpab" method="POST" style="display:flex;flex-direction:column;gap:1rem;max-width:480px;">
+Ou me escreva diretamente em [leofn3[at]gmail.com](mailto:leofn3@gmail.com).
+
+<form action="https://formspree.io/f/xwvngpab" method="POST" style="display:flex;flex-direction:column;gap:1rem;max-width:480px;margin-top:1.5rem;">
+  <input type="text" name="_gotcha" style="display:none">
   <label>
     Full Name
     <input type="text" name="name" placeholder="John Doe" required style="display:block;width:100%;padding:.5rem;margin-top:.25rem;background:transparent;border:1px solid currentColor;border-radius:4px;color:inherit;font-size:1rem;">
