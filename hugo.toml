@@ -42,7 +42,7 @@ PygmentsStyle      = "monokai"
     logoHomeLink = "/"
 
   [params.footer]
-    trademark = 2024
+    trademark = 2026
     rss       = false
     copyright = true
     author    = true
@@ -71,7 +71,7 @@ PygmentsStyle      = "monokai"
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/in/leofn/"
+    url  = "https://www.linkedin.com/in/leofn-labhdufba/"
 
 [languages]
   [languages.en]
