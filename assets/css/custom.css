@@ -1,0 +1,335 @@
+/* ============================================================
+   leofn.com — Custom UI/UX Theme
+   Inner pages: div.content > main.posts > div.page-content
+   Home page:   div.content-center > main
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. COLOR TOKENS
+   ---------------------------------------------------------- */
+:root,
+html[data-theme="light"] {
+  --bg:                #f0f2f5;
+  --bg-card:           #ffffff;
+  --bg-header:         #ffffff;
+  --text:              #1e1e2e;
+  --text-muted:        #374151;
+  --text-subtle:       #6b7280;
+  --border:            #e5e7eb;
+  --accent:            #2563eb;
+  --accent-hover:      #1d4ed8;
+  --accent-tint:       #eff6ff;
+  --accent-ring:       rgba(37,99,235,.18);
+  --table-head-bg:     #eff6ff;
+  --table-head-text:   #1e40af;
+  --table-head-border: #bfdbfe;
+  --table-odd:         #ffffff;
+  --table-even:        #f5f8ff;
+  --table-hover:       #dbeafe;
+  --table-border:      #e5e7eb;
+  --code-bg:           #eff6ff;
+  --code-text:         #1d4ed8;
+  --code-border:       #bfdbfe;
+  --strong:            #111827;
+  --h2-color:          #1e1e2e;
+  --h3-color:          #1e40af;
+  --footer-bg:         #ffffff;
+  --footer-text:       #6b7280;
+  --input-bg:          #ffffff;
+  --input-border:      #d1d5db;
+  --btn-bg:            #2563eb;
+  --btn-text:          #ffffff;
+  --btn-hover:         #1d4ed8;
+  --btn-shadow:        rgba(37,99,235,.28);
+  --shadow-card:       0 2px 10px rgba(0,0,0,.08);
+  --shadow-header:     0 1px 4px rgba(0,0,0,.09);
+  --portrait-border:   #93c5fd;
+  --portrait-shadow:   rgba(37,99,235,.18);
+}
+
+html[data-theme="dark"] {
+  --bg:                #0d1117;
+  --bg-card:           #161b22;
+  --bg-header:         #161b22;
+  --text:              #e2e8f0;
+  --text-muted:        #cbd5e1;
+  --text-subtle:       #94a3b8;
+  --border:            #30363d;
+  --accent:            #60a5fa;
+  --accent-hover:      #93c5fd;
+  --accent-tint:       #1e3a5f;
+  --accent-ring:       rgba(96,165,250,.2);
+  --table-head-bg:     #1e3a5f;
+  --table-head-text:   #93c5fd;
+  --table-head-border: #2563eb;
+  --table-odd:         #161b22;
+  --table-even:        #1c2333;
+  --table-hover:       #1e3a5f;
+  --table-border:      #30363d;
+  --code-bg:           #1e3a5f;
+  --code-text:         #93c5fd;
+  --code-border:       #2563eb;
+  --strong:            #f1f5f9;
+  --h2-color:          #e2e8f0;
+  --h3-color:          #93c5fd;
+  --footer-bg:         #161b22;
+  --footer-text:       #94a3b8;
+  --input-bg:          #1a2030;
+  --input-border:      #30363d;
+  --btn-bg:            #60a5fa;
+  --btn-text:          #0d1117;
+  --btn-hover:         #93c5fd;
+  --btn-shadow:        rgba(96,165,250,.25);
+  --shadow-card:       0 2px 12px rgba(0,0,0,.45);
+  --shadow-header:     0 1px 4px rgba(0,0,0,.4);
+  --portrait-border:   #2563eb;
+  --portrait-shadow:   rgba(96,165,250,.2);
+}
+
+/* ----------------------------------------------------------
+   2. BODY, HEADER, FOOTER
+   ---------------------------------------------------------- */
+body {
+  background-color: var(--bg)   !important;
+  color:            var(--text) !important;
+}
+
+.header {
+  background: var(--bg-header)     !important;
+  box-shadow: var(--shadow-header) !important;
+}
+
+.menu { background: var(--bg-header) !important; }
+
+.footer {
+  background: var(--footer-bg)   !important;
+  color:      var(--footer-text) !important;
+  border-top: 1px solid var(--border);
+  font-size:  .87rem;
+}
+.footer a { color: var(--accent) !important; }
+
+/* ----------------------------------------------------------
+   3. NAVIGATION
+   ---------------------------------------------------------- */
+.menu a,
+.logo, .logo__text, .logo__mark {
+  color:           var(--text) !important;
+  text-decoration: none        !important;
+}
+.menu a {
+  border-bottom: 2px solid transparent;
+  transition:    color .15s, border-color .15s;
+}
+.menu a:hover {
+  color:               var(--accent) !important;
+  border-bottom-color: var(--accent);
+  text-decoration:     none !important;
+}
+.logo__cursor { background: #fe5186; }
+
+/* ----------------------------------------------------------
+   4. INNER PAGE CONTAINER — flat layout matching Home page
+   ---------------------------------------------------------- */
+main.posts {
+  background:    transparent !important;
+  box-shadow:    none        !important;
+  border-radius: 0           !important;
+  padding:       2rem 1.5rem !important;
+  margin-top:    0           !important;
+  margin-bottom: 2rem        !important;
+}
+
+/* Page title */
+h1.page-title {
+  font-size:      1.6rem     !important;
+  font-weight:    700        !important;
+  color:          var(--text) !important;
+  border-bottom:  2px solid var(--accent) !important;
+  padding-bottom: .5rem      !important;
+  margin-bottom:  1.5rem     !important;
+  margin-top:     0          !important;
+  letter-spacing: -.01em;
+}
+
+/* ----------------------------------------------------------
+   5. CONTENT AREA — .page-content targets our layout override
+   ---------------------------------------------------------- */
+
+/* Links */
+.page-content a {
+  color:      var(--accent)       !important;
+  transition: color .15s;
+}
+.page-content a:hover {
+  color:           var(--accent-hover) !important;
+  text-decoration: underline;
+}
+
+/* Section headings (h2) — accent left border */
+.page-content h2 {
+  display:        block     !important;
+  font-size:      1rem      !important;
+  font-weight:    700       !important;
+  text-transform: uppercase !important;
+  letter-spacing: .07em     !important;
+  color:          var(--h2-color) !important;
+  border-left:    3px solid var(--accent) !important;
+  border-bottom:  none              !important;
+  padding-left:   .75rem            !important;
+  margin-top:     2rem              !important;
+  margin-bottom:  .6rem             !important;
+  line-height:    1.4               !important;
+}
+
+/* Sub-section headings (h3) */
+.page-content h3 {
+  display:      block    !important;
+  font-size:    .97rem   !important;
+  font-weight:  600      !important;
+  color:        var(--h3-color) !important;
+  margin-top:   1.3rem   !important;
+  margin-bottom:.3rem    !important;
+  border-bottom:none     !important;
+}
+
+.page-content h4 {
+  font-size:  .93rem            !important;
+  color:      var(--text-muted) !important;
+}
+
+.page-content p  { color: var(--text-muted) !important; line-height: 1.75; }
+.page-content li { color: var(--text-muted) !important; line-height: 1.7;  }
+
+strong, b { color: var(--strong)     !important; font-weight: 700; }
+em, i     { color: var(--text-muted) !important; }
+
+/* Horizontal rules */
+.page-content hr {
+  background: var(--border) !important;
+  height: 1px;
+  border: none;
+  margin: 1.5rem 0;
+}
+
+/* Code */
+.page-content code, code {
+  background:    var(--code-bg)    !important;
+  color:         var(--code-text)  !important;
+  border:        1px solid var(--code-border) !important;
+  border-radius: 4px;
+  font-size:     .87em;
+  padding:       .1rem .35rem;
+}
+
+/* ----------------------------------------------------------
+   6. TABLES
+   ---------------------------------------------------------- */
+.page-content table {
+  border-collapse: collapse !important;
+  width:           100%    !important;
+  font-size:       .91rem  !important;
+  margin:          .8rem 0 1.4rem !important;
+  border-radius:   6px;
+  overflow:        hidden;
+  box-shadow:      var(--shadow-card) !important;
+}
+
+.page-content table thead tr {
+  background: var(--table-head-bg) !important;
+}
+.page-content table thead th {
+  color:          var(--table-head-text)          !important;
+  padding:        .6rem 1rem                      !important;
+  font-weight:    700                             !important;
+  font-size:      .78rem                          !important;
+  text-transform: uppercase                       !important;
+  letter-spacing: .06em                           !important;
+  border:         none                            !important;
+  border-bottom:  2px solid var(--table-head-border) !important;
+  text-align:     left                            !important;
+}
+.page-content table tbody tr:nth-child(odd)  { background: var(--table-odd)  !important; }
+.page-content table tbody tr:nth-child(even) { background: var(--table-even) !important; }
+.page-content table tbody td {
+  padding:        .5rem 1rem               !important;
+  border:         none                     !important;
+  border-bottom:  1px solid var(--table-border) !important;
+  vertical-align: top                      !important;
+  color:          var(--text-muted)        !important;
+}
+.page-content table tbody tr:last-child td { border-bottom: none !important; }
+.page-content table tbody tr:hover         { background: var(--table-hover) !important; }
+
+/* ----------------------------------------------------------
+   7. BUTTONS
+   ---------------------------------------------------------- */
+a[download] {
+  background:      var(--btn-bg)   !important;
+  color:           var(--btn-text) !important;
+  border:          1.5px solid var(--btn-bg) !important;
+  border-radius:   6px             !important;
+  padding:         .5rem 1.3rem    !important;
+  font-weight:     600             !important;
+  text-decoration: none            !important;
+  transition:      background .15s, box-shadow .15s;
+  display:         inline-flex;
+  align-items:     center;
+  gap:             .4rem;
+}
+a[download]:hover {
+  background: var(--btn-hover)                 !important;
+  box-shadow: 0 4px 14px var(--btn-shadow)     !important;
+}
+
+button[type=submit] {
+  background:    var(--btn-bg)    !important;
+  color:         var(--btn-text)  !important;
+  border:        1.5px solid var(--btn-bg) !important;
+  border-radius: 6px              !important;
+  padding:       .5rem 1.4rem     !important;
+  font-weight:   600              !important;
+  cursor:        pointer;
+  transition:    background .15s, box-shadow .15s;
+}
+button[type=submit]:hover {
+  background: var(--btn-hover)             !important;
+  box-shadow: 0 4px 14px var(--btn-shadow) !important;
+}
+
+/* ----------------------------------------------------------
+   8. FORM INPUTS
+   ---------------------------------------------------------- */
+input[type=text], input[type=email], textarea {
+  background:    var(--input-bg)     !important;
+  color:         var(--text)         !important;
+  border:        1.5px solid var(--input-border) !important;
+  border-radius: 6px                 !important;
+  transition:    border-color .15s, box-shadow .15s;
+}
+input:focus, textarea:focus {
+  outline:    none;
+  border-color: var(--accent)           !important;
+  box-shadow:   0 0 0 3px var(--accent-ring) !important;
+}
+
+/* ----------------------------------------------------------
+   9. HOME PAGE LINKS & PORTRAIT
+   ---------------------------------------------------------- */
+.content-center a,
+.content-center > main a { color: var(--accent) !important; }
+
+img.circle {
+  border:     3px solid var(--portrait-border)  !important;
+  box-shadow: 0 4px 18px var(--portrait-shadow) !important;
+}
+
+/* Home page text colors */
+.content-center h1,
+.content-center > main h1 {
+  color: var(--text) !important;
+}
+.content-center p,
+.content-center > main p {
+  color: var(--text-muted) !important;
+}

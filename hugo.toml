@@ -33,7 +33,7 @@ PygmentsStyle      = "monokai"
   enableSharingButtons = false
   enableReadingTime    = false
 
-  customCSS = ["css/custom.css"]
+  customCSS = []
   customJS  = []
 
   [params.portrait]
