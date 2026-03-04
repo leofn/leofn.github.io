@@ -1,0 +1,37 @@
+{{ $main := resources.Get "js/main.js" }}
+{{ $menu := resources.Get "js/menu.js" }}
+{{ $prism := resources.Get "js/prism.js" }}
+{{ $secureJS := slice $main $menu $prism | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+
+{{ range $val := $.Site.Params.customJS }}
+    {{ if gt (len $val) 0 }}
+        <script src="{{ $val }}"></script>
+    {{ end }}
+{{ end }}
+
+{{ if .Page.Store.Get "hasMermaid" }}
+<script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
+    const settings = localStorage.getItem("theme") === "dark" ?
+        { startOnLoad: true, theme: "dark", darkMode: true, themeVariables: { tertiaryColor: "#dee3ed" } }
+        : { startOnLoad: true, theme: "base", darkMode: false, themeVariables: { tertiaryColor: "#dee3ed" } };
+    mermaid.initialize(settings);
+</script>
+{{ end }}
+
+<button id="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor" stroke-width="2.5"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if(!btn) return;
+  window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 300); }, {passive:true});
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>

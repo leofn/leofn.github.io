@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+tags: ["research", "disinformation", "Telegram", "misinformation", "mixed-methods"]
 ---
 
 ## Research Projects

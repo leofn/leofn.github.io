@@ -1,5 +1,6 @@
 ---
 title: "CV"
+tags: ["sociology", "computational-social-science", "digital-humanities", "NLP"]
 ---
 
 <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">

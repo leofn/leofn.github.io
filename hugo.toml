@@ -126,5 +126,3 @@ PygmentsStyle      = "monokai"
     weight     = 6
 
 [taxonomies]
-  tag      = "tags"
-  category = "categories"

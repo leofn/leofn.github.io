@@ -333,3 +333,84 @@ img.circle {
 .content-center > main p {
   color: var(--text-muted) !important;
 }
+
+/* 10. TYPOGRAPHY */
+html { font-size: 17px; }
+body { line-height: 1.75 !important; }
+.page-content p  { margin-bottom: 1.1em; }
+.page-content li { margin-bottom: .45em; }
+.page-content ul,
+.page-content ol { margin-top: .6em; margin-bottom: 1em; }
+
+/* 11. HEADINGS */
+.page-content h2 {
+  font-size: 1.15rem !important;
+  margin-top: 2.4rem !important; margin-bottom: .75rem !important;
+}
+.page-content h3 {
+  font-size: 1.05rem !important;
+  margin-top: 1.6rem !important; margin-bottom: .4rem !important;
+}
+.page-content h4 {
+  font-size: .97rem !important;
+  margin-top: 1.2rem !important; margin-bottom: .3rem !important;
+}
+.page-content h2 + p,
+.page-content h3 + p { margin-top: .2rem; }
+
+/* 12. BACK TO TOP */
+#back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+  width: 2.6rem; height: 2.6rem;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent); color: #fff;
+  border: none; border-radius: 50%; cursor: pointer;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .25s, visibility .25s, transform .25s, background .15s;
+  box-shadow: 0 4px 14px var(--btn-shadow);
+}
+#back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#back-to-top:hover   { background: var(--accent-hover); transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { #back-to-top { transition: opacity .1s; transform: none !important; } }
+@media (max-width: 684px) { #back-to-top { bottom: 1.2rem; right: 1.2rem; width: 2.2rem; height: 2.2rem; } }
+
+/* 13. LINK VISIBILITY */
+.page-content a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--accent-ring);
+}
+.page-content a:hover {
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
+/* 14. TAG BADGES */
+.page-tags { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:1.2rem; align-items:center; }
+.page-tags > p { margin:0; display:flex; flex-wrap:wrap; gap:.3rem; align-items:center; }
+.page-tags svg { display:none; }
+
+.page-tags .tag,
+.page-tags .tag a {
+  display:inline-flex; align-items:center;
+  background:var(--accent-tint); color:var(--accent) !important;
+  border:1px solid var(--accent-ring); border-radius:999px;
+  padding:.2rem .7rem; font-size:.8rem; font-weight:600;
+  text-decoration:none !important; line-height:1.4;
+  transition:background .15s, border-color .15s;
+}
+.page-tags .tag::before { content:none !important; }
+.page-tags .tag:hover   { background:var(--accent-ring); border-color:var(--accent); }
+
+.tags-cloud { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+.tag-badge {
+  display:inline-flex; align-items:center; gap:.3rem;
+  background:var(--accent-tint); color:var(--accent) !important;
+  border:1px solid var(--accent-ring); border-radius:999px;
+  padding:.3rem .85rem; font-size:.85rem; font-weight:600;
+  text-decoration:none !important;
+  transition:background .15s, transform .15s, box-shadow .15s;
+}
+.tag-badge:hover { background:var(--accent); color:#fff !important; transform:translateY(-1px); box-shadow:0 3px 10px var(--btn-shadow); }
+.tag-count { font-size:.75rem; font-weight:400; opacity:.75; }
