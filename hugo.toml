@@ -33,6 +33,9 @@ PygmentsStyle      = "monokai"
   enableSharingButtons = false
   enableReadingTime    = false
 
+  customCSS = ["css/custom.css"]
+  customJS  = []
+
   [params.portrait]
     path     = "/img/profile.webp"
     alt      = "Leonardo F. Nascimento"

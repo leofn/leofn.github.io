@@ -1,0 +1,366 @@
+/* ============================================================
+   leofn.com — Custom UI/UX Overrides
+   Palette: Indigo accent · Warm neutrals · WCAG AA compliant
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   CSS Custom Properties (both themes)
+   ---------------------------------------------------------- */
+:root {
+  --accent:       #2563eb;   /* indigo-600 — links, highlights   */
+  --accent-light: #dbeafe;   /* indigo-100 — subtle bg tints     */
+  --accent-dark:  #60a5fa;   /* indigo-400 — dark mode accent    */
+  --radius:       6px;
+  --transition:   .18s ease;
+}
+
+/* ----------------------------------------------------------
+   LIGHT MODE
+   ---------------------------------------------------------- */
+
+/* Softer off-white background (easier on the eyes) */
+body {
+  background-color: #f7f8fa !important;
+  color: #1e1e2e !important;
+}
+[data-theme=light] body {
+  background-color: #f7f8fa !important;
+  color: #1e1e2e !important;
+}
+
+/* Crisp white header with subtle shadow */
+.header {
+  background: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08) !important;
+}
+[data-theme=light] .header {
+  background: #ffffff !important;
+}
+
+/* Menu same as header */
+.menu {
+  background: #ffffff !important;
+}
+[data-theme=light] .menu {
+  background: #ffffff !important;
+}
+
+/* Content area white card feel */
+.post, .post-content, article {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+/* Links — accent color with smooth underline on hover */
+a {
+  color: var(--accent) !important;
+  text-decoration: none;
+  transition: color var(--transition), border-color var(--transition);
+}
+a:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline;
+}
+
+/* Navigation links — keep neutral, highlight on hover */
+.menu a, .logo {
+  color: #1e1e2e !important;
+}
+[data-theme=light] .menu a,
+[data-theme=light] .logo {
+  color: #1e1e2e !important;
+}
+.menu a:hover {
+  color: var(--accent) !important;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Section headings — accent left-border for visual hierarchy */
+.post-content h2,
+.single-content h2,
+article h2 {
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #1e1e2e !important;
+  border-bottom: none !important;
+  border-left: 3px solid var(--accent);
+  padding-left: .75rem;
+  margin-top: 2.2rem;
+  margin-bottom: .8rem;
+}
+
+.post-content h3,
+article h3 {
+  color: #374151 !important;
+  font-size: 1.05rem !important;
+  margin-top: 1.4rem;
+}
+
+/* Bold / strong — slightly darker, not pure black */
+strong, b {
+  color: #111827 !important;
+  font-weight: 700;
+}
+
+/* Secondary / muted text */
+.post-content p, article p {
+  color: #374151;
+  line-height: 1.75;
+}
+
+/* Tables — clean with accent header */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .93rem;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+table thead tr {
+  background: #eff6ff !important;
+  color: #1e40af !important;
+}
+table thead th {
+  padding: .6rem .9rem;
+  font-weight: 700;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  border-bottom: 2px solid #bfdbfe;
+}
+table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+table tbody tr:nth-child(even) {
+  background: #f8faff;
+}
+table td {
+  padding: .55rem .9rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+table tbody tr:hover {
+  background: #eff6ff !important;
+  transition: background var(--transition);
+}
+
+/* Horizontal rules */
+hr {
+  background: #e5e7eb !important;
+  height: 1px;
+  margin: 1.8rem 0;
+}
+
+/* Code tags */
+code {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe;
+  border-radius: 4px;
+  font-size: .88em;
+  padding: .1rem .35rem;
+}
+
+/* Logo cursor color — keep brand pink */
+.logo__cursor {
+  background: #fe5186;
+}
+
+/* Download / Submit buttons — accent filled */
+a[download],
+button[type=submit],
+.post-content a[download] {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--accent) !important;
+  border-radius: var(--radius) !important;
+  padding: .45rem 1.3rem !important;
+  font-weight: 600 !important;
+  font-size: .95rem !important;
+  transition: background var(--transition), box-shadow var(--transition);
+  text-decoration: none !important;
+}
+a[download]:hover,
+button[type=submit]:hover {
+  background: #1d4ed8 !important;
+  box-shadow: 0 4px 12px rgba(37,99,235,.25) !important;
+}
+
+/* Form inputs */
+input, textarea {
+  border: 1.5px solid #d1d5db !important;
+  border-radius: var(--radius) !important;
+  background: #ffffff !important;
+  color: #1e1e2e !important;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+}
+
+/* Portrait — refined circle with subtle ring */
+.circle {
+  border: 3px solid #bfdbfe !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,.15) !important;
+}
+
+/* Homepage title */
+.content-center h1 {
+  color: #1e1e2e !important;
+  font-size: 2.2rem !important;
+  letter-spacing: -.02em;
+}
+
+/* Homepage subtitle */
+.content-center .subtitle {
+  color: #4b5563 !important;
+}
+
+/* Footer */
+.footer {
+  background: #ffffff !important;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280 !important;
+  font-size: .88rem;
+}
+.footer a {
+  color: var(--accent) !important;
+}
+
+/* ----------------------------------------------------------
+   DARK MODE
+   ---------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f1117 !important;
+    color: #e2e8f0 !important;
+  }
+}
+
+[data-theme=dark] body {
+  background-color: #0f1117 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme=dark] .header,
+[data-theme=dark] .menu {
+  background: #161b22 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3) !important;
+}
+
+[data-theme=dark] .post,
+[data-theme=dark] .post-content,
+[data-theme=dark] article {
+  background: #161b22;
+  box-shadow: 0 1px 6px rgba(0,0,0,.25);
+}
+
+[data-theme=dark] a {
+  color: var(--accent-dark) !important;
+}
+[data-theme=dark] a:hover {
+  color: #93c5fd !important;
+}
+
+[data-theme=dark] .menu a,
+[data-theme=dark] .logo {
+  color: #e2e8f0 !important;
+}
+[data-theme=dark] .menu a:hover {
+  color: var(--accent-dark) !important;
+  border-bottom-color: var(--accent-dark);
+}
+
+[data-theme=dark] .post-content h2,
+[data-theme=dark] article h2 {
+  color: #e2e8f0 !important;
+  border-left-color: var(--accent-dark);
+}
+
+[data-theme=dark] .post-content h3,
+[data-theme=dark] article h3 {
+  color: #cbd5e1 !important;
+}
+
+[data-theme=dark] strong, [data-theme=dark] b {
+  color: #f1f5f9 !important;
+}
+
+[data-theme=dark] table {
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+}
+[data-theme=dark] table thead tr {
+  background: #1e3a5f !important;
+  color: #93c5fd !important;
+}
+[data-theme=dark] table thead th {
+  border-bottom-color: #2563eb;
+}
+[data-theme=dark] table tbody tr:nth-child(odd) {
+  background: #161b22;
+}
+[data-theme=dark] table tbody tr:nth-child(even) {
+  background: #1a2030;
+}
+[data-theme=dark] table td {
+  border-bottom-color: #30363d;
+}
+[data-theme=dark] table tbody tr:hover {
+  background: #1e3a5f !important;
+}
+
+[data-theme=dark] hr {
+  background: #30363d !important;
+}
+
+[data-theme=dark] code {
+  background: #1e3a5f !important;
+  color: #93c5fd !important;
+  border-color: #2563eb;
+}
+
+[data-theme=dark] input,
+[data-theme=dark] textarea {
+  background: #1a2030 !important;
+  color: #e2e8f0 !important;
+  border-color: #30363d !important;
+}
+[data-theme=dark] input:focus,
+[data-theme=dark] textarea:focus {
+  border-color: var(--accent-dark) !important;
+  box-shadow: 0 0 0 3px rgba(96,165,250,.2) !important;
+}
+
+[data-theme=dark] a[download],
+[data-theme=dark] button[type=submit] {
+  background: var(--accent-dark) !important;
+  color: #0f1117 !important;
+  border-color: var(--accent-dark) !important;
+}
+[data-theme=dark] a[download]:hover,
+[data-theme=dark] button[type=submit]:hover {
+  background: #93c5fd !important;
+}
+
+[data-theme=dark] .circle {
+  border-color: #2563eb !important;
+  box-shadow: 0 4px 16px rgba(96,165,250,.2) !important;
+}
+
+[data-theme=dark] .footer {
+  background: #161b22 !important;
+  border-top-color: #30363d;
+  color: #94a3b8 !important;
+}
