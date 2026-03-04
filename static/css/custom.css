@@ -1,127 +1,105 @@
 /* ============================================================
    leofn.com — Custom UI/UX Theme
-   Strategy: CSS custom properties keyed on html[data-theme].
-   A single !important per property — the variable does the switching.
+   Uses CSS custom properties; one !important per property.
+   Targets .posts (actual class on inner page <main>) for
+   maximum specificity over the compiled theme SCSS.
    ============================================================ */
 
 /* ----------------------------------------------------------
-   1. TOKEN DEFINITIONS — light (default) and dark
+   1. COLOR TOKENS
    ---------------------------------------------------------- */
-
-/* Light theme */
-html[data-theme="light"],
-:root {
-  --bg:               #f7f8fa;
-  --bg-card:          #ffffff;
-  --bg-header:        #ffffff;
-  --text:             #1e1e2e;
-  --text-muted:       #374151;
-  --text-subtle:      #6b7280;
-  --border:           #e5e7eb;
-
-  --accent:           #2563eb;
-  --accent-hover:     #1d4ed8;
-  --accent-tint:      #eff6ff;
-  --accent-ring:      #bfdbfe;
-
-  --table-head-bg:    #eff6ff;
-  --table-head-text:  #1e40af;
-  --table-head-border:#bfdbfe;
-  --table-odd:        #ffffff;
-  --table-even:       #f8faff;
-  --table-hover:      #eff6ff;
-  --table-cell-text:  #374151;
-  --table-cell-border:#e5e7eb;
-
-  --code-bg:          #eff6ff;
-  --code-text:        #1d4ed8;
-  --code-border:      #bfdbfe;
-
-  --strong-color:     #111827;
-  --h2-color:         #1e1e2e;
-  --h3-color:         #374151;
-  --h4-color:         #4b5563;
-
-  --footer-bg:        #ffffff;
-  --footer-text:      #6b7280;
-
-  --input-bg:         #ffffff;
-  --input-border:     #d1d5db;
-
-  --btn-bg:           #2563eb;
-  --btn-text:         #ffffff;
-  --btn-hover:        #1d4ed8;
-  --btn-shadow:       rgba(37,99,235,.25);
-
-  --shadow-card:      0 1px 4px rgba(0,0,0,.06);
-  --shadow-header:    0 1px 4px rgba(0,0,0,.08);
-  --portrait-border:  #bfdbfe;
-  --portrait-shadow:  rgba(37,99,235,.15);
+:root,
+html[data-theme="light"] {
+  --bg:                #f4f5f7;
+  --bg-card:           #ffffff;
+  --bg-header:         #ffffff;
+  --text:              #1e1e2e;
+  --text-muted:        #374151;
+  --text-subtle:       #6b7280;
+  --border:            #e5e7eb;
+  --accent:            #2563eb;
+  --accent-hover:      #1d4ed8;
+  --accent-tint:       #eff6ff;
+  --accent-ring:       rgba(37,99,235,.18);
+  --table-head-bg:     #eff6ff;
+  --table-head-text:   #1e40af;
+  --table-head-border: #bfdbfe;
+  --table-odd:         #ffffff;
+  --table-even:        #f5f8ff;
+  --table-hover:       #dbeafe;
+  --table-border:      #e5e7eb;
+  --code-bg:           #eff6ff;
+  --code-text:         #1d4ed8;
+  --code-border:       #bfdbfe;
+  --strong:            #111827;
+  --h2-color:          #1e1e2e;
+  --h3-color:          #1e40af;
+  --h4-color:          #4b5563;
+  --footer-bg:         #ffffff;
+  --footer-text:       #6b7280;
+  --input-bg:          #ffffff;
+  --input-border:      #d1d5db;
+  --btn-bg:            #2563eb;
+  --btn-text:          #ffffff;
+  --btn-hover:         #1d4ed8;
+  --btn-shadow:        rgba(37,99,235,.28);
+  --shadow-card:       0 2px 8px rgba(0,0,0,.09);
+  --shadow-header:     0 1px 4px rgba(0,0,0,.09);
+  --portrait-border:   #93c5fd;
+  --portrait-shadow:   rgba(37,99,235,.18);
 }
 
-/* Dark theme */
 html[data-theme="dark"] {
-  --bg:               #0f1117;
-  --bg-card:          #161b22;
-  --bg-header:        #161b22;
-  --text:             #e2e8f0;
-  --text-muted:       #cbd5e1;
-  --text-subtle:      #94a3b8;
-  --border:           #30363d;
-
-  --accent:           #60a5fa;
-  --accent-hover:     #93c5fd;
-  --accent-tint:      #1e3a5f;
-  --accent-ring:      #2563eb;
-
-  --table-head-bg:    #1e3a5f;
-  --table-head-text:  #93c5fd;
-  --table-head-border:#2563eb;
-  --table-odd:        #161b22;
-  --table-even:       #1a2030;
-  --table-hover:      #1e3a5f;
-  --table-cell-text:  #cbd5e1;
-  --table-cell-border:#30363d;
-
-  --code-bg:          #1e3a5f;
-  --code-text:        #93c5fd;
-  --code-border:      #2563eb;
-
-  --strong-color:     #f1f5f9;
-  --h2-color:         #e2e8f0;
-  --h3-color:         #cbd5e1;
-  --h4-color:         #94a3b8;
-
-  --footer-bg:        #161b22;
-  --footer-text:      #94a3b8;
-
-  --input-bg:         #1a2030;
-  --input-border:     #30363d;
-
-  --btn-bg:           #60a5fa;
-  --btn-text:         #0f1117;
-  --btn-hover:        #93c5fd;
-  --btn-shadow:       rgba(96,165,250,.2);
-
-  --shadow-card:      0 1px 6px rgba(0,0,0,.3);
-  --shadow-header:    0 1px 3px rgba(0,0,0,.35);
-  --portrait-border:  #2563eb;
-  --portrait-shadow:  rgba(96,165,250,.2);
+  --bg:                #0d1117;
+  --bg-card:           #161b22;
+  --bg-header:         #161b22;
+  --text:              #e2e8f0;
+  --text-muted:        #cbd5e1;
+  --text-subtle:       #94a3b8;
+  --border:            #30363d;
+  --accent:            #60a5fa;
+  --accent-hover:      #93c5fd;
+  --accent-tint:       #1e3a5f;
+  --accent-ring:       rgba(96,165,250,.2);
+  --table-head-bg:     #1e3a5f;
+  --table-head-text:   #93c5fd;
+  --table-head-border: #2563eb;
+  --table-odd:         #161b22;
+  --table-even:        #1c2333;
+  --table-hover:       #1e3a5f;
+  --table-border:      #30363d;
+  --code-bg:           #1e3a5f;
+  --code-text:         #93c5fd;
+  --code-border:       #2563eb;
+  --strong:            #f1f5f9;
+  --h2-color:          #e2e8f0;
+  --h3-color:          #93c5fd;
+  --h4-color:          #94a3b8;
+  --footer-bg:         #161b22;
+  --footer-text:       #94a3b8;
+  --input-bg:          #1a2030;
+  --input-border:      #30363d;
+  --btn-bg:            #60a5fa;
+  --btn-text:          #0d1117;
+  --btn-hover:         #93c5fd;
+  --btn-shadow:        rgba(96,165,250,.25);
+  --shadow-card:       0 2px 10px rgba(0,0,0,.4);
+  --shadow-header:     0 1px 4px rgba(0,0,0,.4);
+  --portrait-border:   #2563eb;
+  --portrait-shadow:   rgba(96,165,250,.2);
 }
 
 /* ----------------------------------------------------------
-   2. BASE — body, header, menu, footer
-      One !important per property; var() does the switching.
+   2. BODY, HEADER, FOOTER
    ---------------------------------------------------------- */
-
 body {
   background-color: var(--bg)   !important;
   color:            var(--text) !important;
 }
 
 .header {
-  background:  var(--bg-header) !important;
-  box-shadow:  var(--shadow-header) !important;
+  background: var(--bg-header)    !important;
+  box-shadow: var(--shadow-header) !important;
 }
 
 .menu {
@@ -137,170 +115,162 @@ body {
 .footer a { color: var(--accent) !important; }
 
 /* ----------------------------------------------------------
-   3. NAVIGATION LINKS
+   3. NAVIGATION
    ---------------------------------------------------------- */
-
-.menu a, .logo, .logo__text, .logo__mark {
+.menu a,
+.logo, .logo__text, .logo__mark {
   color:           var(--text) !important;
-  text-decoration: none !important;
+  text-decoration: none       !important;
 }
-
 .menu a {
-  padding-bottom:  2px;
-  border-bottom:   2px solid transparent;
-  transition:      color .15s, border-color .15s;
+  border-bottom:  2px solid transparent;
+  transition:     color .15s, border-color .15s;
 }
 .menu a:hover {
-  color:            var(--accent)  !important;
+  color:               var(--accent) !important;
   border-bottom-color: var(--accent);
-  text-decoration:  none !important;
+  text-decoration:     none !important;
 }
+.logo__cursor { background: #fe5186; }
 
 /* ----------------------------------------------------------
-   4. LINKS (content)
+   4. INNER PAGE CARD  — .posts is the real class on <main>
    ---------------------------------------------------------- */
-
-a {
-  color:      var(--accent) !important;
-  transition: color .15s;
-}
-a:hover {
-  color:           var(--accent-hover) !important;
-  text-decoration: underline;
-}
-/* Nav links should stay neutral — reset above rule */
-.menu a      { color: var(--text)   !important; }
-.menu a:hover{ color: var(--accent) !important; }
-
-/* ----------------------------------------------------------
-   5. MAIN CONTENT CARD (inner pages)
-   ---------------------------------------------------------- */
-
-main {
-  background:    var(--bg-card);
-  border-radius: 6px;
-  padding:       2rem 2.5rem;
-  box-shadow:    var(--shadow-card);
-  width:         100%;
-  max-width:     860px;
+.posts {
+  background:    var(--bg-card)   !important;
+  border-radius: 8px              !important;
+  box-shadow:    var(--shadow-card) !important;
+  padding:       2rem 2.5rem      !important;
 }
 
-/* Home page — no card */
+/* Home page uses .content-center, not .content — no card there */
+.content-center .posts,
 .content-center main {
   background: transparent !important;
-  box-shadow: none         !important;
-  padding:    0            !important;
+  box-shadow: none        !important;
+  padding:    0           !important;
 }
 
 /* ----------------------------------------------------------
-   6. TYPOGRAPHY HIERARCHY
+   5. LINKS (content area)
+   ---------------------------------------------------------- */
+a { color: var(--accent) !important; text-decoration: none; transition: color .15s; }
+a:hover { color: var(--accent-hover) !important; text-decoration: underline; }
+/* reset nav links */
+.menu a       { color: var(--text)   !important; }
+.menu a:hover { color: var(--accent) !important; }
+
+/* ----------------------------------------------------------
+   6. TYPOGRAPHY — scoped to .posts for high specificity
    ---------------------------------------------------------- */
 
 /* Page title injected by theme */
-main > h1:first-child {
-  font-size:     1.4rem  !important;
-  font-weight:   700;
-  color:         var(--h2-color) !important;
-  letter-spacing:-.01em;
-  margin-bottom: 1.5rem;
-  padding-bottom:.5rem;
-  border-bottom: 2px solid var(--accent-tint);
+.posts > h1:first-child {
+  font-size:      1.35rem   !important;
+  font-weight:    700       !important;
+  color:          var(--h2-color) !important;
+  border-bottom:  2px solid var(--accent-tint) !important;
+  padding-bottom: .5rem     !important;
+  margin-bottom:  1.5rem    !important;
+  letter-spacing: -.01em;
 }
 
-/* Section headings — accent left border */
-main h2 {
+/* Section headings (h2) — accent left border */
+.posts h2 {
   font-size:      1rem      !important;
   font-weight:    700       !important;
   text-transform: uppercase !important;
-  letter-spacing: .08em     !important;
+  letter-spacing: .07em     !important;
   color:          var(--h2-color) !important;
   border-left:    3px solid var(--accent) !important;
   border-bottom:  none      !important;
   padding-left:   .7rem     !important;
   margin-top:     2rem      !important;
-  margin-bottom:  .6rem     !important;
+  margin-bottom:  .5rem     !important;
   line-height:    1.4       !important;
 }
 
-main h3 {
-  font-size:    1rem   !important;
-  font-weight:  600    !important;
+/* Sub-section headings (h3) */
+.posts h3 {
+  font-size:    .97rem  !important;
+  font-weight:  600     !important;
   color:        var(--h3-color) !important;
-  margin-top:   1.3rem !important;
+  margin-top:   1.2rem  !important;
+  margin-bottom:.3rem   !important;
+  border-bottom:none    !important;
 }
 
-main h4 {
+.posts h4 {
   color:     var(--h4-color) !important;
-  font-size: .95rem          !important;
+  font-size: .93rem          !important;
 }
 
-main p {
-  color:       var(--text-muted);
-  line-height: 1.75;
-}
+.posts p   { color: var(--text-muted); line-height: 1.75; }
+.posts li  { color: var(--text-muted); line-height: 1.7; }
 
-strong, b { color: var(--strong-color) !important; font-weight: 700; }
-em, i     { color: var(--text-muted)   !important; }
+strong, b  { color: var(--strong) !important; font-weight: 700; }
+em, i      { color: var(--text-muted) !important; }
 
 /* ----------------------------------------------------------
-   7. TABLES
+   7. TABLES — .posts table for high specificity
    ---------------------------------------------------------- */
-
-main table {
-  border-collapse: collapse;
-  width:           100%;
-  font-size:       .92rem;
-  margin:          .8rem 0 1.2rem;
+.posts table {
+  border-collapse: collapse    !important;
+  width:           100%       !important;
+  font-size:       .91rem     !important;
+  margin:          .8rem 0 1.4rem !important;
   border-radius:   6px;
   overflow:        hidden;
-  box-shadow:      var(--shadow-card);
+  box-shadow:      var(--shadow-card) !important;
 }
 
-main table thead tr {
+.posts table thead tr {
   background: var(--table-head-bg) !important;
 }
-main table thead th {
-  color:           var(--table-head-text)   !important;
-  padding:         .55rem .9rem;
-  font-weight:     700;
-  font-size:       .82rem;
-  text-transform:  uppercase;
-  letter-spacing:  .06em;
-  border-bottom:   2px solid var(--table-head-border);
-  text-align:      left;
+.posts table thead th {
+  color:          var(--table-head-text)   !important;
+  padding:        .55rem 1rem              !important;
+  font-weight:    700                      !important;
+  font-size:      .8rem                    !important;
+  text-transform: uppercase                !important;
+  letter-spacing: .06em                    !important;
+  border:         none                     !important;
+  border-bottom:  2px solid var(--table-head-border) !important;
+  text-align:     left                     !important;
 }
-
-main table tbody tr:nth-child(odd)  { background: var(--table-odd)  !important; }
-main table tbody tr:nth-child(even) { background: var(--table-even) !important; }
-
-main table tbody td {
-  padding:       .5rem .9rem;
-  border-bottom: 1px solid var(--table-cell-border);
-  vertical-align:top;
-  color:         var(--table-cell-text);
+.posts table tbody tr:nth-child(odd)  { background: var(--table-odd)  !important; }
+.posts table tbody tr:nth-child(even) { background: var(--table-even) !important; }
+.posts table tbody td {
+  padding:       .5rem 1rem               !important;
+  border:        1px solid var(--table-border) !important;
+  border-left:   none                     !important;
+  border-right:  none                     !important;
+  vertical-align:top                      !important;
+  color:         var(--text-muted)        !important;
 }
-main table tbody tr:last-child td { border-bottom: none; }
-main table tbody tr:hover { background: var(--table-hover) !important; transition: background .15s; }
+.posts table tbody tr:last-child td { border-bottom: none !important; }
+.posts table tbody tr:hover { background: var(--table-hover) !important; }
 
 /* ----------------------------------------------------------
    8. HORIZONTAL RULES
    ---------------------------------------------------------- */
-hr {
-  background: var(--border) !important;
-  height: 1px;
-  border: none;
+.posts hr {
+  background:   var(--border) !important;
+  height:       1px;
+  border:       none;
+  margin:       1.5rem 0;
 }
 
 /* ----------------------------------------------------------
    9. CODE
    ---------------------------------------------------------- */
 code {
-  background:  var(--code-bg)     !important;
-  color:       var(--code-text)   !important;
-  border:      1px solid var(--code-border);
+  background:    var(--code-bg)     !important;
+  color:         var(--code-text)   !important;
+  border:        1px solid var(--code-border) !important;
   border-radius: 4px;
-  font-size:   .87em;
-  padding:     .1rem .35rem;
+  font-size:     .87em;
+  padding:       .1rem .35rem;
 }
 
 /* ----------------------------------------------------------
@@ -310,45 +280,41 @@ a[download] {
   background:      var(--btn-bg)    !important;
   color:           var(--btn-text)  !important;
   border:          1.5px solid var(--btn-bg) !important;
-  border-radius:   6px   !important;
-  padding:         .45rem 1.25rem !important;
-  font-weight:     600   !important;
-  text-decoration: none  !important;
-  display:         inline-flex;
-  align-items:     center;
-  gap:             .4rem;
+  border-radius:   6px              !important;
+  padding:         .5rem 1.3rem     !important;
+  font-weight:     600              !important;
+  text-decoration: none             !important;
   transition:      background .15s, box-shadow .15s;
 }
 a[download]:hover {
-  background: var(--btn-hover) !important;
-  box-shadow: 0 4px 12px var(--btn-shadow) !important;
+  background: var(--btn-hover)                  !important;
+  box-shadow: 0 4px 14px var(--btn-shadow)      !important;
 }
 
 button[type=submit] {
-  background:  var(--btn-bg)   !important;
-  color:       var(--btn-text) !important;
-  border:      1.5px solid var(--btn-bg) !important;
-  border-radius:6px    !important;
-  padding:     .45rem 1.4rem !important;
-  font-weight: 600     !important;
-  font-size:   .95rem  !important;
-  cursor:      pointer;
-  transition:  background .15s, box-shadow .15s;
+  background:    var(--btn-bg)    !important;
+  color:         var(--btn-text)  !important;
+  border:        1.5px solid var(--btn-bg) !important;
+  border-radius: 6px              !important;
+  padding:       .5rem 1.4rem     !important;
+  font-weight:   600              !important;
+  cursor:        pointer;
+  transition:    background .15s, box-shadow .15s;
 }
 button[type=submit]:hover {
-  background: var(--btn-hover) !important;
-  box-shadow: 0 4px 12px var(--btn-shadow) !important;
+  background: var(--btn-hover)             !important;
+  box-shadow: 0 4px 14px var(--btn-shadow) !important;
 }
 
 /* ----------------------------------------------------------
    11. FORM INPUTS
    ---------------------------------------------------------- */
 input[type=text], input[type=email], textarea {
-  background:  var(--input-bg)     !important;
-  color:       var(--text)         !important;
-  border:      1.5px solid var(--input-border) !important;
-  border-radius: 6px               !important;
-  transition:  border-color .15s, box-shadow .15s;
+  background:    var(--input-bg)     !important;
+  color:         var(--text)         !important;
+  border:        1.5px solid var(--input-border) !important;
+  border-radius: 6px                 !important;
+  transition:    border-color .15s, box-shadow .15s;
 }
 input:focus, textarea:focus {
   outline:    none;
@@ -357,11 +323,9 @@ input:focus, textarea:focus {
 }
 
 /* ----------------------------------------------------------
-   12. PORTRAIT & LOGO CURSOR
+   12. PORTRAIT
    ---------------------------------------------------------- */
 img.circle {
   border:     3px solid var(--portrait-border) !important;
-  box-shadow: 0 4px 16px var(--portrait-shadow) !important;
+  box-shadow: 0 4px 18px var(--portrait-shadow) !important;
 }
-
-.logo__cursor { background: #fe5186; }

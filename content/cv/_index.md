@@ -12,7 +12,7 @@ title: "CV"
 
 ---
 
-### Contact
+## Contact
 
 | | |
 |---|---|
@@ -26,13 +26,13 @@ title: "CV"
 
 ---
 
-### Summary
+## Summary
 
 Brazilian computational social scientist and CNPq Research Productivity Fellow (PQ-2). PhD in Sociology with doctoral fellowship at EHESS Paris and visiting research at University of Alberta. Coordinator of the Digital Humanities Laboratory at UFBA since 2018. Currently Data Analyst at CADE (antitrust authority) and IPEA Fellow. Research focuses on disinformation, hate speech, and political extremism in digital ecosystems, combining NLP techniques, network analysis, and qualitative methods.
 
 ---
 
-### Impact Metrics
+## Impact Metrics
 
 | Google Scholar | |
 |---|---|
@@ -41,7 +41,7 @@ Brazilian computational social scientist and CNPq Research Productivity Fellow (
 
 ---
 
-### Current Positions
+## Current Positions
 
 - **Associate Professor** — Federal University of Bahia (UFBA), 2016–Present
 - **Research Director** — Digital Humanities Lab at UFBA (LABHDUFBA), 2018–Present
@@ -50,7 +50,7 @@ Brazilian computational social scientist and CNPq Research Productivity Fellow (
 
 ---
 
-### Education
+## Education
 
 | Period | Degree | Institution |
 |--------|--------|-------------|
@@ -61,7 +61,7 @@ Brazilian computational social scientist and CNPq Research Productivity Fellow (
 
 ---
 
-### Professional Experience
+## Professional Experience
 
 | Period | Role | Organization |
 |--------|------|--------------|
@@ -74,7 +74,7 @@ Brazilian computational social scientist and CNPq Research Productivity Fellow (
 
 ---
 
-### Technical Skills
+## Technical Skills
 
 **Programming & Data Analysis**
 
@@ -99,13 +99,13 @@ Portuguese (native) · English (advanced) · French (fluent) · Spanish (interme
 
 ---
 
-### Research Interests
+## Research Interests
 
 Digital Sociology · Computational Social Science · Disinformation & Hate Speech · Platform Studies · Digital Humanities · Mixed Methods · Science & Technology Studies
 
 ---
 
-### Funded Projects
+## Funded Projects
 
 | Year | Funder | Project |
 |------|--------|---------|
@@ -114,7 +114,7 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 
 ---
 
-### Supervision
+## Supervision
 
 | | Completed | In Progress |
 |---|---|---|
@@ -125,16 +125,16 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 
 ---
 
-### Publications
+## Publications
 
-#### Books
+### Books
 
 - Brasil, M., & Nascimento, L. F. (eds.) (2025). *Cadernos de evidências em direitos humanos: 1º ciclo da Rede Nacional de Evidências em Direitos Humanos (ReneDH)*. Brasília: Ministério dos Direitos Humanos.
 - Barros, J., & Nascimento, L. F. (eds.) (2022). *História digital: A historiografia diante dos recursos e demandas de um novo tempo*. Salvador: EDUFBA.
 - Nascimento, L. F. (2020). *Sociologia digital: Uma breve introdução*. Salvador: EDUFBA.
 - Alves, P. C., & Nascimento, L. F. (eds.) (2018). *Novas fronteiras metodológicas nas ciências sociais*. Salvador: EDUFBA.
 
-#### Peer-Reviewed Articles
+### Peer-Reviewed Articles
 
 - Andrade, J. P., & Nascimento, L. F. (2025). Lexzilla - monitor ALEPE. *Planejamento e Foco*, 2, 2170–2181.
 - Jesus, J. P. de, Fonseca, P., & Nascimento, L. F. (2024). Tradições de pensamento anticomunista: As teorias da conspiração e o modus operandi do golpismo em grupos bolsonaristas do Telegram. *Polifonia*, 13, 474–503.
@@ -155,7 +155,7 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 - Rios, C., Nascimento, L. F., & Ortega, F. (2015). Da invisibilidade à epidemia: A construção narrativa do autismo na mídia impressa brasileira. *Interface - Comunicação, Saúde, Educação*, 19(53), 325–336.
 - Feres Júnior, J., Eisenberg, Z., & Nascimento, L. F. (2013). Monteiro Lobato e o politicamente correto. *Dados*, 56, 69–108.
 
-#### Book Chapters
+### Book Chapters
 
 - Fonseca, P., Cesarino, L., & Vasconcelos, E. (2025). "Cristão não vota em comunista": Extrema-direita, cristianismo e Telegram nas eleições de 2022 no Brasil. In *Religião e cenas morais: Modos religiosos de ler e habitar o mundo*.
 - Nascimento, L. F., Cesarino, L., & Fonseca, P. (2025a). Democracy "inside out": On far-right refracted publics in Brazil. In *The Routledge Companion to Digital Media and Democracy*. London: Routledge.
@@ -166,7 +166,7 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 - Nascimento, L. F. (2018). O uso do ATLAS.ti na pesquisa em ciências sociais: Aspectos metodológicos e epistemológicos. In *Novas fronteiras metodológicas nas ciências sociais*. Salvador: EDUFBA.
 - Nascimento, L. F. (2013). Historical trauma. In *Encyclopedia of Race and Racism* (2nd ed.). Macmillan.
 
-#### Technical Reports & Conference Papers
+### Technical Reports & Conference Papers
 
 - Nascimento, L. F. (2024). Humanidades digitais e vigilância pela democracia.
 - Bernardes, Í., & Nascimento, L. F. (2023). MONITOR ALEPE: Solucionando problemas de classificação com uso de inteligência artificial. In *16º Congresso de Gestão Pública do Rio Grande do Norte (CONGESP/RN)* (Vol. 16).
@@ -176,14 +176,14 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 - Russi, P., & Nascimento, L. F. (2020). *Proposta e processos metodológicos*. Brasília: Instituto de Pesquisa Econômica Aplicada (Ipea).
 - Nascimento, L. F. (2017). Combinando webscraping em R e ATLAS.ti na pesquisa em ciências sociais: As possibilidades e desafios da sociologia digital. In *Anais do 18º Congresso Brasileiro de Sociologia*.
 
-#### Theses & Dissertations
+### Theses & Dissertations
 
 - Nascimento, L. F. (2013). *Sociologia do trauma: Elementos sociogenéticos e psicogenéticos* (PhD thesis). Instituto de Estudos Sociais e Políticos, UERJ, Rio de Janeiro.
 - Nascimento, L. F. (2007). *Da civilização da conduta à conduta civilizada: O processo civilizador e a psicanálise* (Master's thesis). Universidade de São Paulo, São Paulo.
 
 ---
 
-### Academic Service
+## Academic Service
 
 **Examination Committees:** PhD (7) · Master's (10) · Postdoc (2)
 
