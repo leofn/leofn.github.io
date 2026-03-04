@@ -126,7 +126,7 @@ body {
   border-bottom-color: var(--accent);
   text-decoration:     none !important;
 }
-.logo__cursor { background: #fe5186; }
+.logo__cursor { background: var(--accent); }
 
 /* ----------------------------------------------------------
    4. INNER PAGE CONTAINER — flat layout matching Home page
