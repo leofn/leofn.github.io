@@ -1,8 +1,7 @@
 /* ============================================================
    leofn.com — Custom UI/UX Theme
-   Uses CSS custom properties; one !important per property.
-   Targets .posts (actual class on inner page <main>) for
-   maximum specificity over the compiled theme SCSS.
+   Inner pages: div.content > main.posts > div.page-content
+   Home page:   div.content-center > main
    ============================================================ */
 
 /* ----------------------------------------------------------
@@ -10,7 +9,7 @@
    ---------------------------------------------------------- */
 :root,
 html[data-theme="light"] {
-  --bg:                #f4f5f7;
+  --bg:                #f0f2f5;
   --bg-card:           #ffffff;
   --bg-header:         #ffffff;
   --text:              #1e1e2e;
@@ -34,7 +33,6 @@ html[data-theme="light"] {
   --strong:            #111827;
   --h2-color:          #1e1e2e;
   --h3-color:          #1e40af;
-  --h4-color:          #4b5563;
   --footer-bg:         #ffffff;
   --footer-text:       #6b7280;
   --input-bg:          #ffffff;
@@ -43,7 +41,7 @@ html[data-theme="light"] {
   --btn-text:          #ffffff;
   --btn-hover:         #1d4ed8;
   --btn-shadow:        rgba(37,99,235,.28);
-  --shadow-card:       0 2px 8px rgba(0,0,0,.09);
+  --shadow-card:       0 2px 10px rgba(0,0,0,.08);
   --shadow-header:     0 1px 4px rgba(0,0,0,.09);
   --portrait-border:   #93c5fd;
   --portrait-shadow:   rgba(37,99,235,.18);
@@ -74,7 +72,6 @@ html[data-theme="dark"] {
   --strong:            #f1f5f9;
   --h2-color:          #e2e8f0;
   --h3-color:          #93c5fd;
-  --h4-color:          #94a3b8;
   --footer-bg:         #161b22;
   --footer-text:       #94a3b8;
   --input-bg:          #1a2030;
@@ -83,7 +80,7 @@ html[data-theme="dark"] {
   --btn-text:          #0d1117;
   --btn-hover:         #93c5fd;
   --btn-shadow:        rgba(96,165,250,.25);
-  --shadow-card:       0 2px 10px rgba(0,0,0,.4);
+  --shadow-card:       0 2px 12px rgba(0,0,0,.45);
   --shadow-header:     0 1px 4px rgba(0,0,0,.4);
   --portrait-border:   #2563eb;
   --portrait-shadow:   rgba(96,165,250,.2);
@@ -98,19 +95,17 @@ body {
 }
 
 .header {
-  background: var(--bg-header)    !important;
+  background: var(--bg-header)     !important;
   box-shadow: var(--shadow-header) !important;
 }
 
-.menu {
-  background: var(--bg-header) !important;
-}
+.menu { background: var(--bg-header) !important; }
 
 .footer {
-  background:   var(--footer-bg)   !important;
-  color:        var(--footer-text) !important;
-  border-top:   1px solid var(--border);
-  font-size:    .87rem;
+  background: var(--footer-bg)   !important;
+  color:      var(--footer-text) !important;
+  border-top: 1px solid var(--border);
+  font-size:  .87rem;
 }
 .footer a { color: var(--accent) !important; }
 
@@ -120,11 +115,11 @@ body {
 .menu a,
 .logo, .logo__text, .logo__mark {
   color:           var(--text) !important;
-  text-decoration: none       !important;
+  text-decoration: none        !important;
 }
 .menu a {
-  border-bottom:  2px solid transparent;
-  transition:     color .15s, border-color .15s;
+  border-bottom: 2px solid transparent;
+  transition:    color .15s, border-color .15s;
 }
 .menu a:hover {
   color:               var(--accent) !important;
@@ -134,139 +129,91 @@ body {
 .logo__cursor { background: #fe5186; }
 
 /* ----------------------------------------------------------
-   4. INNER PAGE CARD  — .posts is the real class on <main>
+   4. PAGE CARD — main.posts wraps all inner pages
    ---------------------------------------------------------- */
-.posts {
-  background:    var(--bg-card)   !important;
-  border-radius: 8px              !important;
+main.posts {
+  background:    var(--bg-card)    !important;
+  border-radius: 8px               !important;
   box-shadow:    var(--shadow-card) !important;
-  padding:       2rem 2.5rem      !important;
+  padding:       2rem 2.5rem       !important;
+  margin-top:    1.5rem            !important;
+  margin-bottom: 1.5rem            !important;
 }
 
-/* Home page uses .content-center, not .content — no card there */
-.content-center .posts,
-.content-center main {
-  background: transparent !important;
-  box-shadow: none        !important;
-  padding:    0           !important;
-}
-
-/* ----------------------------------------------------------
-   5. LINKS (content area)
-   ---------------------------------------------------------- */
-a { color: var(--accent) !important; text-decoration: none; transition: color .15s; }
-a:hover { color: var(--accent-hover) !important; text-decoration: underline; }
-/* reset nav links */
-.menu a       { color: var(--text)   !important; }
-.menu a:hover { color: var(--accent) !important; }
-
-/* ----------------------------------------------------------
-   6. TYPOGRAPHY — scoped to .posts for high specificity
-   ---------------------------------------------------------- */
-
-/* Page title injected by theme */
-.posts > h1:first-child {
-  font-size:      1.35rem   !important;
-  font-weight:    700       !important;
+/* Page title */
+h1.page-title {
+  font-size:      1.5rem     !important;
+  font-weight:    700        !important;
   color:          var(--h2-color) !important;
   border-bottom:  2px solid var(--accent-tint) !important;
-  padding-bottom: .5rem     !important;
-  margin-bottom:  1.5rem    !important;
+  padding-bottom: .5rem      !important;
+  margin-bottom:  1.5rem     !important;
+  margin-top:     0          !important;
   letter-spacing: -.01em;
 }
 
+/* ----------------------------------------------------------
+   5. CONTENT AREA — .page-content targets our layout override
+   ---------------------------------------------------------- */
+
+/* Links */
+.page-content a {
+  color:      var(--accent)       !important;
+  transition: color .15s;
+}
+.page-content a:hover {
+  color:           var(--accent-hover) !important;
+  text-decoration: underline;
+}
+
 /* Section headings (h2) — accent left border */
-.posts h2 {
+.page-content h2 {
   font-size:      1rem      !important;
   font-weight:    700       !important;
   text-transform: uppercase !important;
   letter-spacing: .07em     !important;
   color:          var(--h2-color) !important;
   border-left:    3px solid var(--accent) !important;
-  border-bottom:  none      !important;
-  padding-left:   .7rem     !important;
-  margin-top:     2rem      !important;
-  margin-bottom:  .5rem     !important;
-  line-height:    1.4       !important;
+  border-bottom:  none              !important;
+  padding-left:   .75rem            !important;
+  margin-top:     2rem              !important;
+  margin-bottom:  .6rem             !important;
+  line-height:    1.4               !important;
 }
 
 /* Sub-section headings (h3) */
-.posts h3 {
+.page-content h3 {
   font-size:    .97rem  !important;
   font-weight:  600     !important;
   color:        var(--h3-color) !important;
-  margin-top:   1.2rem  !important;
+  margin-top:   1.3rem  !important;
   margin-bottom:.3rem   !important;
   border-bottom:none    !important;
 }
 
-.posts h4 {
-  color:     var(--h4-color) !important;
-  font-size: .93rem          !important;
+.page-content h4 {
+  font-size:  .93rem            !important;
+  color:      var(--text-muted) !important;
 }
 
-.posts p   { color: var(--text-muted); line-height: 1.75; }
-.posts li  { color: var(--text-muted); line-height: 1.7; }
+.page-content p  { color: var(--text-muted); line-height: 1.75; }
+.page-content li { color: var(--text-muted); line-height: 1.7;  }
 
-strong, b  { color: var(--strong) !important; font-weight: 700; }
-em, i      { color: var(--text-muted) !important; }
+strong, b { color: var(--strong)     !important; font-weight: 700; }
+em, i     { color: var(--text-muted) !important; }
 
-/* ----------------------------------------------------------
-   7. TABLES — .posts table for high specificity
-   ---------------------------------------------------------- */
-.posts table {
-  border-collapse: collapse    !important;
-  width:           100%       !important;
-  font-size:       .91rem     !important;
-  margin:          .8rem 0 1.4rem !important;
-  border-radius:   6px;
-  overflow:        hidden;
-  box-shadow:      var(--shadow-card) !important;
+/* Horizontal rules */
+.page-content hr {
+  background: var(--border) !important;
+  height: 1px;
+  border: none;
+  margin: 1.5rem 0;
 }
 
-.posts table thead tr {
-  background: var(--table-head-bg) !important;
-}
-.posts table thead th {
-  color:          var(--table-head-text)   !important;
-  padding:        .55rem 1rem              !important;
-  font-weight:    700                      !important;
-  font-size:      .8rem                    !important;
-  text-transform: uppercase                !important;
-  letter-spacing: .06em                    !important;
-  border:         none                     !important;
-  border-bottom:  2px solid var(--table-head-border) !important;
-  text-align:     left                     !important;
-}
-.posts table tbody tr:nth-child(odd)  { background: var(--table-odd)  !important; }
-.posts table tbody tr:nth-child(even) { background: var(--table-even) !important; }
-.posts table tbody td {
-  padding:       .5rem 1rem               !important;
-  border:        1px solid var(--table-border) !important;
-  border-left:   none                     !important;
-  border-right:  none                     !important;
-  vertical-align:top                      !important;
-  color:         var(--text-muted)        !important;
-}
-.posts table tbody tr:last-child td { border-bottom: none !important; }
-.posts table tbody tr:hover { background: var(--table-hover) !important; }
-
-/* ----------------------------------------------------------
-   8. HORIZONTAL RULES
-   ---------------------------------------------------------- */
-.posts hr {
-  background:   var(--border) !important;
-  height:       1px;
-  border:       none;
-  margin:       1.5rem 0;
-}
-
-/* ----------------------------------------------------------
-   9. CODE
-   ---------------------------------------------------------- */
-code {
-  background:    var(--code-bg)     !important;
-  color:         var(--code-text)   !important;
+/* Code */
+.page-content code, code {
+  background:    var(--code-bg)    !important;
+  color:         var(--code-text)  !important;
   border:        1px solid var(--code-border) !important;
   border-radius: 4px;
   font-size:     .87em;
@@ -274,21 +221,63 @@ code {
 }
 
 /* ----------------------------------------------------------
-   10. BUTTONS
+   6. TABLES
+   ---------------------------------------------------------- */
+.page-content table {
+  border-collapse: collapse !important;
+  width:           100%    !important;
+  font-size:       .91rem  !important;
+  margin:          .8rem 0 1.4rem !important;
+  border-radius:   6px;
+  overflow:        hidden;
+  box-shadow:      var(--shadow-card) !important;
+}
+
+.page-content table thead tr {
+  background: var(--table-head-bg) !important;
+}
+.page-content table thead th {
+  color:          var(--table-head-text)          !important;
+  padding:        .6rem 1rem                      !important;
+  font-weight:    700                             !important;
+  font-size:      .78rem                          !important;
+  text-transform: uppercase                       !important;
+  letter-spacing: .06em                           !important;
+  border:         none                            !important;
+  border-bottom:  2px solid var(--table-head-border) !important;
+  text-align:     left                            !important;
+}
+.page-content table tbody tr:nth-child(odd)  { background: var(--table-odd)  !important; }
+.page-content table tbody tr:nth-child(even) { background: var(--table-even) !important; }
+.page-content table tbody td {
+  padding:        .5rem 1rem               !important;
+  border:         none                     !important;
+  border-bottom:  1px solid var(--table-border) !important;
+  vertical-align: top                      !important;
+  color:          var(--text-muted)        !important;
+}
+.page-content table tbody tr:last-child td { border-bottom: none !important; }
+.page-content table tbody tr:hover         { background: var(--table-hover) !important; }
+
+/* ----------------------------------------------------------
+   7. BUTTONS
    ---------------------------------------------------------- */
 a[download] {
-  background:      var(--btn-bg)    !important;
-  color:           var(--btn-text)  !important;
+  background:      var(--btn-bg)   !important;
+  color:           var(--btn-text) !important;
   border:          1.5px solid var(--btn-bg) !important;
-  border-radius:   6px              !important;
-  padding:         .5rem 1.3rem     !important;
-  font-weight:     600              !important;
-  text-decoration: none             !important;
+  border-radius:   6px             !important;
+  padding:         .5rem 1.3rem    !important;
+  font-weight:     600             !important;
+  text-decoration: none            !important;
   transition:      background .15s, box-shadow .15s;
+  display:         inline-flex;
+  align-items:     center;
+  gap:             .4rem;
 }
 a[download]:hover {
-  background: var(--btn-hover)                  !important;
-  box-shadow: 0 4px 14px var(--btn-shadow)      !important;
+  background: var(--btn-hover)                 !important;
+  box-shadow: 0 4px 14px var(--btn-shadow)     !important;
 }
 
 button[type=submit] {
@@ -307,7 +296,7 @@ button[type=submit]:hover {
 }
 
 /* ----------------------------------------------------------
-   11. FORM INPUTS
+   8. FORM INPUTS
    ---------------------------------------------------------- */
 input[type=text], input[type=email], textarea {
   background:    var(--input-bg)     !important;
@@ -318,14 +307,16 @@ input[type=text], input[type=email], textarea {
 }
 input:focus, textarea:focus {
   outline:    none;
-  border-color: var(--accent)      !important;
+  border-color: var(--accent)           !important;
   box-shadow:   0 0 0 3px var(--accent-ring) !important;
 }
 
 /* ----------------------------------------------------------
-   12. PORTRAIT
+   9. HOME PAGE LINKS & PORTRAIT (content-center)
    ---------------------------------------------------------- */
+.content-center a { color: var(--accent) !important; }
+
 img.circle {
-  border:     3px solid var(--portrait-border) !important;
+  border:     3px solid var(--portrait-border)  !important;
   box-shadow: 0 4px 18px var(--portrait-shadow) !important;
 }
