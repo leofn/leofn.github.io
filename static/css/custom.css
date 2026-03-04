@@ -1,356 +1,367 @@
 /* ============================================================
-   leofn.com — Custom UI/UX Overrides
-   Palette: Indigo accent · Warm neutrals · WCAG AA compliant
+   leofn.com — Custom UI/UX Theme
+   Strategy: CSS custom properties keyed on html[data-theme].
+   A single !important per property — the variable does the switching.
    ============================================================ */
 
+/* ----------------------------------------------------------
+   1. TOKEN DEFINITIONS — light (default) and dark
+   ---------------------------------------------------------- */
+
+/* Light theme */
+html[data-theme="light"],
 :root {
-  --accent:       #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-light: #dbeafe;
-  --accent-dark:  #60a5fa;
-  --radius:       6px;
-  --transition:   .18s ease;
+  --bg:               #f7f8fa;
+  --bg-card:          #ffffff;
+  --bg-header:        #ffffff;
+  --text:             #1e1e2e;
+  --text-muted:       #374151;
+  --text-subtle:      #6b7280;
+  --border:           #e5e7eb;
+
+  --accent:           #2563eb;
+  --accent-hover:     #1d4ed8;
+  --accent-tint:      #eff6ff;
+  --accent-ring:      #bfdbfe;
+
+  --table-head-bg:    #eff6ff;
+  --table-head-text:  #1e40af;
+  --table-head-border:#bfdbfe;
+  --table-odd:        #ffffff;
+  --table-even:       #f8faff;
+  --table-hover:      #eff6ff;
+  --table-cell-text:  #374151;
+  --table-cell-border:#e5e7eb;
+
+  --code-bg:          #eff6ff;
+  --code-text:        #1d4ed8;
+  --code-border:      #bfdbfe;
+
+  --strong-color:     #111827;
+  --h2-color:         #1e1e2e;
+  --h3-color:         #374151;
+  --h4-color:         #4b5563;
+
+  --footer-bg:        #ffffff;
+  --footer-text:      #6b7280;
+
+  --input-bg:         #ffffff;
+  --input-border:     #d1d5db;
+
+  --btn-bg:           #2563eb;
+  --btn-text:         #ffffff;
+  --btn-hover:        #1d4ed8;
+  --btn-shadow:       rgba(37,99,235,.25);
+
+  --shadow-card:      0 1px 4px rgba(0,0,0,.06);
+  --shadow-header:    0 1px 4px rgba(0,0,0,.08);
+  --portrait-border:  #bfdbfe;
+  --portrait-shadow:  rgba(37,99,235,.15);
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+  --bg:               #0f1117;
+  --bg-card:          #161b22;
+  --bg-header:        #161b22;
+  --text:             #e2e8f0;
+  --text-muted:       #cbd5e1;
+  --text-subtle:      #94a3b8;
+  --border:           #30363d;
+
+  --accent:           #60a5fa;
+  --accent-hover:     #93c5fd;
+  --accent-tint:      #1e3a5f;
+  --accent-ring:      #2563eb;
+
+  --table-head-bg:    #1e3a5f;
+  --table-head-text:  #93c5fd;
+  --table-head-border:#2563eb;
+  --table-odd:        #161b22;
+  --table-even:       #1a2030;
+  --table-hover:      #1e3a5f;
+  --table-cell-text:  #cbd5e1;
+  --table-cell-border:#30363d;
+
+  --code-bg:          #1e3a5f;
+  --code-text:        #93c5fd;
+  --code-border:      #2563eb;
+
+  --strong-color:     #f1f5f9;
+  --h2-color:         #e2e8f0;
+  --h3-color:         #cbd5e1;
+  --h4-color:         #94a3b8;
+
+  --footer-bg:        #161b22;
+  --footer-text:      #94a3b8;
+
+  --input-bg:         #1a2030;
+  --input-border:     #30363d;
+
+  --btn-bg:           #60a5fa;
+  --btn-text:         #0f1117;
+  --btn-hover:        #93c5fd;
+  --btn-shadow:       rgba(96,165,250,.2);
+
+  --shadow-card:      0 1px 6px rgba(0,0,0,.3);
+  --shadow-header:    0 1px 3px rgba(0,0,0,.35);
+  --portrait-border:  #2563eb;
+  --portrait-shadow:  rgba(96,165,250,.2);
 }
 
 /* ----------------------------------------------------------
-   BODY & BACKGROUND
+   2. BASE — body, header, menu, footer
+      One !important per property; var() does the switching.
    ---------------------------------------------------------- */
+
 body {
-  background-color: #f7f8fa !important;
-  color: #1e1e2e !important;
+  background-color: var(--bg)   !important;
+  color:            var(--text) !important;
 }
 
-/* ----------------------------------------------------------
-   HEADER & NAV
-   ---------------------------------------------------------- */
 .header {
-  background: #ffffff !important;
-  box-shadow: 0 1px 4px rgba(0,0,0,.08) !important;
+  background:  var(--bg-header) !important;
+  box-shadow:  var(--shadow-header) !important;
 }
 
 .menu {
-  background: #ffffff !important;
+  background: var(--bg-header) !important;
 }
 
-/* Nav links — neutral, accent on hover */
-.menu a {
-  color: #1e1e2e !important;
+.footer {
+  background:   var(--footer-bg)   !important;
+  color:        var(--footer-text) !important;
+  border-top:   1px solid var(--border);
+  font-size:    .87rem;
+}
+.footer a { color: var(--accent) !important; }
+
+/* ----------------------------------------------------------
+   3. NAVIGATION LINKS
+   ---------------------------------------------------------- */
+
+.menu a, .logo, .logo__text, .logo__mark {
+  color:           var(--text) !important;
   text-decoration: none !important;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: color var(--transition), border-color var(--transition);
+}
+
+.menu a {
+  padding-bottom:  2px;
+  border-bottom:   2px solid transparent;
+  transition:      color .15s, border-color .15s;
 }
 .menu a:hover {
-  color: var(--accent) !important;
+  color:            var(--accent)  !important;
   border-bottom-color: var(--accent);
-  text-decoration: none !important;
-}
-
-.logo, .logo__text, .logo__mark {
-  color: #1e1e2e !important;
-  text-decoration: none !important;
+  text-decoration:  none !important;
 }
 
 /* ----------------------------------------------------------
-   MAIN CONTENT — ALL INNER PAGES
+   4. LINKS (content)
    ---------------------------------------------------------- */
+
+a {
+  color:      var(--accent) !important;
+  transition: color .15s;
+}
+a:hover {
+  color:           var(--accent-hover) !important;
+  text-decoration: underline;
+}
+/* Nav links should stay neutral — reset above rule */
+.menu a      { color: var(--text)   !important; }
+.menu a:hover{ color: var(--accent) !important; }
+
+/* ----------------------------------------------------------
+   5. MAIN CONTENT CARD (inner pages)
+   ---------------------------------------------------------- */
+
 main {
-  background: #ffffff;
-  border-radius: var(--radius);
-  padding: 2rem 2.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  width: 100%;
-  max-width: 860px;
+  background:    var(--bg-card);
+  border-radius: 6px;
+  padding:       2rem 2.5rem;
+  box-shadow:    var(--shadow-card);
+  width:         100%;
+  max-width:     860px;
 }
 
-/* Home page uses content-center > main, no card needed there */
+/* Home page — no card */
 .content-center main {
   background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+  box-shadow: none         !important;
+  padding:    0            !important;
 }
 
 /* ----------------------------------------------------------
-   TYPOGRAPHY HIERARCHY
+   6. TYPOGRAPHY HIERARCHY
    ---------------------------------------------------------- */
 
-/* Page title (h1 injected by theme) */
+/* Page title injected by theme */
 main > h1:first-child {
-  font-size: 1.4rem !important;
-  font-weight: 700;
-  color: #1e1e2e !important;
-  letter-spacing: -.01em;
+  font-size:     1.4rem  !important;
+  font-weight:   700;
+  color:         var(--h2-color) !important;
+  letter-spacing:-.01em;
   margin-bottom: 1.5rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid var(--accent-light);
+  padding-bottom:.5rem;
+  border-bottom: 2px solid var(--accent-tint);
 }
 
 /* Section headings — accent left border */
 main h2 {
-  font-size: 1rem !important;
-  font-weight: 700 !important;
+  font-size:      1rem      !important;
+  font-weight:    700       !important;
   text-transform: uppercase !important;
-  letter-spacing: .08em !important;
-  color: #1e1e2e !important;
-  border-left: 3px solid var(--accent) !important;
-  border-bottom: none !important;
-  padding-left: .7rem !important;
-  margin-top: 2rem !important;
-  margin-bottom: .7rem !important;
-  line-height: 1.4 !important;
+  letter-spacing: .08em     !important;
+  color:          var(--h2-color) !important;
+  border-left:    3px solid var(--accent) !important;
+  border-bottom:  none      !important;
+  padding-left:   .7rem     !important;
+  margin-top:     2rem      !important;
+  margin-bottom:  .6rem     !important;
+  line-height:    1.4       !important;
 }
 
 main h3 {
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  color: #374151 !important;
-  margin-top: 1.3rem !important;
-  margin-bottom: .4rem !important;
+  font-size:    1rem   !important;
+  font-weight:  600    !important;
+  color:        var(--h3-color) !important;
+  margin-top:   1.3rem !important;
 }
 
 main h4 {
-  color: #4b5563 !important;
-  font-size: .95rem !important;
+  color:     var(--h4-color) !important;
+  font-size: .95rem          !important;
 }
 
-/* Body text */
 main p {
-  color: #374151;
+  color:       var(--text-muted);
   line-height: 1.75;
 }
 
-/* Bold/strong — max contrast */
-strong, b {
-  color: #111827 !important;
-  font-weight: 700;
-}
-
-/* em / italic */
-em, i {
-  color: #374151 !important;
-}
+strong, b { color: var(--strong-color) !important; font-weight: 700; }
+em, i     { color: var(--text-muted)   !important; }
 
 /* ----------------------------------------------------------
-   LINKS
+   7. TABLES
    ---------------------------------------------------------- */
-a {
-  color: var(--accent) !important;
-  text-decoration: none;
-  transition: color var(--transition);
-}
-a:hover {
-  color: var(--accent-hover) !important;
-  text-decoration: underline;
-}
 
-/* ----------------------------------------------------------
-   TABLES
-   ---------------------------------------------------------- */
 main table {
   border-collapse: collapse;
-  width: 100%;
-  font-size: .92rem;
-  margin: .8rem 0 1.2rem;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,.07);
+  width:           100%;
+  font-size:       .92rem;
+  margin:          .8rem 0 1.2rem;
+  border-radius:   6px;
+  overflow:        hidden;
+  box-shadow:      var(--shadow-card);
 }
+
 main table thead tr {
-  background: #eff6ff !important;
+  background: var(--table-head-bg) !important;
 }
 main table thead th {
-  color: #1e40af !important;
-  padding: .55rem .9rem;
-  font-weight: 700;
-  font-size: .82rem;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  border-bottom: 2px solid #bfdbfe;
-  text-align: left;
+  color:           var(--table-head-text)   !important;
+  padding:         .55rem .9rem;
+  font-weight:     700;
+  font-size:       .82rem;
+  text-transform:  uppercase;
+  letter-spacing:  .06em;
+  border-bottom:   2px solid var(--table-head-border);
+  text-align:      left;
 }
-main table tbody tr:nth-child(odd)  { background: #ffffff; }
-main table tbody tr:nth-child(even) { background: #f8faff; }
+
+main table tbody tr:nth-child(odd)  { background: var(--table-odd)  !important; }
+main table tbody tr:nth-child(even) { background: var(--table-even) !important; }
+
 main table tbody td {
-  padding: .5rem .9rem;
-  border-bottom: 1px solid #e5e7eb;
-  vertical-align: top;
-  color: #374151;
+  padding:       .5rem .9rem;
+  border-bottom: 1px solid var(--table-cell-border);
+  vertical-align:top;
+  color:         var(--table-cell-text);
 }
 main table tbody tr:last-child td { border-bottom: none; }
-main table tbody tr:hover { background: #eff6ff !important; transition: background var(--transition); }
+main table tbody tr:hover { background: var(--table-hover) !important; transition: background .15s; }
 
 /* ----------------------------------------------------------
-   HORIZONTAL RULES
+   8. HORIZONTAL RULES
    ---------------------------------------------------------- */
 hr {
-  background: #e5e7eb !important;
+  background: var(--border) !important;
   height: 1px;
   border: none;
-  margin: 1.6rem 0;
 }
 
 /* ----------------------------------------------------------
-   CODE
+   9. CODE
    ---------------------------------------------------------- */
 code {
-  background: #eff6ff !important;
-  color: #1d4ed8 !important;
-  border: 1px solid #bfdbfe;
+  background:  var(--code-bg)     !important;
+  color:       var(--code-text)   !important;
+  border:      1px solid var(--code-border);
   border-radius: 4px;
-  font-size: .87em;
-  padding: .1rem .35rem;
+  font-size:   .87em;
+  padding:     .1rem .35rem;
 }
 
 /* ----------------------------------------------------------
-   BUTTONS — Download PDF & form Submit
+   10. BUTTONS
    ---------------------------------------------------------- */
 a[download] {
-  background: var(--accent) !important;
-  color: #ffffff !important;
-  border: 1.5px solid var(--accent) !important;
-  border-radius: var(--radius) !important;
-  padding: .45rem 1.25rem !important;
-  font-weight: 600 !important;
-  font-size: .92rem !important;
-  text-decoration: none !important;
-  transition: background var(--transition), box-shadow var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
+  background:      var(--btn-bg)    !important;
+  color:           var(--btn-text)  !important;
+  border:          1.5px solid var(--btn-bg) !important;
+  border-radius:   6px   !important;
+  padding:         .45rem 1.25rem !important;
+  font-weight:     600   !important;
+  text-decoration: none  !important;
+  display:         inline-flex;
+  align-items:     center;
+  gap:             .4rem;
+  transition:      background .15s, box-shadow .15s;
 }
 a[download]:hover {
-  background: var(--accent-hover) !important;
-  box-shadow: 0 4px 12px rgba(37,99,235,.25) !important;
+  background: var(--btn-hover) !important;
+  box-shadow: 0 4px 12px var(--btn-shadow) !important;
 }
 
 button[type=submit] {
-  background: var(--accent) !important;
-  color: #ffffff !important;
-  border: 1.5px solid var(--accent) !important;
-  border-radius: var(--radius) !important;
-  padding: .45rem 1.4rem !important;
-  font-weight: 600 !important;
-  font-size: .95rem !important;
-  cursor: pointer;
-  transition: background var(--transition), box-shadow var(--transition);
+  background:  var(--btn-bg)   !important;
+  color:       var(--btn-text) !important;
+  border:      1.5px solid var(--btn-bg) !important;
+  border-radius:6px    !important;
+  padding:     .45rem 1.4rem !important;
+  font-weight: 600     !important;
+  font-size:   .95rem  !important;
+  cursor:      pointer;
+  transition:  background .15s, box-shadow .15s;
 }
 button[type=submit]:hover {
-  background: var(--accent-hover) !important;
-  box-shadow: 0 4px 12px rgba(37,99,235,.25) !important;
+  background: var(--btn-hover) !important;
+  box-shadow: 0 4px 12px var(--btn-shadow) !important;
 }
 
 /* ----------------------------------------------------------
-   FORM INPUTS
+   11. FORM INPUTS
    ---------------------------------------------------------- */
 input[type=text], input[type=email], textarea {
-  border: 1.5px solid #d1d5db !important;
-  border-radius: var(--radius) !important;
-  background: #ffffff !important;
-  color: #1e1e2e !important;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  background:  var(--input-bg)     !important;
+  color:       var(--text)         !important;
+  border:      1.5px solid var(--input-border) !important;
+  border-radius: 6px               !important;
+  transition:  border-color .15s, box-shadow .15s;
 }
 input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important;
+  outline:    none;
+  border-color: var(--accent)      !important;
+  box-shadow:   0 0 0 3px var(--accent-ring) !important;
 }
 
 /* ----------------------------------------------------------
-   PORTRAIT (HOME)
+   12. PORTRAIT & LOGO CURSOR
    ---------------------------------------------------------- */
 img.circle {
-  border: 3px solid #bfdbfe !important;
-  box-shadow: 0 4px 16px rgba(37,99,235,.15) !important;
+  border:     3px solid var(--portrait-border) !important;
+  box-shadow: 0 4px 16px var(--portrait-shadow) !important;
 }
 
-/* ----------------------------------------------------------
-   FOOTER
-   ---------------------------------------------------------- */
-.footer {
-  background: #ffffff !important;
-  border-top: 1px solid #e5e7eb;
-  color: #6b7280 !important;
-  font-size: .87rem;
-}
-.footer a { color: var(--accent) !important; }
-
-/* Logo cursor — keep brand pink */
 .logo__cursor { background: #fe5186; }
-
-/* ----------------------------------------------------------
-   DARK MODE
-   ---------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  body { background-color: #0f1117 !important; color: #e2e8f0 !important; }
-  .header, .menu { background: #161b22 !important; box-shadow: 0 1px 3px rgba(0,0,0,.35) !important; }
-  .menu a, .logo, .logo__text, .logo__mark { color: #e2e8f0 !important; }
-  .menu a:hover { color: var(--accent-dark) !important; border-bottom-color: var(--accent-dark); }
-  main { background: #161b22; box-shadow: 0 1px 6px rgba(0,0,0,.3); }
-  .content-center main { background: transparent !important; box-shadow: none !important; }
-  a { color: var(--accent-dark) !important; }
-  a:hover { color: #93c5fd !important; }
-  .menu a { color: #e2e8f0 !important; }
-  main h2 { color: #e2e8f0 !important; border-left-color: var(--accent-dark) !important; }
-  main > h1:first-child { color: #e2e8f0 !important; border-bottom-color: #1e3a5f; }
-  main h3 { color: #cbd5e1 !important; }
-  strong, b { color: #f1f5f9 !important; }
-  em, i { color: #cbd5e1 !important; }
-  main p { color: #cbd5e1; }
-  main table { box-shadow: 0 1px 4px rgba(0,0,0,.3); }
-  main table thead tr { background: #1e3a5f !important; }
-  main table thead th { color: #93c5fd !important; border-bottom-color: #2563eb; }
-  main table tbody tr:nth-child(odd) { background: #161b22; }
-  main table tbody tr:nth-child(even) { background: #1a2030; }
-  main table tbody td { border-bottom-color: #30363d; color: #cbd5e1; }
-  main table tbody tr:hover { background: #1e3a5f !important; }
-  hr { background: #30363d !important; }
-  code { background: #1e3a5f !important; color: #93c5fd !important; border-color: #2563eb; }
-  input[type=text], input[type=email], textarea { background: #1a2030 !important; color: #e2e8f0 !important; border-color: #30363d !important; }
-  input:focus, textarea:focus { border-color: var(--accent-dark) !important; box-shadow: 0 0 0 3px rgba(96,165,250,.2) !important; }
-  a[download] { background: var(--accent-dark) !important; color: #0f1117 !important; border-color: var(--accent-dark) !important; }
-  a[download]:hover { background: #93c5fd !important; }
-  button[type=submit] { background: var(--accent-dark) !important; color: #0f1117 !important; border-color: var(--accent-dark) !important; }
-  button[type=submit]:hover { background: #93c5fd !important; }
-  img.circle { border-color: #2563eb !important; box-shadow: 0 4px 16px rgba(96,165,250,.2) !important; }
-  .footer { background: #161b22 !important; border-top-color: #30363d; color: #94a3b8 !important; }
-}
-
-[data-theme=dark] body { background-color: #0f1117 !important; color: #e2e8f0 !important; }
-[data-theme=dark] .header,
-[data-theme=dark] .menu { background: #161b22 !important; box-shadow: 0 1px 3px rgba(0,0,0,.35) !important; }
-[data-theme=dark] .menu a,
-[data-theme=dark] .logo,
-[data-theme=dark] .logo__text,
-[data-theme=dark] .logo__mark { color: #e2e8f0 !important; }
-[data-theme=dark] .menu a:hover { color: var(--accent-dark) !important; border-bottom-color: var(--accent-dark); }
-[data-theme=dark] main { background: #161b22; box-shadow: 0 1px 6px rgba(0,0,0,.3); }
-[data-theme=dark] .content-center main { background: transparent !important; box-shadow: none !important; }
-[data-theme=dark] a { color: var(--accent-dark) !important; }
-[data-theme=dark] a:hover { color: #93c5fd !important; }
-[data-theme=dark] .menu a { color: #e2e8f0 !important; }
-[data-theme=dark] main h2 { color: #e2e8f0 !important; border-left-color: var(--accent-dark) !important; }
-[data-theme=dark] main > h1:first-child { color: #e2e8f0 !important; border-bottom-color: #1e3a5f; }
-[data-theme=dark] main h3 { color: #cbd5e1 !important; }
-[data-theme=dark] strong, [data-theme=dark] b { color: #f1f5f9 !important; }
-[data-theme=dark] em, [data-theme=dark] i { color: #cbd5e1 !important; }
-[data-theme=dark] main p { color: #cbd5e1; }
-[data-theme=dark] main table { box-shadow: 0 1px 4px rgba(0,0,0,.3); }
-[data-theme=dark] main table thead tr { background: #1e3a5f !important; }
-[data-theme=dark] main table thead th { color: #93c5fd !important; border-bottom-color: #2563eb; }
-[data-theme=dark] main table tbody tr:nth-child(odd) { background: #161b22; }
-[data-theme=dark] main table tbody tr:nth-child(even) { background: #1a2030; }
-[data-theme=dark] main table tbody td { border-bottom-color: #30363d; color: #cbd5e1; }
-[data-theme=dark] main table tbody tr:hover { background: #1e3a5f !important; }
-[data-theme=dark] hr { background: #30363d !important; }
-[data-theme=dark] code { background: #1e3a5f !important; color: #93c5fd !important; border-color: #2563eb; }
-[data-theme=dark] input[type=text],
-[data-theme=dark] input[type=email],
-[data-theme=dark] textarea { background: #1a2030 !important; color: #e2e8f0 !important; border-color: #30363d !important; }
-[data-theme=dark] input:focus,
-[data-theme=dark] textarea:focus { border-color: var(--accent-dark) !important; box-shadow: 0 0 0 3px rgba(96,165,250,.2) !important; }
-[data-theme=dark] a[download] { background: var(--accent-dark) !important; color: #0f1117 !important; border-color: var(--accent-dark) !important; }
-[data-theme=dark] a[download]:hover { background: #93c5fd !important; }
-[data-theme=dark] button[type=submit] { background: var(--accent-dark) !important; color: #0f1117 !important; border-color: var(--accent-dark) !important; }
-[data-theme=dark] button[type=submit]:hover { background: #93c5fd !important; }
-[data-theme=dark] img.circle { border-color: #2563eb !important; box-shadow: 0 4px 16px rgba(96,165,250,.2) !important; }
-[data-theme=dark] .footer { background: #161b22 !important; border-top-color: #30363d; color: #94a3b8 !important; }
