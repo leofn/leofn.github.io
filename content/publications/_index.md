@@ -1,6 +1,5 @@
 ---
 title: "Publications"
-tags: ["publications", "disinformation", "hate-speech", "Telegram", "peer-reviewed"]
 ---
 
 ## Publications

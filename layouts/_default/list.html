@@ -3,9 +3,6 @@
         <main class="posts">
             <h1 class="page-title">{{ .Title }}</h1>
 
-            {{ if .Params.tags }}
-            <div class="page-tags">{{ partial "tags.html" .Params.tags }}</div>
-            {{ end }}
 
             {{ if .Content }}
                 <div class="page-content">{{ .Content }}</div>

@@ -1,6 +1,5 @@
 ---
 title: "Teaching"
-tags: ["teaching", "digital-sociology", "UFBA"]
 ---
 
 ## Teaching

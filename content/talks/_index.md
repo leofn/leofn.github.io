@@ -1,6 +1,5 @@
 ---
 title: "Talks"
-tags: ["talks", "conferences", "digital-humanities"]
 ---
 
 ## Talks & Presentations
