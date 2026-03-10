@@ -21,7 +21,7 @@ title: "CV"
 | **GitHub** | [github.com/leofn](https://github.com/leofn) |
 | **ORCID** | [0000-0003-2907-8338](https://orcid.org/0000-0003-2907-8338) |
 | **Google Scholar** | [Profile](https://scholar.google.com/citations?user=essj6yQAAAAJ) |
-| **Lattes** | [Link](http://lattes.cnpq.br/) |
+| **Lattes** | [Link](https://lattes.cnpq.br/7141811368487014) |
 | **LinkedIn** | [leofn-labhdufba](https://www.linkedin.com/in/leofn-labhdufba/) |
 
 ---
