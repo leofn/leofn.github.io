@@ -16,7 +16,7 @@ title: "CV"
 
 | | |
 |---|---|
-| **Email** | <a href="mailto:leofn3@gmail.com" target="_blank" rel="noopener">leofn3@gmail.com</a> |
+| **Email** | leofn3[at]gmail.com |
 | **Website** | <a href="https://leofn.com" target="_blank" rel="noopener">leofn.com</a> |
 | **GitHub** | <a href="https://github.com/leofn" target="_blank" rel="noopener">github.com/leofn</a> |
 | **ORCID** | <a href="https://orcid.org/0000-0003-2907-8338" target="_blank" rel="noopener">0000-0003-2907-8338</a> |
