@@ -120,9 +120,13 @@ PygmentsStyle      = "monokai"
     weight     = 5
 
   [[menu.main]]
+    identifier = "press"
+    name       = "Press"
+    url        = "/press/"
+    weight     = 6
+
+  [[menu.main]]
     identifier = "contact"
     name       = "Contact"
     url        = "/contact/"
-    weight     = 6
-
-[taxonomies]
+    weight     = 7

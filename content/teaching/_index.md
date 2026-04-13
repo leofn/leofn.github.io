@@ -2,48 +2,73 @@
 title: "Teaching"
 ---
 
-## Teaching
+### 2021.2
 
-### Undergraduate
+| Course | Hours | Level |
+|--------|-------|-------|
+| Contemporary Studies I | 68h | Undergraduate |
+| Research Practice in Sociology | 34h | Undergraduate |
+| Special Topics: Computational Social Science | 68h | Graduate |
 
-**Interdisciplinar em Ciência e Tecnologia — UFBA** *(09/2018 – Present)*
+### 2021.1
 
-- Estudos sobre a Contemporaneidade I
+| Course | Hours | Level |
+|--------|-------|-------|
+| Contemporary Studies I | 68h | Undergraduate |
 
----
+### 2020.1
 
-### Graduate (Postgraduate)
+| Course | Hours | Level |
+|--------|-------|-------|
+| Analyzing the COVID-19 Pandemic: Social Media, Scientific Controversies and Disinformation | 68h | Undergraduate |
+| Analyzing the COVID-19 Pandemic: Social Media, Scientific Controversies and Disinformation | 68h | Graduate |
+| Contemporary Studies I | 68h | Undergraduate |
+| Digital Tools for Academic Research | 68h | Undergraduate |
 
-**Programa de Pós-graduação em Ciências Sociais — UFBA** *(03/2014 – Present)*
+### 2019.2
 
-Research lines: Sociologia Digital · Análise de Mídia · CAQDAS
+| Course | Hours | Level |
+|--------|-------|-------|
+| Digital Tools for Academic Research | 68h | Undergraduate |
+| Special Topics: Digital Sociology | 68h | Undergraduate |
+| Digital Sociology | — | Graduate |
 
-**Ciências Sociais — UFBA** *(07/2019 – 12/2019)*
+### 2019.1
 
-- Sociologia Digital
+| Course | Hours | Level |
+|--------|-------|-------|
+| Contemporary Studies I | 102h | Undergraduate |
+| Contemporary Studies II | 68h | Undergraduate |
 
-**Ciências Sociais — UFBA** *(06/2016 – 11/2016)*
+### 2018.2
 
-- Sociologia Digital
+| Course | Hours | Level |
+|--------|-------|-------|
+| Contemporary Studies I | 102h | Undergraduate |
+| Contemporary Studies I | 102h | Undergraduate |
 
-**Curso de Doutorado em Ciências Sociais — UFBA** *(01/2016 – 05/2016)*
+### 2016.2
 
-- Sociologia Digital
-- Técnicas de Investigação e Análise (TIA)
+| Course | Hours | Level |
+|--------|-------|-------|
+| Digital Sociology | — | Graduate |
 
-**Curso de Doutorado em Ciências Sociais — UFBA** *(08/2014 – 12/2015)*
+### 2016.1
 
-- Técnicas de Investigação e Análise
-- Tecnologia de Pesquisa Aplicada às Ciências Sociais
+| Course | Hours | Level |
+|--------|-------|-------|
+| Digital Sociology | — | Graduate |
+| Research Investigation and Analysis (TIA) | — | Graduate |
 
-**Curso de Doutorado em Ciências Sociais — UFBA** *(03/2014 – 06/2014)*
+### 2014.2 – 2015.2
 
-- Tecnologia de Pesquisa Aplicada às Ciências Sociais
+| Course | Hours | Level |
+|--------|-------|-------|
+| Research Investigation and Analysis | — | Graduate |
+| Technology of Research Applied to Social Sciences | — | Graduate |
 
----
+### 2014.1
 
-### Research & Development
-
-**Laboratório de Humanidades Digitais da UFBA (LABHDUFBA)** *(07/2018 – Present)*
-
-Research lines: Humanidades Digitais · Ciências Sociais Computacionais · Pandemia, Saúde e Desinformação
+| Course | Hours | Level |
+|--------|-------|-------|
+| Technology of Research Applied to Social Sciences | — | Graduate |
