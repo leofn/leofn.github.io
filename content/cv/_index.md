@@ -19,8 +19,8 @@ title: "CV"
 | **Email** | leofn3[at]gmail.com |
 | **Website** | <a href="https://leofn.com" target="_blank" rel="noopener">leofn.com</a> |
 | **GitHub** | <a href="https://github.com/leofn" target="_blank" rel="noopener">github.com/leofn</a> |
-| **ORCID** | <a href="https://orcid.org/0000-0003-2907-8338" target="_blank" rel="noopener">0000-0003-2907-8338</a> |
-| **Google Scholar** | <a href="https://scholar.google.com/citations?user=essj6yQAAAAJ" target="_blank" rel="noopener">Profile</a> |
+| **ORCID** | <a href="https://orcid.org/0000-0003-2907-8338" target="_blank" rel="noopener">https://orcid.org/0000-0003-2907-8338</a> |
+| **Google Scholar** | <a href="https://scholar.google.com/citations?user=essj6yQAAAAJ" target="_blank" rel="noopener">https://scholar.google.com/citations?user=essj6yQAAAAJ</a> |
 | **Lattes** | <a href="http://lattes.cnpq.br/7141811368487014" target="_blank" rel="noopener">http://lattes.cnpq.br/7141811368487014</a> |
 | **LinkedIn** | <a href="https://www.linkedin.com/in/leofn-labhdufba/" target="_blank" rel="noopener">leofn-labhdufba</a> |
 
