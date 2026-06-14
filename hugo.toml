@@ -114,19 +114,25 @@ PygmentsStyle      = "monokai"
     weight     = 4
 
   [[menu.main]]
+    identifier = "slides"
+    name       = "Slides"
+    url        = "https://leofn.com/Slides/"
+    weight     = 5
+
+  [[menu.main]]
     identifier = "teaching"
     name       = "Teaching"
     url        = "/teaching/"
-    weight     = 5
+    weight     = 6
 
   [[menu.main]]
     identifier = "press"
     name       = "Press"
     url        = "/press/"
-    weight     = 6
+    weight     = 7
 
   [[menu.main]]
     identifier = "contact"
     name       = "Contact"
     url        = "/contact/"
-    weight     = 7
+    weight     = 8
