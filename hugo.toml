@@ -115,7 +115,7 @@ PygmentsStyle      = "monokai"
 
   [[menu.main]]
     identifier = "slides"
-    name       = "Slides"
+    name       = "slides"
     url        = "https://leofn.com/Slides/"
     weight     = 5
 
