@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Ecossistema de desinformação e propaganda computacional no aplicativo Telegram</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2021-11-25" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Ecossistema de desinformação e propaganda computacional no aplicativo Telegram
+## Relatório parcial - Jun/Nov - 2021
+### 2021-11-25
+
+---
+
+layout: true
+
+
+
+---
+class: middle, center  
+
+# - Equipe de Pesquisa - 
+&lt;br&gt;
+
+## Coordenação: 
+&lt;br&gt;
+
+Leonardo F. Nascimento (ICTI/PPGCS/LABHD/UFBA) - Doutor em Sociologia -  [leofn3@gmail.com](mailto:leofn3@gmail.com)
+&lt;br&gt;
+
+Letícia Maria Costa da Nóbrega Cesarino (PPGAS/UFSC) - Doutora em Antropologia - [leticia.cesarino@gmail.com](mailto:leticia.cesarino@gmail.com)
+&lt;br&gt;
+
+Paulo de Freitas Castro Fonseca (ICTI/LABHD/UFBA) – Doutor em Sociologia - [pfonseca@ufba.br](mailto:pfonseca@ufba.br) 
+
+---
+class: middle, center  
+
+# - Equipe de Pesquisa -
+
+## Análise computacional - Ciências de Dados:
+
+Ana Carolina Balbino Silva (LABHD/UFBA) - Bolsista de iniciação científica, Graduanda do Bacharelado Interdisciplinar em Ciência, Tecnologia e Inovação - carolbalbinos@hotmail.com
+
+Daniel de Sena Bastos (LABHD/UFBA) - Bolsista de iniciação científica, Graduando do Bacharelado Interdisciplinar em Ciência, Tecnologia e Inovação -  danielosena@hotmail.com
+
+Iolanda Victoria Morais Ramos (LABHD/UFBA) - Graduanda do Bacharelado Interdisciplinar em Ciência, Tecnologia e Inovação iolanda.ramos07@gmail.com
+
+Tarssio Brito Barreto (LABHD/PEI/UFBA) Cientista de dados e Doutorando do Programa de Pós Graduação em Engenharia Industrial da Universidade Federal da Bahia - PEI/UFBA  - tarssioesa@gmail.com
+
+Thamirys Albuquerque Cunha (LABHD/UFBA) - Graduanda do Bacharelado Interdisciplinar em Ciência, Tecnologia e Inovação t21cunha@gmail.com
+
+Vítor Mussa (DTA/PPGSA/UFRJ) - Engenheiro de dados, Mestrando em Sociologia e Antropologia - vtrmussa@gmail.com
+
+---
+class: middle, center  
+
+# Equipe de Pesquisa
+
+
+## Equipe - Análise qualitativa/Codificação
+
+Anna Carollyne Vieira (PIBIC/LABHD/UFBA) Bolsista IC - PIBIC, Bacharelanda Interdisciplinar em Humanidades - vieiracarol177@gmail.com
+
+Barbara Mendes Lima (FAPESC/PPGAS/UFSC) Bolsista FAPESC, Mestranda em Antropologia Social - barbaramendeslima@outlook.com
+
+Fernanda Luiza Godinho (CAPES/PPGAS/UFSC) - Bolsista CAPES, Mestranda em Antropologia Social - fernandaluiza.b@gmail.com
+
+Gabriel Darío López Zamora (UFSC) Graduado em Antropologia - dario.lopez.z@outlook.com
+
+Jéfte Batista de Oliveira  (PIBIC/LABHD/UFBA) - Bolsista de iniciação científica, Graduado em Ciências Sociais Licenciatura - jeftebatista10@gmail.com
+
+Juciane Pereira de Jesus (PIBIC/LABHD/UFBA) - Bolsista de iniciação científica, Graduanda em Ciências Sociais (licenciatura) - juciane_pereira1997@outlook.com
+
+Larissa Schwedersky (PPGAS/UFSC) - Doutoranda em Antropologia Social - lari.schwedersky@gmail.com
+
+Larisse Amaral Marajó (CNPq/PPGAS/UFSC)  Bolsista CNPq, Mestranda em Antropologia Social - lamarajo@outlook.com
+
+---
+class: middle, center  
+
+# Equipe de Pesquisa
+
+
+## Equipe - Análise qualitativa/Codificação
+
+Larisse Louise Pontes Gomes (PPGAS/UFSC) Doutoranda em Antropologia Social - larisse.louise@gmail.com
+
+Louise Lima Karczeski (CAPES/PPGAS/UFSC) - Bolsista CAPES, Mestranda em Antropologia Social - karczeski.lou@gmail.com
+
+Maria Luiza Scheren (PIBIC/CNPq/UFSC) Bolsista de Iniciação Científica (PIBIC/CNPq), Graduanda em Antropologia 
+
+Maximiano Augusto Gonçalves Neto (FGV) - Mestrando em Bens patrimoniais -  maxagn@gmail.com
+
+Sandra Stephanie Holanda Ponte Ribeiro (GrupCiber/PPGAS/UFSC) - Doutoranda em Antropologia Social - stephanie.hpr@gmail.com
+
+Silvia Rocha Walz  (PIBIC/UFSC) – Bolsista de iniciação científica PIBIC, Graduanda em Antropologia -  silviawalz@hotmail.com
+
+Tatiana Balistieri  (PIBIC/UFSC) - Bolsista de iniciação científica PIBIC, Graduando em Ciências Sociais - tatianabalistieri@gmail.com
+
+Virgínia Squizani Rodrigues (TRANSES/PPGAS/UFSC) Doutoranda em Antropologia Social - virginia.squizani@gmail.com
+
+---
+class: middle, center  
+
+# Colaboradores 
+
+Alisson Magalhães Soares (Observatório InCite/UFMG) - Doutor em Sociologia - [alissonmsoares@gmail.com](mailto:alissonmsoares@gmail.com)
+
+Elias Cunha Bitencourt (UNEB/PPGCOM-UFBA/LAB404)  Doutor em Comunicação - [eliasbitencourt@gmail.com](mailto:eliasbitencourt@gmail.com) 
+
+Pedro H. J. Nardelli (CPSG/LUT University) Doutor em Engenharia - [Pedro.Nardelli@lut.fi](mailto:Pedro.Nardelli@lut.fi)
+
+---
+class: inverse, center, middle
+
+# Objetivo
+
+---
+class: middle, center
+
+## Estabelecer uma estrutura interdisciplinar de mapeamento, monitoramento e análise multi-método (quanti/quali) de grupos e canais bolsonaristas no Telegram.
+
+---
+class: inverse, center, middle
+
+# Contexto
+
+---
+class: middle, center
+
+--
+## aumento acentuado de novos grupos e canais no Telegram de apoiadores e figuras políticas ligadas ao presidente; 
+&lt;br&gt;
+
+--
+## reorganização das estruturas de rede e estratégias de comunicação nas próximas eleições presidenciais
+
+---
+class: inverse, center, middle
+
+# Enquadramento conceitual-analítico
+
+---
+class: middle, center
+
+--
+## Públicos refratados (Crystal Abidin - 2021);
+&lt;br&gt;
+
+--
+## "Confusão de fronteiras"(Gray, Bounegru e Venturini, 2020; Abidin, 2021);
+&lt;br&gt;
+
+--
+## Operação via camuflagem;
+&lt;br&gt;
+
+--
+## Lógica antagonística não-pluralista;
+&lt;br&gt;
+
+--
+## **Desestabilização do processo eleitoral em 2022.**
+
+
+---
+class: inverse, center, middle
+
+# Parâmetros éticos de investigação
+
+---
+class: middle, center
+
+--
+## Grupos e canais públicos
+&lt;br&gt;
+
+--
+## Anonimização de mensagens e usuários
+&lt;br&gt;
+
+--
+## *"Lurker"*
+
+---
+class: inverse, center, middle
+
+# Coleta de dados 
+
+---
+class: middle, center
+
+# Pipeline da extração dos dados
+
+&lt;img src="./img/pipeline.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Dados coletados
+
+---
+class: center, middle
+
+--
+# **42 grupos** com + de **277.000 usuários**
+&lt;br&gt;
+
+--
+# **108 canais** com + de **3.300.000 usuários**
+
+---
+class: inverse, center, middle
+
+# Dinâmica de surgimento dos chats
+
+---
+class: middle, center
+
+
+&lt;img src="./img/timeline_grupos_plot3.jpeg" width="70%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 1 - Linha do tempo dos grupos analisado**
+---
+class: middle, center
+
+
+&lt;img src="./img/timeline_canais_plot3.jpeg" width="60%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 2 - Linha do tempo dos canais analisados**
+
+---
+class: inverse, center, middle
+
+# Quantidade de usuários (grupos/canais)
+
+---
+class: middle, center
+
+&lt;img src="./img/plot_users_grupos2.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 3 - Quinze grupos com maior número de usuários**
+
+---
+class: middle, center
+
+&lt;img src="./img/plot_users_canais2.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 4 - Quinze canais com maior número de usuários**
+
+
+---
+class: inverse, center, middle
+
+# Dinâmicas de crescimento dos (grupos/canais)
+
+---
+class: middle, center
+
+&lt;img src="./img/n_users_grupos_plus5k.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 5 - Crescimento do número de usuários nos grupos mais de 5 mil  usuários (jul/out 2021)**
+
+---
+class: middle, center
+
+&lt;img src="./img/n_users_canais.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 6 - Crescimento do número de usuários nos canais com mais de 50 mil  usuários (jul/out 2021)**
+
+---
+class: inverse, center, middle
+
+# Dinâmica das mensagens 
+
+---
+class: middle, center
+
+&lt;img src="./img/total_msgs_grupos3.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+##### **Gráfico 7 - Frequência das mensagens postadas nos grupos analisados - Jan/Out 2021. (As mensagens estão classificadas em textuais e de mídia - mensagens com links para redes sociais, áudio, fotos e vídeos.**
+
+---
+class: middle, center
+
+&lt;img src="./img/total_msgs_canais.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+##### **Gráfico 8 - Frequência das mensagens postadas nos canais analisados - Jan/Out 2021. (As mensagens estão classificadas em textuais e de mídia - mensagens com links para redes sociais, áudio, fotos e vídeos**
+
+
+---
+class: inverse, center, middle
+
+# Talkatives
+
+---
+class: middle, center
+
+&lt;img src="./img/top20_bar.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 9 - Total de mensagens dos dez talkatives - Jan/Out 2021**
+
+---
+class: middle, center
+
+&lt;img src="./img/din_top20.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 10 - Dinâmica de mensagens dos dez talkatives - Jan/Out 2021**
+
+---
+class: middle, center
+
+&lt;img src="./img/s1.png" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 11 - Distribuição das mensagens de texto dos dez talkatives nos grupos que participam - Jan/Out 2021**
+
+---
+class: inverse, center, middle
+
+# Temáticas 
+
+
+---
+class: middle, center
+
+# Pandemia
+&lt;img src="./img/saude_plot.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 13 - Menções a temas relacionado à pandemia nos chats analisados - Jan/Out 2021**
+
+
+---
+class: middle, center
+
+# Supremo Tribunal Federal
+&lt;img src="./img/STF_plot.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 14 - Menções ao Supremo Tribunal Federal nos chats analisados - Jan/Out 2021**
+
+---
+class: middle, center
+
+# MInistros do STF
+&lt;img src="./img/stf_min.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 15 - Menções ao ministros do Supremo Tribunal Federal nos chats analisados - Jan/Out 2021**
+
+---
+class: middle, center
+
+# CPI da Covid
+&lt;img src="./img/cpi_plot.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 16 - Menções aos atores políticos na CPI da covid-19 - Jan/Out 2021**
+
+---
+class: inverse, center, middle
+
+# Ecossistema multiplataforma de desinformação 
+
+---
+class: center, middle
+
+# Websites bolsonaristas 
+
+---
+class: middle, center
+
+&lt;img src="./img/eco_websites2.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 17 - Websites mais citados no chats (grupos e canais) analisados - Jan/Out 2021**
+---
+class: middle, center
+
+&lt;img src="./img/eco_din_websites3.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 18 - Dinâmica de links dos três websites mais postados no chats (grupos e canais) analisados - Jan/Out 2021**
+
+---
+class: inverse, center, middle
+
+# Redes sociais
+
+---
+class: middle, center
+
+&lt;img src="./img/gfinal2.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 19 - Links para plataformas nos (grupos e canais) analisados - Jan/Out 2021**
+
+---
+class: middle, center
+
+&lt;img src="./img/eco_yt2.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+#### **Gráfico 20 - Dez vídeos do Youtube mais postados nos (grupos/canais) - Jan/Out 2021**
+
+
+---
+class: inverse, center, middle
+
+# Estudo de caso: o 7 de setembro
+
+---
+class: middle, center
+
+# Análise topológica da rede do período 
+
+
+## **184.203 mensagens compartilhadas de 01/9/2021 a 12/09/2021 nos grupos**
+
+---
+class: middle, center
+
+&lt;img src="./img/fig3.png" width="85%" style="display: block; margin: auto;" /&gt;
+##### **Nós proporcionais aos grupos/canais que mais mandam mensagens**
+
+---
+class: middle, center
+
+
+&lt;img src="./img/fig4.png" width="85%" style="display: block; margin: auto;" /&gt;
+##### ****Nós proporcionais aos grupos/canais que mais recebem mensagens**
+
+
+---
+class: inverse, center, middle
+
+# Análise de imagens compartilhadas entre 01/09/2021 e 12/09/2021
+
+---
+class: middle, center
+
+# Atores
+
+&lt;img src="./img/atores.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+# Temáticas
+
+&lt;img src="./img/temas.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+# Funções
+
+&lt;img src="./img/funcao.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Resultados preliminares
+
+---
+class: middle, center
+
+--
+## Papel emergente do Telegram como “dobradiça” do ecossistema multiplataforma do bolsosnarismo;
+&lt;br&gt;
+
+--
+## Ritmo cíclico
+
+---
+class: middle, center
+
+&lt;img src="./img/esquema.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+#### **Sistema bifurcado entre públicos refratados e públicos dominantes (Fonte: perfil de Facebook de Christian Lynch, complementado por Letícia Cesarino e Pedro Nardelli**
+
+
+---
+class: inverse, center, middle
+
+# Próximas etapas
+
+---
+class: middle, center
+
+--
+## 1.Expansão da base de dados;
+&lt;br&gt;
+
+--
+## 2.Análise dos talkatives;
+&lt;br&gt;
+
+--
+## 3.Etnografia;
+&lt;br&gt;
+
+--
+## 4.Ferramentas de monitoramento em tempo real; 
+&lt;br&gt;
+
+--
+## 5.Técnicas de NLP, AI e ML.
+
+
+---
+class: middle, center
+
+##**Agradecimentos especiais**:
+
+.pull-left[
+## Obrigado ao InternetLab!
+]
+.pull-right[
+
+## Obrigado à toda equipe e aos colaboradores!
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+---
+title: "A crise na Sociologia Empírica"
+author: "Leonardo F. Nascimento"
+institute: "FCHK43 - Sociologia Digital - Aula 3"
+date: "`r format(Sys.time(), '%d %B de %Y')`"
+header-includes:
+   - \usepackage{ragged2e}
+output:
+   beamer_presentation:
+      theme: "Bergen"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Mike Savage
+
+![http://www.lse.ac.uk/sociology/people/mike-savage](images/mike-savage.jpg) 
+
+## Roger Burows
+
+![https://www.ncl.ac.uk/apl/staff/profile/rogerburrows.html](images/Roger-Burrows.png){width=250px}
+
+
+## The Coming Crisis of Empirical Sociology
+
+- Artigo de 2007
+\newline
+- Um dos artigos mais citados da sociologia (1411 citações em 2013!) 
+\newline
+- foco na mudança do significado da pesquisa empírica e nas reivindicações de jurisdição dos repertórios metodológicos da sociologia
+
+## A crise (não mais vindoura) na Sociologia Empírica
+
+> "1950 e 1990, os sociólogos podiam reivindicar uma série de ferramentas metodológicas distintas que lhes permitiam reivindicar claros pontos de acesso às relações sociais, mas no início do século XXI os dados sociais são hoje tão rotineiramente coletados e disseminados de tantas maneiras, que o papel dos sociólogos na geração de dados agora é incerto"
+
+## Sinais da crise para Savage (2004)
+
+- Análise de redes sobre voluntários de três organizações sociais; 
+\newline
+- Dados de empresa de telefonia;
+\newline
+- Limites dos dados: não há conteúdo somente metadados!; 
+\newline
+- Busca pelo "refúgio da sofisticação" 
+
+
+## Sinais da crise para Burrows (2005)
+
+- Indústria geodemográfica
+\newline
+- Agregados de bases de dados -> mapas socio-espaciais
+\newline
+- Uso da retórica do discurso sociológico + sofisiticação
+\newline
+- Inovações em dados e no uso das informações
+
+
+## Sinais da crise no "setor cultural"
+
+- Parecia haver um déficit na pesquisa cultural;
+\newline
+- Há, na realidade, muita pesquisa mas que independe da academia;
+\newline
+- Fazem pesquisas adequadas às suas necessidades: produtiva e "efetiva"
+
+
+## Comparações históricas
+
+- Capitalismo do conhecimento;
+\newline
+- Conhecimento aplicado X conhecimento internamente validado;
+\newline
+- Habilidade prática para diagnosticar problemas (ABBOTT);
+\newline
+- 40 anos atrás: survey e estudos em comunidades.
+
+## Ideia central
+
+> "É a relevâncias das tecnologias de pesquisa empírica para a sociedade que torna a sociologia um campo de pesquisas importante socialmente"
+
+## Manifestações da crise: métodos quantitativos
+
+- Survey e inferência estatística formam a base da sociologia científica;
+\newline
+- Survey possui uma história e enfrenta problemas:
+
+1. Altas taxas de não-resposta;
+2. Fronteiras nacionais;
+3. Proliferação de surveys comerciais...
+\newline
+
+"A irrelevância social (dos métodos) da sociologia"
+
+## Manifestações da crise: métodos quantitativos
+
+- Survey *versus* Observação em massa
+\newline
+- Por que o survey venceu?
+\newline
+
+"demonstrou a efetividade de sua tecnologia a poderosos grupos de interesses (stakeholders)"
+
+## Manifestações da crise: métodos quantitativos
+
+- Dias atuais (2007): dados do survey *versus* dados transacionais;
+\newline
+- Amazon e o "cartão da loja": bypass do princípio da inferência;
+\newline
+- Localização espacial e residência: proxy de informações sociológicas;
+
+## Manifestações da crise: métodos quantitativos
+
+![O survey vai sobreviver?](images/bender-crying.jpg){width=250px}
+
+
+## Manifestações da crise: métodos qualitativos
+
+- A entrevista em profundidade;
+\newline
+- Diferenças nacionais e "banalização" do uso;
+\newline
+- Qual a relevância da entrevista em profundidade em captar as visões de mundo nos dias atuais?
+
+## Repensando os repertórios da Sociologia Empírica
+
+- "Não invocarás a sofisticação...";
+\newline
+- A sociologia abandonou a pesquisa empírica;
+\newline
+- **Políticas dos métodos**: renovação, inovação, combinação;
+\newline
+- Mistura radical com reflexão crítica renovada;
+\newline
+- causalidade e análise -> descrição e classificação;
+\newline
+- "descer do pedestal", usar dados digitais.
+
+## After the crisis? Big Data and the methodological challenges of empirical sociology
+
+- Artigo de 2014
+
+- Citado por 214
+
+- Comentários ao artigo anterior incorporando o debate sobre "big data"
+
+## Retomanda do argumento
+
+- Sociologia com preocupações esotéricas, internalistas, auto-referidas;
+\newline
+- A época gloriosa da sociologia passou;
+\newline
+- Proliferação de pesquisa social para além da sociologia;
+\newline
+- Sociologia comercial; 
+\newline
+- Métodos discretos (não-invasivos) de coleta de dados;
+\newline
+- Produção massiva de dados digitais (prosumption).
+
+## Um mundo de dados sem sociólogo
+
+- "sociólogos profissionais.. não são as únicas pessoas que investigam, analisam, teorizam e dão voz... aos fenêmenos de um ponto de vista 'social'"
+\newline
+- "outros atores às vezes produzem melhor sociologia do que... sociólogos"
+
+Osborne et al. (2008)
+
+## Ciências dos dados, uma ciência social?
+
+- métodos sociológicos baseiam-se em relatos de ações: relatos discursivos de ações;
+\newline
+- O problema da coleta de dados basedas na evocação (dados ad hoc);
+
+## Dados digitais, dados sociológicos?
+
+- "novos dados capazes de rastrear, localizar, registrar e sentir nossas interações"
+\newline
+- necessidade de re-descrição das explicações e entendimento sociológicos
+\newline
+- repensar o poder descritivo para revigorar a imaginação sociológica
+## 
+
+Obrigado!

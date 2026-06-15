@@ -1,0 +1,169 @@
+---
+title: "Personalidade e Socialização"
+author: "Leonardo F. Nascimento"
+date: "19/04/2021"
+output:
+  beamer_presentation: default
+subtitle: ICTIA067 - Estudos em Contemporaneidade - I
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Personalidade e socialização
+
+> Sob certos aspectos, cada homem é:
+<br>
+
+>a) Como todos os outros homens.
+<br>
+
+>b) Como alguns outros homens.
+<br>
+
+>c) Como nenhum outro homem.
+
+
+
+>(Clyde Kluckhohn e Henry A. Murray
+(orgs.). Personality in Nature, Society
+and Culture. Nova York, Alfred A.
+Knopf, 1949. p. 35.)
+
+## Fatores no desenvolvimento da personalidade
+
+>Os fatores no desenvolvimento da personalidade são: (l) herança biológica, (2) ambiente físico, (3) cultura, (4) experiência de grupo e (5) experiência única
+
+## Herança biológica e personalidade
+
+> Uma casa de tijolos não pode ser construída com pedras ou bambus; mas de uma pilha de tijolos pode ser construída una grande variedade de casas. A herança biológica proporciona as matérias-primas da personalidade, e estas matérias-primas podem ser moldadas de muitas maneiras diferentes.
+
+## Ambiente físico e personalidade
+
+>Em qualquer espécie de clima pode-se encontrar qualquer tipo de personalidade.
+
+## Cultura e personalidade
+
+>Algumas experiências são comuns a todas as culturas.
+<br>
+
+>Personalidade “modal”
+<br>
+
+## O dobuano ansioso x Os cooperativos Zuñi
+
+>“Cada sociedade desenvolve um ou mais tipos básicos de personalidade que se ajustam à cultura. Os dobuanos não treinam consciente ou intencionalmente os filhos para serem hostis e desconfiados; mas a atmosfera de traição e medo constantes produz este resultado. Cada cultura, sendo simplesmente o que é, molda a personalidade que se ajusta a ela.”(p.75)
+<br>
+
+## Normas da cultura
+
+> A partir do momento em que nasce, a criança é tratada de certas maneiras que moldam a personalidade. Cada cultura propicia um conjunto de influências gerais que variam infindavelmente de uma sociedade para outra. (p.75)
+<br>
+
+## Normas da cultura
+
+>“...é a atmosfera total e não uma prática específica que tem importância no desenvolvimento da personalidade. Importa menos saber se a criança é amamentada no peito ou na mamadeira; o importante é verificar se esta alimentação é um momento afetuoso de carinho, em um mundo aconchegante e seguro, ou um incidente apressado, casual, em um ambiente impessoal, destituído de sentimentos e de envolvimento. (p.75-76)
+<br>
+
+## Tipos de personalidade cultural
+
+> Parece inevitável um relacionamento íntimo entre personalidade e cultura, porque, em certo sentido, ambas são dois aspectos da mesma coisa. (p.76)
+<br>
+
+## Tipos de personalidade cultural
+
+>“Em uma sociedade estável, bem integrada, a personalidade é um aspecto individual da cultura, ao passo que a cultura é um aspecto coletivo da personalidade.” Spiro [1951] (p.76)
+<br>
+
+## Personalidade modal e subculturas
+
+>“não podemos descrever a personalidade normal[modal] (...) sem primeiramente fazer referência à subcultura que temos em mente” (p.76)
+<br>
+
+## Personalidade modal e subculturas
+
+>Cada sociedade e cada grupo social permite um certo grau de desvio em relação à personalidade modal. Quando este desvio vai além do que o grupo ou a sociedade consideram “normal”, então a pessoa é considerada “desviante”.
+<br>
+
+## Socialização e o eu
+
+>Quando a vida de uma pessoa começa não existe eu...
+
+<br>
+
+>“socialização é o processo pelo qual uma pessoa internaliza as normas dos grupos em que vive, de modo que surja um ‘eu’ distinto, único para um dado indivíduo” (p.77)
+
+
+<br>
+
+>Sem a experiência grupal a personalidade humana não se desenvolve...
+<br>
+
+## Cooley e o eu do espelho
+
+>O conceito do eu é desenvolvido por meio de um processo gradual e complexo que continua a vida toda. O conceito é uma imagem que a pessoa forma somente com o auxílio de outras. (p.78)
+
+## Cooley e o eu do espelho
+
+
+>A auto-imagem de uma pessoa não precisa ter relação com fatos objetivos. (p.78)
+
+## Cooley e o eu do espelho
+
+>...é nossa percepção das respostas dos outros e não suas respostas reais que molda nossa autoimagem, e tais percepções com frequência são inexatas.
+
+
+## Mead e o “outro generalizado”
+
+- O ‘outro generalizado’ é o conjunto das expectativas que uma pessoa acredita que os outros tenham a seu respeito. (p. 79)
+
+
+- “os outros significantes”: são as pessoas que exercem grande influência nas atitudes dos indivíduos...
+
+
+## Freud e o eu anti-social
+
+- Reinvindicações pulsionais do indivíduo X possibilidade sociais limitadas de satisfação
+
+- Consciente x Inconsciente 
+
+- Id(Isso), ego (Eu) e supergo (Supereu)
+
+- maniras de representação da personalidade e não entidades reais 
+
+
+## Grupos múltiplos e socialização
+
+- "Eu não sou nem sou outro, sou qualquer coisa de *intermezzo*" (Mário de Sá-Carneiro)
+
+## Grupos múltiplos e socialização
+
+> "Em uma sociedade complexa, a experiência de grupo de uma pessoa nem sempre é congruente e harmoniosa" (p.80)
+
+
+- Múltiplos "eus", múltiplos papéis...
+
+- auto-imagem: "ver é comportar-se. Comportamo-nos da maneira que nos vemos" (p.82)
+
+
+## Experiência única e personalidade
+
+> "Por que é que crianças criadas na mesma família são tão diferentes entre si, apesar de terem as mesmas experiências? Elas não tiveram as mesmas experiências, ou melhor, ·tiveram experiências sociais semelhantes sob certos aspectos e diferentes em outros. (p.82)
+
+## Experiência única e personalidade
+
+- A experiência de cada pessoa é única porque nenhuma outra consegue duplicá-la perfeitamente.
+
+
+- as experiências não se somam meramente umas às outras, elas se integram
+
+
+- O significado e o impacto de uma experiênCia dependem das outras experiências que a precederam (e influenciam as subsequentes...) 
+
+
+- "Dilema" da parte e do todo na integração das experiências vividas...
+
+## Dinâmica do eu
+
+- O papel central da (construção, desconstrução e reconstrução) da auto-imagem

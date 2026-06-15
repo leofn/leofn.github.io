@@ -1,0 +1,482 @@
+---
+format: 
+  revealjs:
+    logo: "images/logo.png"
+    width: 1600
+    height: 900
+    self-contained: false
+    incremental: false
+    footer: "Slides by [Leonardo F. Nascimento](https://leofn.com) (@leofn3). Code available [on GitHub](https://github.com/leofn/ipea_telegram_2025)"
+    theme: ["simple"]
+    slide-number: c/t
+    title-slide-attributes:
+      data-background-image: background-iframe="colored-particles/index.html"
+      data-background-size: cover
+    show-slide-number: all
+    hash-type: number
+    preview-links: false
+    preload-iframes: true
+---
+
+# {background-iframe="colored-particles/index.html"}
+
+<div style="text-align: center; font-size: 85px;"> <strong>Ecossistema multiplataforma de desinformação e radicalização: o caso do Telegram no Brasil (2020-2025)</strong> </div>
+<div style="text-align: center; font-size: 40px;"> <strong>Leonardo F. Nascimento - Bolsista IPEA  - Edital 30/2024</strong> </div>
+<div style="text-align: center; font-size: 40px; margin-bottom: 0;"> 26/03/2025 </div>
+
+<div style="text-align: center; margin-top: -10px;">
+  <img src="images/qrcode.png" width="275" height="300" />
+</div>
+
+
+
+## 
+
+<div style="text-align: center; font-size: 55px;"> <strong>O LABORATÓRIO DE HUMANIDADES DIGITAIS DA UFBA</strong> </div>
+<br>
+
+::: columns
+::: {.column width="60%"}
+
+-  Surge em 2018 em associação com o Programa de Pós-Graduação em Ciências Sociais (PPGCS) da UFBA
+
+-   Tem como missão promover pesquisa e ensino entre as humanidades e o campo ciência de dados
+
+-   Contatos:  
+
+    - [Email](mailto:labhdufba@gmail.com) 
+    - [Website](https://labhd.ufba.br) 
+    - [Twitter](https://twitter.com/labhdufba) 
+    - [Canal do Telegram](https://t.me/labhdufba_labhdufrj) 
+    - [Bluesky](https://bsky.app/profile/labhdufba.bsky.social)
+
+
+:::
+::: {.column width="40%"}
+![](images/logo.png)
+:::
+:::
+
+##
+
+<div style="text-align: center; font-size: 55px;"> <strong>Desde 2021 eu investigo grupos e canais extremistas do Telegram</strong> </div>
+<br>
+
+::: columns
+::: {.column width="65%"}
+
+
+- Em parceria com PPGAS/UFSC (Profa. Letícia Cesarino) e apoio do InternetLab e CNPq;
+<br><br>
+
+- \+ de 70 milhões de mensagens;
+<br><br>
+
+- \+ 3.5 milhões de imagens e \+ de 900 mil vídeos;
+<br><br>
+
+- \+ de 3 milhões de links do Youtube;
+<br><br>
+
+- \+ 30 Terabytes de dados.
+
+:::
+::: {.column width="35%"}
+
+![](images/telegram.webp)
+
+:::
+:::
+
+
+##
+
+<div style="text-align: center; font-size: 55px;"> <strong>Aliança entre raciocínio computacional com a compreensão interpretativa das ciências sociais</strong> </div>
+<br><br>
+
+::: columns
+::: {.column width="60%"}
+::: {.incremental}
+
+- **Ciência de dados com ciências sociais**
+<br><br>
+
+- **Rastreabilidade** total dos conteúdos 
+<br><br>
+
+- Detecção de **"talkatives"** e porta-vozes
+<br><br>
+
+- **Fine-tunning de modelos de NLP**: NER, Topic Modeling, Clustering e detecção automatizada de violência online, como [racismo](https://huggingface.co/leofn3/modelo_racismo_setfit_5jan24), misoginia e anti-semitismo.
+<br><br>
+
+- Telegram enquanto **espaço de experimentações**
+
+:::
+:::
+::: {.column width="40%"}
+
+::: {style="font-size: 80%;"}
+::: {.incremental}
+
+
+- [Públicos refratados: grupos de extrema-direita brasileiros na plataforma Telegram](https://revista.internetlab.org.br/wp-content/uploads/2023/01/publicos.pdf)
+____
+- [Demarcating patriotic science on digital platforms: Covid-19, chloroquine and the institutionalisation of ignorance in Brazil](https://www.tandfonline.com/doi/abs/10.1080/09505431.2022.2105691)
+____
+- [“Intankaveis contra o Bostil”: racismo, misoginia e anti-semitismo em chats do Telegram (2020-2023) - em Breve!](https://periodicosnic.emnuvens.com.br/revista/index)
+
+:::
+:::
+:::
+:::
+
+
+## Ecossistema multiplataforma de desinformação e radicalização
+
+<br><br>
+
+::: columns
+::: {.column width="40%"}
+<br>
+<div style="text-align: justify"> A utilização **sistemática e estratégica** de ferramentas, tecnologias e serviços que permitem a criação e disseminação de desinformação e incitação à radicalização política em **diferentes plataformas**, como redes sociais, sites de notícias e aplicativos de mensagens. </div>
+
+
+::: 
+::: {.column width="60%"}
+
+![](images/DALL.webp){fig-align="center"}
+
+:::
+:::
+
+
+#
+
+<div style="text-align: center; font-size: 55px;"> <strong>QUAIS SÃO OS DESAFIOS?</strong> </div>
+<br><br>
+
+::: {.incremental}
+
+- Acesso aos dados
+<br><br>
+
+- Complexidade metodológica
+<br><br>
+
+- Recursos computacionais
+
+:::
+
+# 
+
+<div style="text-align: center; font-size: 55px;"> <strong>ACESSO AOS DADOS</strong> </div>
+<br>
+
+::: {.incremental}
+
+- **Política de acesso aos dados digitais** de todas as plataformas
+<br><br>
+
+- **"Sem API não há solução!"**
+<br><br>
+
+- Plataforma pública e auditável de **armazenamento** de conteúdos
+<br><br>
+
+- Pensar os **dados digitais enquanto memória social**
+<br><br>
+
+:::
+
+# 
+
+<div style="text-align: center; font-size: 55px;"> <strong>COMPLEXIDADE METODOLÓGICA</strong> </div>
+<br>
+
+::: {.incremental}
+
+- Dados digitais contituem um **"objeto epistêmico complexo"** [Aradau & Blanke, 2015](http://dx.doi.org/10.1177/2053951715609066)
+<br><br>
+
+- **Estratégia penelopeana de desinformação e radicalização**
+<br><br>
+
+- Coleta de dados em tempo real: a **vigilância-como-método**
+<br><br>
+
+- Necessidade de **atualização do Sistema CEP/Conep** diante das pesquisas com dados digitais 
+<br><br>
+
+- Esboçar, de modo inequívoco, a **relação dos dados coletados de plataformas digitais com a LGPD** 
+
+:::
+
+# 
+
+<div style="text-align: center; font-size: 55px;"> <strong>Acesso a recursos computacionais</strong> </div>
+<br>
+
+::: {.incremental}
+
+- **Necessidade de uma divisão igualitária de recursos com a região norte-nordeste**;
+<br><br>
+
+- **Estrutura pública de servidores (VMs) e armazenamento (S3)** ou "cotas" em nuvens federadas; 
+<br><br>
+
+- Acesso a **créditos para uso de APIs de IA generativa e a modelos avançados de processamento de linguagem natural**.  
+<br><br>
+
+:::
+
+
+##
+
+<div style="text-align: center; font-size: 55px;"> <strong>A partir de 2025 vamos investigar a desinformação em saúde</strong> </div>
+<br>
+
+::: columns
+::: {.column width="65%"}
+::: {.incremental}
+
+- Em parceria com o Programa Integrado em Economia, Tecnologia e Inovação em Saúde (PECS/ISC/UFBA) e apoio do CNPq.
+<br><br>
+
+- Coletar e analisar dados de redes sociais, sites de notícias e aplicativos de mensagens;
+<br><br>
+
+- Implantação de aplicações de IA para classificação automática de conteúdos multimodais.;
+<br><br>
+
+- Painel de detecção de conteúdos em tempo real.
+
+:::
+:::
+::: {.column width="35%"}
+
+![](images/pecs.png)
+
+:::
+:::
+
+# 
+
+<div style="text-align: center; font-size: 55px;"> <strong>Resultados preliminares</strong> </div>
+<br>
+
+
+# 
+
+<div style="text-align: center; font-size: 50px;"> <strong>Uso de Knowledge graphs (KGs)/redes semânticas para análise de polarização política em momentos extremos</strong> </div>
+<br>
+
+::: columns
+::: {.column width="50%"}
+::: {.incremental}
+
+- **Servem para a compreensão contextualizada de dados, especialmente em contextos de grandes volumes de informações heterogêneas**;
+<br><br>
+
+- **Em contexto políticos os KG ajudam a conectar conceitos possibilitando análises sobre as dinâmicas de narrativas (OSMONOVA; TIKHONOV; YAMSHCHIKOV, 2024)**;
+<br><br>
+
+:::
+:::
+::: {.column width="50%"}
+
+![](images/kg1.png)
+
+:::
+:::
+
+##
+
+<div style="text-align: center; font-size: 55px;"> <strong>Uso de Knowledge graphs (KGs)/redes semânticas para análise de polarização política em momentos extremos</strong> </div>
+<br>
+
+::: {.incremental}
+
+- **945k de mensagens de 01/01/2023 a 10/01/2023 em 207 grupos e 268 canais do Telegram**.  
+<br><br>
+
+- **Amostra de 7610 mensagens (5825 de grupos e 1785 de canais) que continham os termos “forças armadas” ou “militares”**; 
+<br><br>
+
+- **Utilizamos o LLMGraphTransformer + gpt-4o-mini para: identificar entidades, relações, tipos de nós e conexões e extração de propriedades**.
+<br><br>
+
+:::
+
+## 
+
+<!-- Inserindo o iframe corretamente -->
+<iframe src="./html/grafo_interativo.html" style="width: 300vw; height: 500vh; border: none;"></iframe>
+
+##
+
+<div style="text-align: center; font-size: 55px;"> <strong>Uso de Knowledge graphs (KGs)/redes semânticas para análise de polarização política em momentos extremos</strong> </div>
+<br>
+
+::: {.incremental}
+
+- **Em seguida, usamos os mesmos dados na plataforma [InfraNodus](https://infranodus.com/), apenas para acelerar o processo de visualização**;  
+<br><br>
+
+- **KG resultante apresenta quatro grandes narrativas ou (clusters) principais: a) intervenção militar; b) força nacional; c) Brasil popular e d) governo Bolsonaro**; 
+<br><br>
+
+- **Resultados são valiosos em cenários mutáveis em que precisamos entender os impacto de narrativas políticas no comportamento social (JUNGHERR, 2015).**.
+<br><br>
+:::
+
+## 
+
+<div style="text-align: center; font-size: 30px;"> <strong>Knowledge Graph de mensagens com os termos “forças armadas” ou “militares” (01/01/2023 - 00:00h a 10/01/2023 - 23:59h)</strong> </div>
+
+<br>
+
+![](images/infranodus1.svg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Intervenção Militar: expressa o papel dos militares e as demandas por intervenção</strong> </div> 
+
+
+![](images/infranodus2.svg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Governo Bolsonaro: inclui debates sobre dinâmicas políticas, críticas ao ex-presidente Lula e discursos sobre a legitimidade do novo governo</strong> </div> 
+
+
+![](images/infranodus5.svg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Força Nacional: refere-se à atuação da Força Nacional, explorando questões relacionadas à segurança pública para garantir a ordem no dia 08 de Janeiro</strong> </div> 
+
+
+![](images/infranodus4.svg){fig-align="center"}
+
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong> Brasil Popular: narrativas voltadas para a população brasileira, com um discurso mais emocional para a mobilização popular unida em torno de valores nacionais e religiosos</strong> </div> 
+
+
+![](images/infranodus3.svg){fig-align="center"}
+
+# 
+
+<div style="text-align: center; font-size: 55px;"> <strong>Clusterizar imagens de grupos masculinistas do Telegram</strong> </div>
+<br>
+
+::: {.incremental}
+
+- **22k de imagens de 10 grupos masculinistas postadas do surgimento até dezembro de 2024 **;
+<br><br>
+
+- **Aplicação do modelo CLIP (Contrastive Language-Image Pretraining), desenvolvido pela OpenAI**; 
+<br><br>
+
+- **Entender formas imagéticas de violência, mais difíceis de detecção automatizada**.  
+<br><br>
+
+:::
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 01</strong> </div> 
+
+
+![](images/mosaico_cluster_7.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 02</strong> </div> 
+
+
+![](images/mosaico_cluster_10.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 03</strong> </div> 
+
+
+![](images/mosaico_cluster_11.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 04</strong> </div> 
+
+
+![](images/mosaico_cluster_15.jpg){fig-align="center"}
+
+
+# 
+
+<div style="text-align: center; font-size: 55px;"> <strong>Clusterização de imagens de grupos anti-vacina em grupos do Telegram</strong> </div>
+<br>
+
+::: {.incremental}
+
+- **Amostra de 10k de imagens de 7 grupos anti-vacina de jan/dez de 2024**;
+<br><br>
+
+- **Aplicação do modelo CLIP (Contrastive Language-Image Pretraining), desenvolvido pela OpenAI**; 
+<br><br>
+
+- **Semântica Rica, Zero-Shot Learning e Escalabilidade**.  
+<br><br>
+
+:::
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Frequência mensal de postagens das imagens nos grupos analisados </strong> </div> 
+
+
+![](images/antivax-tsvb.png){fig-align="center"}
+
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 0</strong> </div> 
+
+
+![](images/mosaico_cluster_0.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 11</strong> </div> 
+
+
+![](images/mosaico_cluster_111.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 6</strong> </div> 
+
+
+![](images/mosaico_cluster_66.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 7</strong> </div> 
+
+
+![](images/mosaico_cluster_77.jpg){fig-align="center"}
+
+#
+
+<div style="text-align: center; font-size: 30px;"> <strong>Cluster 2</strong> </div> 
+
+
+![](images/mosaico_cluster_2.jpg){fig-align="center"}
+
+
+# {background-iframe="colored-particles/index.html"}
+
+<br>
+<div style="text-align: center; font-size: 200px;"> <strong>Obrigado!</strong> </div>

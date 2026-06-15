@@ -1,0 +1,312 @@
+---
+title: "_"  
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: ["css/default.css", "css/mmp.css" , "css/mmp-fonts.css"]
+    lib_dir: libs
+    nature:
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
+---
+layout: true
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(
+	echo = FALSE,
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE
+)
+```
+
+```{r eval=FALSE, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(widgetframe)
+```
+
+---
+class: inverse, middle, center  
+
+```{r, out.width="40%"}
+knitr::include_graphics("img/logo_MA_color.png")
+```
+
+## Laboratório de Humanidades Digitais da UFBA
+
+**Twitter**: [@labhdufba](https://twitter.com/labhdufba) 
+<br>
+**Instagram**: [@labhdufba](http://instagram.com/labhdufba)
+<br>
+**Github**: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+<br>
+**Youtube**: [https://www.youtube.com/c/LABHDUFBA](https://www.youtube.com/c/LABHDUFBA)
+
+---
+class: inverse, center, middle
+
+--
+## Há ou não uma experiência social (do digital) característica das sociedade contemporâneas?
+<br>
+
+--
+## Como esta experiência pôde se constituir?
+<br>
+
+--
+## De que forma esta experiência pode se tornar um objeto de investigação das ciências sociais?
+<br>
+
+
+---
+class: inverse, center, middle
+
+# Aspectos gerais das sociedades contemporâneas...
+
+---
+class: inverse, middle, center
+
+## "Digitalização do eu na vida cotidiana" (Nascimento, 2020)
+
+```{r, out.width="80%"}
+knitr::include_graphics("img/ds.jpeg")
+```
+---
+class: inverse, center, middle
+
+## Algoritmização de processos sociais
+
+```{r, out.width="60%"}
+knitr::include_graphics("img/matrix-digital-self.png")
+```
+
+---
+class: inverse, center, middle
+
+## Traços digitais (Howison et al. 2011, p. 769)
+
+
+```{r, out.width="75%"}
+knitr::include_graphics("img/socioloy.png")
+```
+
+---
+class: inverse, center, middle
+
+## Dataficação (Cukier & Mayer-Schoenberger, 2013)
+
+```{r, out.width="75%"}
+knitr::include_graphics("img/datafication4.jpg")
+```
+
+---
+class: inverse, center, middle
+
+## Cultura de vigilância (Lyon, 2018)
+
+
+```{r, out.width="65%"}
+knitr::include_graphics("img/surv.jpg")
+```
+
+---
+class: inverse, center, middle
+
+# Qual o papel da sociologia em um mundo digital de dados continuamente produzidos?
+
+```{r, out.width="80%"}
+knitr::include_graphics("https://media.giphy.com/media/pOEbLRT4SwD35IELiQ/giphy.gif?cid=ecf05e475vot0dyqf7ocbyf43eh75omn2pjcymz4m65rzbf4&rid=giphy.gif&ct=g")
+```
+---
+class: inverse, middle, center
+
+# Nunca tivemos tantos dados, ferramentas, técnicas... 
+
+```{r, out.width="85%"}
+knitr::include_graphics("https://media.giphy.com/media/YnlDGfCxyOIYTDp86I/giphy.gif")
+```
+
+---
+class: inverse, middle, center
+
+# Apesar disso, nossos problemas NÃO acabaram! 
+
+```{r, out.width="70%"}
+knitr::include_graphics("https://media.giphy.com/media/H0kxiS2RJF2HC/giphy.gif")
+```
+---
+class: inverse, center, middle
+
+## "O fato contundente é que a sociologia está lamentavelmente despreparada para lidar com esse problema: não temos nem as ferramentas analíticas nem a imaginação conceitual necessária." 
+<br>
+### (Reflections on the Future of Sociology, Andrew Abbott, 2000, p. 298, tradução nossa)
+
+
+---
+class: inverse, center, middle
+
+# Três grandes eixos de desafios:
+
+---
+class: inverse, middle, center
+
+--
+## 1. fontes digitais da pesquisa
+<br>
+
+--
+## 2. métodos e técnicas digitais
+<br>
+
+--
+## 3. vigilância epistemológica das pesquisas em meios digitais
+<br>
+
+---
+class: inverse, middle, center
+# 1. Desafios das fontes da pesquisa
+
+--
+## publicidade/acessibilidade
+<br>
+
+--
+## Evocação versus coleta (*repurpose* - Salganik, 2020)
+<br>
+
+--
+## representatividade
+<br>
+
+--
+## pré-construção	algorítimica
+<br>
+
+--
+## capacidade computacional
+<br>
+
+---
+class: inverse, middle, center
+# 2. Desafios das técnicas e métodos
+<br>
+
+--
+## Letramento digital 
+<br>
+
+--
+## pré-construção	algorítimica das ferramentas ("black-box")
+<br>
+
+--
+## Articulação analógico e digital
+<br>
+
+--
+## Superação da suposta oposição quali-quanti
+<br>
+
+---
+class: inverse, middle, center
+# 3. vigilância epistemológica das pesquisas em meios digitais
+<br>
+
+--
+## Visibilidade: dados abertos, códigos abertos, ferramentas abertas;
+<br>
+
+--
+## Resistir ao fascínio da objetividade e ao poder da evidência visual (Bernhard Rieder and Theo Röhle, 2012);
+<br>
+
+--
+## Desconstruir fetichismos: dos dados, dos métodos e dos resultados
+
+---
+class: inverse, middle, center
+
+--
+# Sociologia digital: quo vadis?
+<br>
+
+--
+### Utilidade;
+<br>
+
+--
+### Aprendizado; 
+<br>
+
+--
+### Aperfeiçoamento;
+<br>
+
+--
+### Diversificação;
+<br>
+
+--
+### "Artesanato digital"
+<br>
+
+---
+class: inverse, middle, center
+
+### Referências bibliográficas
+
+> ABBOTT, A. Reflections on the Future of Sociology. Contemporary Sociology,
+New York, v. 29, n. 2, p. 296, 2000
+
+> [HOWISON, J.; WIGGINS, A.; CROWSTON, K. Validity Issues in the Use of Social Network Analysis with Digital Trace Data. Journal of the Association for Information Systems, v. 12, n. 12, 29 dez. 2011.](http://aisel.aisnet.org/jais/vol12/iss12/2)
+
+> LYON, David. Cultura da vigilância: envolvimento, exposição e ética na modernidade digital. Em:
+Bruno, Fernanda et al. (orgs) Tecnopolítica da vigilância: perspectivas da margem. São Paulo:
+Boitempo, p.151-179, 2018.
+
+> MAYER-SCHÖNBERGER, V.; CUKIER, K. Big Data: A Revolution that Will Transform how We Live, Work, and Think. London: John Murray Publishers, 2013. 
+
+> [NASCIMENTO, L. F. Sociologia digital: uma breve introdução. Salvador: EDUFBA, 2020](https://repositorio.ufba.br/ri/handle/ri/32746) 
+
+> RIEDER & RÖHLE. “Digital methods: Five challenges.” Understanding digital humanities. In: BERRY, David-Understanding Digital HumanitiesPalgrave Macmillan UK, 2012. (Cápitulo 4, pp. 67-84.
+
+> SALGANIK, M. J. Bit by Bit: Social Research in the Digital Age. [s.l.] Princeton University Press, 2019. 
+
+---
+class: inverse, middle, center
+
+# Obrigado!
+<br>
+<br>
+
+.pull-left[
+### Agradecimentos especiais:
+<br>
+### Prof. Dr. Jacob Carlos Lima pelo convite!
+<br>
+]
+.pull-right[
+### Contatos:
+
+[leofn3@gmail.com](mailto:leofn3@gmail.com)
+
+[Twitter: @leofn3](https://twitter.com/leofn3)
+
+]
+
+---
+class: middle, center
+
+```{r, out.width="1800px"}
+knitr::include_graphics("img/slide_02.png")
+```
+

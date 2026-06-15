@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to Computational Social Science: concepts, tools and challenges</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Leonardo Nascimento (PPGCS/ICTI/LABHD/UFBA)" />
+    <meta name="date" content="2023-01-25" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# <strong>Introduction to Computational Social Science: concepts, tools and challenges</strong>
+]
+.subtitle[
+## <strong>Programa de Pós-Graduação em Sociologia UnB - SOL</strong>
+]
+.author[
+### Leonardo Nascimento (PPGCS/ICTI/LABHD/UFBA)
+]
+.date[
+### 2023-01-25
+]
+
+---
+
+layout: true
+
+
+
+
+
+---
+class: middle, center  
+
+# Apresentações!😃 🙋️
+
+---
+class: middle, center  
+
+# Leonardo F. Nascimento
+
+&lt;img src="img/logos_bia.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+## 15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
+&lt;br&gt;
+
+### [Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
+
+### [Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
+
+### [website: **www.leofn.com**](http://www.leofn.com)
+
+---
+class: middle, center  
+
+&lt;img src="img/labhd.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+## Laboratório de Humanidades Digitais da UFBA
+
+**Twitter**: [@labhdufba](https://twitter.com/labhdufba) 
+&lt;br&gt;
+**Instagram**: [@labhdufba](http://instagram.com/labhdufba)
+&lt;br&gt;
+**Github**: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+&lt;br&gt;
+**Youtube**: [https://www.youtube.com/c/LABHDUFBA](https://www.youtube.com/c/LABHDUFBA)
+
+---
+class: middle, center
+
+# Pesquisa atual
+--
+
+&lt;img src="img/telegram-2.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+### + info [clique](https://internetlab.org.br/pt/noticias/analisando-os-ecossistemas-de-desinformacao-politica-no-telegram-durante-o-periodo-eleitoral/) 
+
+---
+class: middle, center
+
+# Financiamento
+
+.pull-left[
+&lt;img src="img/cnpq.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+&lt;img src="img/internetlab.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: inverse, center, middle
+
+# Objetivo do encontro
+
+---
+class: center, middle
+
+# Apresentar um panorama da Ciência Social Computacional (CSC) e sua relação com a Sociologia/Antropologia/História/Humanidades Digitais, enfatizando conceitos, ferramentas e desafios!
+
+---
+class: inverse, middle, center
+
+# Desafios
+
+&lt;img src="https://media.giphy.com/media/MJgPOGVdwyOaxu0R3L/giphy.gif" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center, middle
+
+# De onde vem os atuais desafios? 
+&lt;br&gt;
+
+--
+## 1) "Digitalização do eu na vida cotidiana" (Nascimento, 2020);
+&lt;br&gt;
+
+--
+## 2) Efeitos da "digitalização" sobre a produção de conhecimento nas Humanidades.
+
+---
+class: inverse, middle, center
+
+## 1) "Digitalização do eu na vida cotidiana" (Nascimento, 2020)
+
+&lt;img src="img/ds.jpeg" width="80%" style="display: block; margin: auto;" /&gt;
+---
+class: inverse, center, middle
+
+## Algoritmização de processos sociais
+
+&lt;img src="img/matrix-digital-self.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+## Traços digitais (Howison et al. 2011, p. 769)
+
+
+&lt;img src="img/socioloy.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+## Dataficação (Cukier &amp; Mayer-Schoenberger, 2013)
+
+&lt;img src="img/datafication4.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+## Cultura de vigilância (Lyon, 2018)
+
+
+&lt;img src="img/surv.jpg" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, middle, center
+
+# 2) Efeitos da "digitalização" sobre a produção de conhecimento nas Humanidades.
+
+---
+class: middle, center
+
+.pull-left[
+
+## ABBOTT, 2000
+
+&lt;img src="img/abbott.png" width="110%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://doi.org/10.2307/2654383)
+]
+.pull-right[
+## Savage &amp; Burrows, 2007
+
+&lt;img src="img/savage.png" width="110%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://journals.sagepub.com/doi/10.1177/0038038507080443)
+]
+
+---
+class: middle, center
+
+# [Reflections on the Future of Sociology - 2000](https://doi.org/10.2307/2654383)
+&lt;br&gt;
+
+--
+### "+ comportamentos conduzidos eletronicamente" e "+ dados em tempo contínuo e em nível populacional" 
+&lt;br&gt;
+
+--
+### **"...sociologia está lamentavelmente despreparada para lidar com esse problema: não temos nem as ferramentas analíticas nem a imaginação conceitual necessária"**
+&lt;br&gt;
+
+--
+### "temos demasiados teóricos que não fazem nada além de pensar sobre a teoria anteriormente produzida. [...] Importantes teorias sociais sempre crescem a partir de um extenso trabalho empírico"
+&lt;br&gt;
+
+---
+class: inverse, middle, center
+
+# "A Sociologia precisa de uma nova e grande idéia teórica" (ABBOTT, 2000, p. 299)
+
+---
+class: middle, center
+
+# [The Coming Crisis of Empirical Sociology - 2007](https://journals.sagepub.com/doi/abs/10.1177/0038038507080443)
+&lt;br&gt;
+
+--
+### Um dos artigo mais citados da sociologia (1411 citações em 2023!) 
+&lt;br&gt;
+
+--
+### Aborda as mudanças no significado da pesquisa empírica e nos repertórios metodológicos da sociologia
+&lt;br&gt;
+
+--
+### Ideia central: "É a relevância das tecnologias de pesquisa empírica para a sociedade que torna a sociologia um campo de pesquisas importante socialmente"
+
+
+---
+class: middle, center
+
+.pull-left[
+## Wynn, 2009
+
+&lt;img src="img/wynn.png" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://doi.org/10.1111/j.1573-7861.2009.01109.x)
+
+]
+.pull-right[
+
+## Conte, Gilbert, Bonelli et al, 2012
+ 
+&lt;img src="img/manifesto.png" width="110%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://link.springer.com/article/10.1140/epjst/e2012-01697-8)
+]
+
+---
+class: inverse, middle, center
+
+# "A crescente integração da tecnologia em nossas vidas criou volumes sem precedentes de dados que a abrem novas oportunidades em direção a um entendimento quantitativo dos sistemas sociais" (Conte, Gilbert, Bonelli et al, 2012)
+
+---
+class: middle, center
+
+.pull-left[
+
+## HORST &amp; MILLER, 2012
+
+&lt;img src="img/antro.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://www.amazon.ca/Digital-Anthropology-Heather-Horst/dp/0857852906)
+
+]
+.pull-right[
+
+## JUNGHERR, 2015
+
+&lt;img src="img/jungherr.webp" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://link.springer.com/book/10.1007/978-3-319-20319-5)
+]
+
+---
+class: inverse, middle, center
+
+# "a própria idéia de 'cultura' ou 'sociedade' não pode ser plenamente compreendida sem o reconhecimento de que os dispositivos de software e hardware constituem ativamente a individualidade, a corporeidade, a vida social, as relações sociais e as instituições" (HORST &amp; MILLER, 2012)
+
+---
+class: inverse, middle, center
+
+# Apesar de todas as diferenças, ciências sociais computacionais, métodos digitais e big data compartilham uma convicção subjacente: novas fontes de dados e novas técnicas para armazenamento e análise de dados podem levar à próxima mudança de paradigma nas ciências sociais. (JUNGHERR, 2015, p.34)
+
+---
+class: middle, center
+
+.pull-left[
+
+## Lupton, 2015
+
+&lt;img src="img/lupton.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://www.amazon.com.br/Digital-Sociology-Deborah-Lupton/dp/1138022772/ref=sr_1_1)
+
+]
+.pull-right[
+
+## Nascimento, 2016
+
+&lt;img src="img/leo.png" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para baixar](https://www.scielo.br/j/soc/a/y9gtcQSrjjXVyRfryrKpXBk/?format=pdf&amp;lang=pt)
+]
+
+---
+class: inverse, middle, center
+
+# Eu argumentaria que a sociologia precisa fazer o estudo das tecnologias digitais central às suas atribuições. Todos os tópicos que os sociólogos agora pesquisam e ensinam estão inevitavelmente conectados às tecnologias digitais (LUPTON, 2015, p. 5)
+
+
+---
+class: inverse, middle, center
+
+# Quando algum sociólogo supera a barreira epistemológica do qualitativismo tacanho que impera nos programas de pós-graduação, ele se encontra desesperado porque simplesmente precisa “terceirizar” a coleta e análise dos dados. (Nascimento, 2016, p.234)
+
+---
+class: middle, center
+
+.pull-left[
+
+## Rockwell &amp; Sinclair, 2016
+
+&lt;img src="img/rock.avif" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://mitpress.mit.edu/9780262545891/hermeneutica/)
+
+]
+
+.pull-right[
+
+## DANIELS, GREGORY, &amp; COTTOM, 2016. 
+
+
+&lt;img src="img/jesse.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://www.amazon.ca/Digital-Sociologies-Jessie-Daniels/dp/1447329015)
+
+] 
+
+---
+class: middle, center
+
+.pull-left[
+
+## Marres, 2017
+
+&lt;img src="img/marres.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://www.amazon.com.br/Digital-Sociology-Reinvention-Research-English-ebook/dp/B071HRPK4B/ref=sr_1_2)
+
+]
+.pull-right[
+
+## 2019
+
+&lt;img src="img/selwyn.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://www.amazon.com.br/What-Digital-Sociology-Neil-Selwyn/dp/1509527117)
+
+]
+
+---
+class: inverse, middle, center
+
+# Digital como "fato social total" (Marres, 2017)
+
+---
+class: middle, center
+
+.pull-left[
+
+## Ignatow, 2020
+
+&lt;img src="img/gabe.jpeg" width="120%" style="display: block; margin: auto;" /&gt;
+[Clique para acessar](https://www.amazon.com/Sociological-Theory-Digital-Gabe-Ignatow/dp/0367263475)
+]
+.pull-right[
+
+## Nascimento, 2021
+
+&lt;img src="img/bookleo.png" width="70%" style="display: block; margin: auto;" /&gt;
+[Clique para baixar](https://repositorio.ufba.br/ri/handle/ri/32746/statistics)]
+
+]
+
+---
+class: inverse, center, middle
+
+# Desafios
+
+---
+class: center, middle
+
+# Produzir uma Ciência Social Computacional crítica...
+&lt;br&gt;
+
+--
+## ...dos datasets"
+&lt;br&gt;
+
+--
+## ...das ferramentas
+&lt;br&gt;
+
+--
+## ...que articule teoria social e métodos computacionais
+&lt;br&gt;
+
+--
+## ...e pública
+&lt;br&gt;
+
+---
+class: center, middle
+
+# CSC: crítica dos datasets
+&lt;br&gt;
+&lt;br&gt;
+
+--
+## ["Raw Data" Is an Oxymoron](https://direct.mit.edu/books/book/3992/Raw-Data-Is-an-Oxymoron) 
+
+---
+class: center, middle
+
+# CSC: crítica dos datasets
+&lt;br&gt;
+
+--
+## "Para trabalhar com dados, você precisa entender aquilo que os dados estão tentando representar. Uma das primeiras coisas que devemos fazer diante de uma base de dados, é compreender as condições através das quais essa base de dados chegou a existir. Há sempre uma história por trás dos dados. Há sempre uma narrativa."
+
+[Smari McCarthy, making data speak](https://exposingtheinvisible.org/en/films/smari-mccarthy-making-data-speak/)
+
+
+---
+class: center, middle
+
+# CSC: crítica dos datasets
+&lt;br&gt;
+
+--
+## O trabalho do &lt;s&gt;historiador&lt;/s&gt; ciêntista social diante do arquivo digital, portanto, não é tão diferente do trabalho diante do arquivo físico, pois exige tanto rigor metodológico no tratamento da fonte quanto o tratamento de uma fonte não digital. [...]esse cuidado muitas vezes é escamoteado diante da profusão de fontes, a agilidade da busca, a velocidade do acesso e a facilidade do armazenamento. 
+&lt;br&gt;
+
+## [Brasil &amp; Nascimento, 2020](https://www.scielo.br/j/eh/a/XNJJWhFFzPKdkhF6cyj5BJv/)
+
+---
+class: center, middle
+
+# CSC: crítica dos datasets
+&lt;br&gt;
+
+--
+## Publicidade, acessibilidade e terceirização
+&lt;br&gt;
+
+--
+## Evocaçao/"Ad hoc" versus coleta (*repurpose* - Salganik, 2020)
+&lt;br&gt;
+
+---
+class: center, middle
+
+# CSC: crítica das ferramentas
+&lt;br&gt;
+
+--
+## Um "erro no código" passa a constituir um "erro metodológico"
+
+&lt;img src="img/python.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+# CSC: crítica das ferramentas
+&lt;br&gt;
+
+--
+## "nossos ajudantes digitais já estão cheios de teoria e julgamento" (Bernhard Rieder and Theo Röhle in: BERRY, 2012, p. 70)
+
+&lt;img src="img/bender.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+# CSC: crítica das ferramentas
+&lt;br&gt;
+
+--
+## “Não existe neutralidade metodológica das técnicas” 
+(BOURDIEU; PASSERON; CHAMBOREDON, 2004, p. 55)
+
+&lt;img src="img/bourdieu.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle, center
+
+# CSC: crítica das ferramentas
+&lt;br&gt;
+
+--
+## Letramento digital
+&lt;br&gt;
+
+--
+## Articulação analógico e digital
+&lt;br&gt;
+
+--
+## Superação da suposta oposição Quali-quanti
+&lt;br&gt;
+
+---
+class: center, middle
+
+# CSC: articulação teoria e empiria
+&lt;br&gt;
+
+--
+### Estudantes de graduação e pós-graduação [deveriam ser] ensinados como construir uma teoria por conta própria, principalmente fazendo pequenos projetos empíricos que introduzem os alunos à abstração, abdução e indução. Ensinar teorização como uma habilidade prática em vez de teoria como história intelectual implica em desenvolver habilidades em design de pesquisa, resolução de problemas e pensamento abstrato, analógico e abdutivo. 
+&lt;br&gt;
+
+##(Ignatow, 2020, p.96)
+
+---
+
+---
+class: middle, center
+
+# CSC crítica e pública
+&lt;br&gt;
+
+--
+## Importância da presença digital: visibilidade e engajamento
+&lt;br&gt;
+
+--
+## Data power!
+&lt;br&gt;
+
+--
+## Tentação ao profetismo e sedução pelas lógicas de metrificação 
+&lt;br&gt;
+
+---
+class: inverse, center, middle
+
+# Como eu aprendo a fazer **Ciência Social Computacional**?
+
+---
+class: middle, center
+
+--
+# Vamos aprender a andar de bicicleta?
+&lt;br&gt;
+
+--
+### Utilidade;
+&lt;br&gt;
+
+--
+### Aprendizado; 
+&lt;br&gt;
+
+--
+### Aperfeiçoamento;
+&lt;br&gt;
+
+--
+### Diversificação;
+&lt;br&gt;
+
+--
+### "Artesanato digital"
+&lt;br&gt;
+
+---
+class: middle, center
+
+# À guisa de conclusão: "certo, mas onde eu começo"?
+&lt;br&gt;
+
+--
+## Investir no letramento digital!
+&lt;br&gt;
+
+--
+## Praticar ciência aberta: dados abertos, códigos abertos, ferramentas abertas;
+&lt;br&gt;
+
+--
+## Abandonar o fetichismos dos dados, dos métodos e dos resultados
+
+---
+class: inverse, middle, center
+
+
+# FIM DO PRIMEIRO ENCONTRO!
+&lt;br&gt;
+
+---
+class: center, middle
+
+# Dúvidas, perguntas?
+
+---
+class: inverse, middle, center
+
+# Ferramentas
+
+&lt;img src="https://media.giphy.com/media/3oFzmhSdxPiyRyR5vi/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center, middle
+
+# Gerenciamento de referências bibliográficas
+
+&lt;img src="img/zotero.webp" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center, middle
+
+# Gerenciamento de referências bibliográficas
+&lt;br&gt;
+
+--
+### Por que? Para que? 
+&lt;br&gt;
+
+--
+### [https://www.zotero.org/](https://www.zotero.org/)
+&lt;br&gt;
+
+--
+### [Zotero do Zero - Tutorial de instalação do Zotero no Windows 10](https://youtu.be/CPdhyKboKC0)
+&lt;br&gt;
+
+--
+### [Workshop de Zotero - Ferramentas Digitais e a pesquisa em Humanidades](https://youtu.be/I5ohkh5d51Y)
+
+---
+class: center, middle
+
+# Análise qualitativa de dados
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+### [ATLAS.ti](https://atlasti.com/)
+
+--
+### [NVivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home)
+
+--
+### [MaxQDA](https://www.maxqda.com/)
+
+--
+### [Iramuteq](http://www.iramuteq.org/)
+
+--
+### [RQDA](https://rqda.r-forge.r-project.org/)
+
+---
+class: center, middle
+
+# Análise qualitativa de dados (ATLAS.ti)
+&lt;br&gt;
+
+--
+## [Slides para aprender o ATLAS.ti versão 7](https://prezi.com/c851ggslq3ef/atlasti-ufjf-2017-modulo-i/?present=1)
+&lt;br&gt;
+
+--
+## [Oficina LABHDUFBA - ATLAS.ti 7 (parte 1)](https://youtu.be/wmYHvfxfM5Q)
+&lt;br&gt;
+
+--
+## [Oficina LABHDUFBA - ATLAS.ti 7 (parte 2)](https://youtu.be/IB3ldXF1zEM)
+
+---
+class: center, middle
+
+# R/Rstudio
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+### [Como instalar?](https://livro.curso-r.com/1-1-instalacao-do-r.html)
+&lt;br&gt;
+
+--
+### [Comece aqui!](https://maryms.github.io/2019-02-R-Basics-R-LadiesSP/#1)
+&lt;br&gt;
+
+--
+### [Onde aprender mais?](https://github.com/beatrizmilz/materiais_estudo_R)
+&lt;br&gt;
+
+--
+### [Canal do R-Brasil no Telegram!](https://t.me/rbrasiloficial)
+&lt;br&gt;
+
+---
+class: center, middle
+
+# R/Rstudio (plus ultra)
+&lt;br&gt;
+
+### [Canal do R e RStudio 📈📊Humanidades no Telegram!](https://t.me/R_humanidades)
+&lt;br&gt;
+
+--
+### [SICSS R/Rstudio](https://sicss.io/boot_camp/)
+&lt;br&gt;
+
+--
+### [R for Data Science](https://r4ds.had.co.nz/index.html)
+&lt;br&gt;
+
+--
+### [Introduction to R for Social Scientists](https://clanfear.github.io/CSSS508/)
+&lt;br&gt;
+
+--
+### [Curso de R](https://livro.curso-r.com/2-rstudio.html)
+
+---
+class: center, middle
+
+# Python
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+### [Como instalar?](http://python.org.br/instalacao-windows/)
+&lt;br&gt;
+
+--
+### [Comece aqui!](https://leofn.github.io/oficina-python/#/)
+&lt;br&gt;
+
+--
+### [Onde aprender mais?](https://pythonhumanities.com/python-for-dh-course/)
+
+
+---
+class: center, middle
+
+# Git
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+## [Como instalar?](https://www.youtube.com/watch?v=IJ2VDiDLzj8)
+&lt;br&gt;
+
+--
+## [Comece aqui!](https://github.com/rladies/meetup-presentations_sao-paulo/blob/master/pdf_presentations/2019-09-12-RLadies-12-Git-Github-Ana-Bastos.pdf)
+&lt;br&gt;
+
+---
+class: center, middle
+
+# GitHub
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+## [Git e Github para noobs das humanidades](https://www.youtube.com/watch?v=ZSevDOHWsNM)
+&lt;br&gt;
+
+--
+##[Git e Github no RStudio](https://beatrizmilz.github.io/RLadies-Git-RStudio-2019/#1)
+
+---
+class: center, middle
+
+# Análise de redes: Gephi
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+## [Como instalar?](https://ibpad.com.br/comunicacao/aprenda-a-instalar-o-gephi/)
+&lt;br&gt;
+
+--
+## [Comece aqui!](https://seinecle.github.io/gephi-tutorials/generated-pdf/simple-project-from-a-to-z-en.pdf)
+&lt;br&gt;
+
+--
+## [Preparando seus dados: Table 2 Net](https://medialab.github.io/table2net/)
+
+---
+class: center, middle
+
+# Ferramentas de raspagem para Instagram
+&lt;br&gt;
+
+--
+class: center, middle
+
+## [Instaloader](https://instaloader.github.io/)
+&lt;br&gt;
+
+--
+## Após instalar o Python 3 (e devidamente colocado no PATH do Windows!
+&lt;br&gt;
+
+--
+## pip ou pip3 install instaloader
+&lt;br&gt;
+
+--
+## DIGITE após "C:\diretorio&gt;" .---&gt; instaloader profile perfil_sem_@
+
+---
+class: center, middle
+
+# Ferramentas de raspagem para Twitter
+&lt;br&gt;
+
+## [rtweet](https://docs.ropensci.org/rtweet/)
+
+---
+class: center, middle
+
+# Ferramentas para análise de texto: Voyant Tools
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+## [Como instalar?](https://voyant-tools.org/)
+&lt;br&gt;
+
+--
+## [Comece aqui!](http://www.larhud.ibict.br/index.php?title=Voyant_Tools)
+&lt;br&gt;
+
+---
+class: center, middle
+
+# Digital Methods Intiative
+&lt;br&gt;
+
+--
+## Por que? Para que?  
+&lt;br&gt;
+
+--
+## [Digital Methods Intiative](Digital Methods Initiative)
+&lt;br&gt;
+
+--
+## [Lista de ferramentas](https://wiki.digitalmethods.net/Dmi/ToolDatabase)
+&lt;br&gt;
+
+---
+class: center, middle
+
+# Programming Historian
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+## [Site do Programming Historian](https://programminghistorian.org/pt/)
+
+---
+class: center, middle
+
+# SICSS - SSummer Institute in Computational Social Science
+&lt;br&gt;
+
+--
+## Por que? Para que? 
+&lt;br&gt;
+
+--
+## [SICSS - SSummer Institute in Computational Social Science](https://sicss.io/curriculum)
+&lt;br&gt;
+
+
+---
+class: inverse, center, middle
+
+# Alguns conceitos básicos
+
+
+---
+class: inverse, center, middle
+
+# Webscraping
+
+---
+class: center, middle
+
+--
+## Em português, "raspagem de dados";
+&lt;br&gt;
+
+--
+## Envolve acessar, baixar e organizar de maneira sistemática dados provenientes da web; 
+&lt;br&gt;
+
+--
+## Tudo o que você vê na internet pode se transformar dados para analisar!
+&lt;br&gt;
+
+--
+## Por que aprender?
+
+---
+class: inverse, center, middle
+
+&lt;img src="https://media.giphy.com/media/IZY2SE2JmPgFG/giphy.gif" width="80%" style="display: block; margin: auto;" /&gt;
+### "Nunca mande um humano fazer o trabalho de um robô!"
+
+---
+class: inverse, center, middle
+
+# API
+
+---
+class: center, middle
+
+--
+## Application Programming Interface;
+&lt;br&gt;
+
+--
+## Forma unificada para acessar dados de uma plataforma, a partir de qualquer linguagem de programação;
+&lt;br&gt;
+
+--
+## Facilita a vida da pessoa que programa;
+&lt;br&gt;
+
+--
+## Geralmente vem acompanhada de documentação.
+&lt;br&gt;
+
+--
+## Reduz o volume na transferência de dados
+
+---
+class: middle, center
+
+# Final do segundo encontro! Dúvidas? Perguntas?
+
+---
+class: middle, center
+
+# Obrigado gente!
+
+.pull-left[
+&lt;img src="https://media.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" width="150%" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+#### **Agradecimentos especiais**: 
+
+- Professor Tiago Ribeiro Duarte e ao Programa de Pós-Graduação em Sociologia UnB pelo convite!
+
+]
+
+---
+class: middle, center
+
+## Referências bilbiográficas
+
+BOURDIEU, P.; PASSERON, J. C.; CHAMBOREDON, J. C. Ofício de Sociólogo: metodologia da pesquisa na sociologia. Petrópolis: Vozes, 2004. 
+
+Boyd, D., &amp; Crawford, K. (2012). Critical questions for big data. Information, Communication &amp; Society, 15(5), 662–679
+
+[FEATHERSTONE, M. Ubiquitous Media: An Introduction. Theory, Culture &amp; Society, v. 26, n. 2–3, p. 1–22, 1 mar. 2009.](https://journals.sagepub.com/doi/10.1177/0263276409103104)
+
+[HOWISON, J.; WIGGINS, A.; CROWSTON, K. Validity Issues in the Use of Social Network Analysis with Digital Trace Data. Journal of the Association for Information Systems, v. 12, n. 12, 29 dez. 2011.](http://aisel.aisnet.org/jais/vol12/iss12/2)
+
+RIEDER, B.; RÖHLE, T. Digital Methods. In: SCHÄFER, M. T.; VAN ES, K. (Ed.). The Datafied Society. Studying Culture through Data. [s.l.] Amsterdam University Press, 2017. p. 109–124. 
+
+[SOUTHERTON, C. Datafication. In: SCHINTLER, L. A.; MCNEELY, C. L. (Ed.). Encyclopedia of Big Data. Cham: Springer International Publishing, 2020. p. 1–4.](https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-32001-4_332-1)
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

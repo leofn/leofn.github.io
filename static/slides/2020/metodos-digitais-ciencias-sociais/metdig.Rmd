@@ -1,0 +1,23 @@
+---
+title: "Métodos digitais nas ciências sociais: desafios e perspectivas"
+author: "Leonardo F. Nascimento"
+date: "12/06/2020"
+institute: "sddfsfsfsfs"
+output: slidy_presentation
+footer: "Laboratório de Humanidades Digitais"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Sobre mim 
+
+- 15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
+- Coordenador do Laboratório de Humanidades Digitais da UFBA
+- [Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
+- [Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
+- [website: **www.leofn.com**](http://www.leofn.com)
+- [**www.labhd.ufba.br**](http://www.labhd.ufba.br)
+\center
+![](images/labhd.jpg){width=150px}

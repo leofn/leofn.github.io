@@ -1,0 +1,152 @@
+---
+title: 'Universidade: reprodução ou emancipação?'
+author: | 
+  | CTIA67 - ESTUDOS SOBRE A CONTEMPORANEIDADE I (ICTI/UFBA)
+  | Leonardo F. Nascimento
+date: "23/08/2021"
+output: beamer_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Texto 5 - BOURDIEU, Pierre. O racismo da inteligência. In: BOURDIEU, P. Questões de Sociologia. Rio de Janeiro: Marco Zero,1983. p. 205-208.
+
+
+##  "Não há um racismo, mas vários racismos..."
+
+- há tantos racismos quantos grupos que precisem justificar sua existência como tal, o que constitui a função invariante dos racismos.
+
+
+## O racismo da inteligência
+
+
+- "O racismo da inteligência é um racismo da classe dominante"
+
+<br>
+
+- A reprodução social desta classe dominante "depende em parte da transmissão do capital cultural"
+
+
+## O que é capital cultural?
+
+- O que você sabe?
+
+## O que é capital cultural?
+
+- Incorporado: habilidades, sotaque, jeitos, postura, gestos, gosto, modos de falar, domínio de idiomas...
+
+<br>
+
+- Objetificado: livros, obras de arte, instrumentos musicais... 
+
+<br>
+
+- Institucionalizado: títulos escolares, diplomas, mestrado/doutorado...
+
+
+
+## O que é capital cultural?
+
+
+- Quando você compartilha o capital cultural em uma comunidade, você tem a sensação de uma identidade coletiva..
+
+<br>
+
+- Crenças, jeitos, maneiras, valores, etc.
+
+## O que é capital social?
+
+
+- Quem você conhece?
+
+<br>
+
+- Networking, relações com pessoas ricas, poderosas, inteligentes, "bem posicionadas"...
+
+<br>
+
+- "filho de...", "irmão de...", "neto de..."
+
+## "teodicéia de seu próprio privilégio"
+
+- "os dominadores em toda e qualquer sociedade (precisam) sentir justificados de sua existência como dominantes";
+
+<br>
+
+- eles (precisam) sentir como possuindo uma "essência superior".
+
+# "Todo racismo é um essencialismo"
+
+
+## Racismo da inteligência 
+
+- "poder que repousa em parte sobre a posse de títulos escolares que são considerados como uma garantia de inteligência" (são como os antigos títulos de nobreza)
+
+
+## Classificação escolar 
+
+> "A classificação escolar é uma classificação social eufemizada, portanto naturalizada, absolutizada, uma classificação social que já sofreu uma censura, portanto uma alquimia, uma transformação tendendo a transformar as diferenças de classe em diferenças de "inteligência", de "dom", isto é, em diferenças de natureza"
+
+#  BOURDIEU, P. A Escola conservadora e as desigualdades frente à escola e à cultura. In: CATANI, A. (org). Escritos de Educação. Petrópolis: Vozes, 1998, pp. 41-64.
+
+
+## A Escola conservadora
+
+> É provavelmente por um efeito de **inércia cultural** que continuamos tomando o sistema escolar como um fator de mobilidade social quando, ao contrário, tudo tende a mostrar que ele é um dos fatores mais eficazes de conservação social, pois fornece a **aparência de legitimidade às desigualdades sociais, e sanciona a herança cultural e o dom social tratado como dom natural**.
+
+## A Escola conservadora
+
+- Classes social, capital cultural e social = êxito escolar
+
+<br>
+
+- O nível cultural global do grupo familiar = êxito escolar
+
+<br>
+
+- capital cultural mais rentável na universidade: informações sobre o mundo universitário, o *cursus*, facilidade verbal e cultura livre/geral.
+
+
+## A Escola conservadora
+
+- nem o vestibular nem a universidade faz/fazia parte do horizonte das famílias pobres; 
+
+<br>
+
+- "Em todos os domínios da cultura, teatro, música, pintura, jazz, cinema, os conhecimentos dos estudantes são tão mais ricos e extensos quanto mais elevada é sua origem social" (p.45)
+
+## Lugar e destino social
+
+- Qual é o meu/seu lugar?
+
+<br>
+
+- O "lugar" e por tabela o "destino" social é lembrado a todo momento
+
+<br>
+
+- Os desejos das famílias reproduzem a estratificação social: "não desejar o impossível" X "ethos ascético de ascensão social"
+
+
+## Economia das trocas línguísticas
+
+- a importância fundamental do manejo da língua;
+
+<br>
+
+- "transmisão de maneira osmótica": o problema da "incorporação"
+
+<br>
+
+- hierarquia dos valores intclectuais que dá aos manipuladores prestigiosos de palavras e idéias superioridade sobre os humildes servidores das técnicas
+
+<br>
+
+- sistema que tem por função conservar os valores que fundamentam a ordem social.
+
+
+#  Debate: Universidade, reprodução ou emancipação?
+

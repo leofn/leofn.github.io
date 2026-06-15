@@ -1,0 +1,395 @@
+---
+title: "Criando apresentações com `xaringan`"
+author: "<a href='https://beatrizmilz.com'>Beatriz Milz</a>"
+date: "27 de agosto de 2019  <br> <BR>Atualizado em: `r format(Sys.Date(), format='%d/%m/%Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    theme: united
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  include = TRUE,
+  fig.align = "center"
+)
+```
+
+# Sobre o Xaringan
+As apresentações fazem parte de uma etapa importante na ciência: a comunicação dos resultados! Existem algumas formas de criar apresentações com R: `beamer`, `slidy`, `ioslides`... Nesta série de posts, o foco será na criação de apresentações utilizando o pacote `xaringan`. 
+
+O `xaringan `é um pacote de `R` que possibilita a criação de apresentações usando a biblioteca `javascript` [remark.js](http://remarkjs.com) através do RMarkdown. 
+
+```{r echo=FALSE, out.width="20%", eval = TRUE}
+knitr::include_graphics("img/xaringan.PNG")
+```
+
+O pacote foi criado por [**Yihui Xie**](https://yihui.name/), que é desenvolvedor de software na RStudio.[**Yihui Xie**](https://yihui.name/) também desenvolveu os seguintes pacotes: [knitr](https://yihui.name/knitr/), [animation](https://yihui.name/animation/), [bookdown](https://bookdown.org/), [blogdown](https://github.com/rstudio/blogdown), [pagedown](https://github.com/rstudio/blogdown) e [tinytex](https://yihui.name/tinytex/). 
+
+O `xaringan` utiliza o formado RMarkdown - `.Rmd`, um formato utilizado para criar relatórios reprodutíveis. Este formato suporta códigos em `R`, texto, `markdown`, `HTML`, e outros formatos. Portanto, possibilita apresentar os códigos, resultados, e também comentários e textos explicativos.
+
+Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
+
+O Rmarkdown possibilita exportar em diferentes tipos de arquivos. Porém, no xaringan, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`. Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
+
+```{r echo=FALSE, out.width="20%", eval = TRUE}
+knitr::include_graphics("img/html-css-javascript.jpg")
+```
+
+  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+
+  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+
+  - **Javascript** - é uma linguagem de programação, roda no navegador e permite que as páginas sejam dinâmicas.
+
+Para os próximos passos, é importante que tenha o software [R](https://www.r-project.org/) e a versão mais recente da IDE [RStudio](https://www.rstudio.com/)  instalada, assim como o pacote [Xaringan](https://github.com/yihui/xaringan). É conselhável ter o navegador Google Chrome ou Chromium instalado.
+
+# Preparação
+
+1)  Criar um projeto
+```{r }
+usethis::create_project("~/GitHub/IME-27-08-2019")
+```
+
+2) Caso queira utilizar o git, utilize a função a seguir: (obs: o Rstudio vai reiniciar)
+
+```{r }
+usethis::use_git()
+```
+
+3)  Caso queira criar um repositório no GitHub com os códigos da apresentação, utilize a função a seguir: (o RStudio vai abrir o Github em aba do navegador)
+```{r }
+usethis::use_github()
+```
+
+
+4) Caso queira deixar sua apresentação disponível no GitHub Pages, coloque todo o conteúdo da sua apresentação na pasta `docs`. Vamos considerar daqui pra frente a utilização da pasta `docs`.
+
+```{r}
+if (!dir.exists("docs")) {
+  dir.create("docs")
+} 
+```
+
+
+5)  Pessoalmente, eu gosto de deixar o diretório organizado. Todas as imagens da apresentação eu insiro na pasta `img`, os  arquivos `.css` (utilizados para personalizar os temas) na pasta `css`, e as bibliotecas `javascript` na pasta `libs`. 
+
+
+```{r }
+if (!dir.exists("docs/img")) {
+  dir.create("docs/img")
+} 
+
+if (!dir.exists("docs/css")) {
+  dir.create("docs/css")
+} 
+
+if (!dir.exists("docs/libs")) {
+  dir.create("docs/libs")
+} 
+```
+
+5) Instalar o pacote xaringan
+
+```{r}
+install.packages("xaringan", dependencies = TRUE)
+```
+
+6) Criar arquivo xaringan - nomear como `index.Rmd` e salvar na pasta `docs`
+
+- Pode fazer clicando em ...
+```{r echo=FALSE}
+knitr::include_graphics("img/criar-xaringan.JPG")
+```
+
+- Ou através de código:
+```{r}
+rmarkdown::draft("docs/index.Rmd", template = "xaringan", package = "xaringan")
+```
+
+A partir de agora trabalharemos no arquivo `.Rmd` criado:
+```{r}
+rstudioapi::navigateToFile("docs/index.Rmd")
+```
+
+
+# Preparando o yaml
+
+No arquivo `index.Rmd`, existem 3 partes importantes: o `yaml`, os `chunks` (campos de código), e .... .
+
+`yaml` é a sigla para **y**et **a**nother **m**arkup **l**anguage, e é a parte do código onde contém diversas informações do documento (metadados). É preciso ter cuidado com a **identação** do código `yaml`, pois qualquer erro pode causar um erro na compilação do arquivo para `html`.
+
+## Remover conteúdo da documentação
+Quando um arquivo com o template `xaringan` é criado, por padrão ele contém diversos códigos que, quando compilado, resulta na documentação do pacote `xaringan`. 
+
+Vamos apagar todo o conteúdo após o `yaml`. O que teremos restante é o seguinte código:
+
+```{r}
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, Inc."
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```
+
+
+## Alterar o `yaml`
+
+O `yaml` possui informações importantes para a apresentação, como o título, subtítulo, autor, instituição e data. Vamos alterar essas informações:
+
+```{r}
+---
+title: "Título da apresentação"
+subtitle: "Subtítulo da apresentação"
+author: "Autor"
+institute: "Instituição"
+date: "27-08-2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```
+
+
+Para que o R compile o arquivo `.Rmd` para `.html`, é necessário clicar no botão `Knit` (foto abaixo), ou utilizar a função `rmarkdown::render()`:
+```{r}
+rmarkdown::render(input = "docs/index.Rmd")
+```
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("img/knit-button.png")
+```
+
+Agora que existe um arquivo `.html`, veja a apresentação no navegador. 
+
+O resultado desta etapa está disponível em [`docs/etapa1.html`](https://beatrizmilz.github.io/IME-27-08-2019/etapa1.html).
+
+## Fazer o download do `remark.js`
+Essa etapa possibilita que sua apresentação seja visualizada offline!
+
+A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`. 
+
+```{r}
+xaringan::summon_remark(to = "docs/libs")
+```
+
+```{r}
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+```
+
+
+## Definir o encoding
+Para evitar problemas de codificação, adicione o encoding no yaml:
+
+```{r}
+encoding: "UTF-8"
+```
+
+Leia o texto do blog do Yihui: [My Biggest Regret in the knitr Package
+UTF-8, and UTF-8 only, or we cannot be friends](https://yihui.name/en/2018/11/biggest-regret-knitr/)
+
+## Alterar o tema
+
+Temas são códigos CSS disponibilizados com o pacote. Para consultar os temas disponíveis atualmente, utilize:
+```{r eval=TRUE}
+names(xaringan:::list_css())
+```
+
+Os temas devem ser modificados no yaml.
+
+```{r}
+---
+title: "Título da apresentação"
+subtitle: "Subtítulo da apresentação"
+author: "Autor"
+institute: "Instituição"
+date: "27-08-2019"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: ["rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```
+
+
+Faça novamente o processo de Knit e veja o que aconteceu com a apresentação. O resultado desta etapa está disponível em [`docs/etapa2.html`](https://beatrizmilz.github.io/IME-27-08-2019/etapa2.html).
+
+
+
+# Inserindo conteúdos na apresentação
+
+A partir deste ponto, o foco será em como inserir conteúdos na apresentação.
+
+Existe uma função que facilita a visualização de uma prévia da apresentação, porém ela pode não funcionar corretamente em todos os casos:
+
+```{r}
+xaringan::inf_mr()
+```
+
+
+## Inserindo conteúdos em Markdown
+O RMarkdown possibilita a utilização da linguagem de marcação simples Markdown. Essa linguagem de marcação foi elaborada para ser fácil de ler, fácil de escrever.
+
+* Confira as cheatsheets: [Rmarkdown Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+### Elementos básicos 
+
+`**negrito**` 
+
+`_italico_`
+
+### Títulos
+
+`# Título 1`
+
+`## Título 2`
+
+`### Título 3` 
+
+### Listas
+
+Você pode fazer uma lista escrevendo com hífens ou asteriscos, como a seguir:
+
+`* Maçã`
+
+`* Banana`
+
+`* Uva`
+
+ou desta forma:
+
+`- Maçã`
+
+`- Banana`
+
+`- Uva`
+
+Cada um vai aparecer como:
+
+- Maçã
+- Banana
+- Uva
+
+
+### Fazendo uma lista enumerada
+Você pode fazer uma lista numerada usando somente números. Você pode usar o mesmo número quantas vezes quiser: 
+
+`1. Maçã`
+
+`1. Banana`
+
+`1. Uva`
+
+Isso irá aparecer como:
+
+1. Maçã
+1. Banana
+1. Uva
+
+### Outros elementos
+
+Você pode fazer um hiperlink dessa forma: `[texto para mostrar](http://the-web-page.com)`.
+
+Você pode incluir arquivo de imagem dessa forma: `![título](http://url/for/file)`
+
+Se você sabe como escrever equações em LaTeX, ficará feliz em saber que pode usar `$$` para inserir equações matemáticas, como: 
+
+```{r}
+# $$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+```
+
+$$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+
+## Chuncks de Código R
+
+Os chuncks são campos onde podemos inserir código de R (ou Python, SQL,  Bash...) em um arquivo RMarkdown. Existe um atalho do teclado para criar chunks no RStudio:  `Ctrl + ALt + I`. Também é possível criar um chunck clicando no seguinte botão do RStudio:
+
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("img/create-chunck.png")
+```
+
+### Opções de Chunck
+
+
+### Opções globais de Chunck
+
+As opções globais de chunck são opções de chucnk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
+Para configurar as opções globais de chunck, modifique o código abaixo e insira após o código `yaml` (retire os `#` no início de cada linha):
+
+```{r}
+
+# ```{r setup, include=FALSE}
+# knitr::opts_chunk$set(echo = TRUE)
+# ```
+
+```
+
+
+---
+# Conteúdos extras
+## Addins do RStudio
+ 
+Existe um `addin` que facilita a 
+```{r}
+remotes::install_github("ThinkR-open/remedy")
+```
+
+---
+
+# Referências
+
+- **RMarkdown**:
+  - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+  
+  - [R Markdown from RStudio](https://rmarkdown.rstudio.com/lesson-1.html)
+  
+  - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+  
+  - [R for Data Science - Cap 27: R Markdown](https://r4ds.had.co.nz/r-markdown.html)
+  
+  - [Software Carpentry - Producing Reports With knitr ](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/)
+
+  - [Advanced R Markdown](https://slides.yihui.name/2017-rstudio-conf-rmarkdown-Yihui-Xie.html)
+
+- **Xaringan**:
+
+  - [Apresentação da documentação](http://slides.yihui.name/xaringan/) 
+
+  - [Xaringan Wiki](https://github.com/yihui/xaringan/wiki)
+  
+  - [Livro R Markdown (Capítulo 7)](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+
+  - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
+
+- **Outros**:
+
+  - [R for Data Science](http://r4ds.had.co.nz/)
