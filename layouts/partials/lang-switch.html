@@ -1,20 +1,10 @@
-{{- if .IsTranslated }}
+{{- $currentLang := .Language.Lang -}}
 <span class="lang-switch not-selectable">
-    {{- range .Translations }}
-        <a href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">{{ index (split .Language.Lang "-") 0 }}</a>
-    {{- end }}
-    {{- if not (eq .Language.Lang "en") }}
-        <a href="{{ .Site.BaseURL }}{{ if eq .Site.Params.defaultContentLanguageInSubdir true }}en/{{ end }}" title="English">en</a>
-    {{- end }}
-    <span class="lang-current">{{ index (split .Language.Lang "-") 0 }}</span>
-</span>
-{{- else }}
-<span class="lang-switch not-selectable">
-    <span class="lang-current">{{ index (split .Language.Lang "-") 0 }}</span>
     {{- range .Site.Languages }}
-        {{- if ne .Lang $.Language.Lang }}
-            <a href="{{ $.Site.BaseURL }}{{ .Lang }}/" title="{{ .LanguageName }}">{{ index (split .Lang "-") 0 }}</a>
+        {{- if eq .Lang $currentLang }}
+            <span class="lang-current">{{ index (split .Lang "-") 0 }}</span>
+        {{- else }}
+            <a href="{{ $.Site.BaseURL }}{{ if ne .Lang $.Site.Params.defaultContentLanguage }}{{ .Lang }}/{{ end }}" title="{{ .LanguageName }}">{{ index (split .Lang "-") 0 }}</a>
         {{- end }}
     {{- end }}
 </span>
-{{- end }}
