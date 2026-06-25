@@ -42,9 +42,9 @@ For a full and updated list, see my [Google Scholar](https://scholar.google.com/
 
 ### Book Chapters
 
+- Nascimento, L. F., Cesarino, L., & Fonseca, P. (2026). Democracy "inside out": On far-right refracted publics in Brazil. In *The Routledge Companion to Digital Media and Democracy*. London: Routledge.
 - Fonseca, P., Cesarino, L., & Vasconcelos, E. (2025). "Cristão não vota em comunista": Extrema-direita, cristianismo e Telegram nas eleições de 2022 no Brasil. In *Religião e cenas morais: Modos religiosos de ler e habitar o mundo*.
-- Nascimento, L. F., Cesarino, L., & Fonseca, P. (2025a). Democracy "inside out": On far-right refracted publics in Brazil. In *The Routledge Companion to Digital Media and Democracy*. London: Routledge.
-- Nascimento, L. F., Cesarino, L., & Fonseca, P. (2025b). Intankável o Bostil. In *Gênero e sexualidade na ruptura do direito: Disputas localizadas, epistemes*.
+- Nascimento, L. F., Cesarino, L., & Fonseca, P. (2025). Intankável o Bostil. In *Gênero e sexualidade na ruptura do direito: Disputas localizadas, epistemes*.
 - Nascimento, L. F., Cesarino, L., & Fonseca, P. (2024). "Intankaveis contra o Bostil": Racismo, misoginia e antissemitismo em chats do Telegram (2020–2023). In *Coletânea TIC, governança da internet, gênero, raça e diversidade* (Vol. 4, p. 200).
 - Brasil, E., & Nascimento, L. F. (2022a). A ferramenta de busca da Hemeroteca Digital Brasileira e o ofício do historiador: Reflexões para a história digital. In *Caminhos da história digital no brasil* (p. 369).
 - Brasil, E., & Nascimento, L. F. (2022b). Por uma história social digital: O uso de CAQDAS na pesquisa e escrita da história. In *História digital: A historiografia diante dos recursos e demandas de um novo tempo*. Salvador: EDUFBA.
