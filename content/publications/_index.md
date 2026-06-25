@@ -55,6 +55,8 @@ For a full and updated list, see my [Google Scholar](https://scholar.google.com/
 
 ### Technical Reports & Conference Papers
 
+- Nascimento, L. F., Brasil, E., Lima, A., Andrade, G., Andrade, R. J., & Barreto, T. (2026). Social-RAG: A retrieval-augmented generation pipeline for computational social science research on Telegram. In *Proceedings of the 17th International Conference on Computational Processing of Portuguese (PROPOR 2026)*. Association for Computational Linguistics. [PDF](https://aclanthology.org/2026.propor-2.34.pdf)
+- Nascimento, L. F., Cesarino, L., & Soares, A. (2026). *Ecossistema de desinformação e radicalização: Repercussões no policymaking*. Brasília: Instituto de Pesquisa Econômica Aplicada (Ipea).
 - Nascimento, L. F. (2024). Humanidades digitais e vigilância pela democracia.
 - Bernardes, Í., & Nascimento, L. F. (2023). MONITOR ALEPE: Solucionando problemas de classificação com uso de inteligência artificial. In *16º Congresso de Gestão Pública do Rio Grande do Norte (CONGESP/RN)* (Vol. 16).
 - Cesarino, L., Fonseca, P., & Nascimento, L. F. (2023). Far-right publics on Brazilian Telegram: A mixed-methods approach to digital anthropology (No. 11). UNESCO Digital Library.
@@ -68,6 +70,12 @@ For a full and updated list, see my [Google Scholar](https://scholar.google.com/
 ### Essays & Public Writing
 
 - Nascimento, L. F. (2026). A sociologia digital e suas interfaces: Humanidades digitais, ciência de dados e os desafios da IA generativa. *Biblioteca Virtual do Pensamento Social (BVPS)*, série "A Sociologia Digital e suas Interfaces" (curated by Richard Miskolci). [Link](https://blogbvps.com/2026/05/06/a-sociologia-digital-e-suas-interfaces-humanidades-digitais-ciencia-de-dados-e-os-desafios-da-ia-generativa-por-leonardo-nascimento/)
+
+---
+
+### Preprints
+
+- Nothaft, R. J., Nascimento, L. F., Moraes, L. T. T., Santos, R. A. L., & Wedderburn, R. S. M. (2026). *Visual and narrative patterns of online misogyny: A computer vision analysis of Telegram chats*. OSF Preprints. [DOI](https://doi.org/10.31235/osf.io/wvn9e_v1)
 
 ---
 

@@ -37,7 +37,8 @@ Brazilian computational social scientist and CNPq Research Productivity Fellow (
 | Google Scholar | |
 |---|---|
 | **h-index** | 10 |
-| **Citations** | 559 |
+| **i10-index** | 11 |
+| **Citations** | 600 |
 
 ---
 
