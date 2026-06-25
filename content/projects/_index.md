@@ -6,197 +6,227 @@ title: "Projects"
 
 ---
 
-### Democracia digital: análise dos ecossistemas de desinformação no Telegram durante o processo eleitoral brasileiro de 2022
-*(2022 – Present)*
+### AI Agency and Infrastructures in Social Research: Sociology, Anthropology, History, and Archival Science in the Age of Agents
+*(2025 – Present)*
 
-O projeto tem como objetivo estabelecer uma estrutura de mapeamento dos ecossistemas multiplataforma de grupos de extrema-direita brasileiros na plataforma Telegram durante o processo eleitoral brasileiro de 2022. A pesquisa assume uma perspectiva de métodos mistos, articulando análise computacional de dados com análises socioantropológicas. Em projeto anterior, nós analisamos a diferença de dinâmicas entre grupos e canais, o protagonismo de usuários que denominamos de *talkatives*, bem como a presença significativa de links para outras plataformas de mídia social mainstream. Nesta segunda fase, a ideia é ampliar os dados coletados incluindo áudio, vídeo e imagens compartilhados buscando compreender as narrativas, valores, gramáticas e lógicas de ação subjacentes aos usuários, grupos e canais.
+This project investigates the incorporation of AI agents into social science and humanities research, taking as its analytical axis the redistribution of agency among researchers, computational models, document bases, and digital infrastructures. The diagnosis is that the digital has ceased to be merely a set of sources, instruments, or auxiliary environments, and has become part of the very conditions of production, mediation, and validation of social, historical, anthropological, and archival knowledge. In this context, the expansion of large language models, retrieval-augmented generation systems, and autonomous agents demands a renewed epistemological critique capable of examining how such systems reorganize practices of interpretation, classification, search, synthesis, and documentation.
 
-**Status:** Em andamento | **Students:** Graduação (8) / Mestrado (3) / Doutorado (6)
+The central problem consists in understanding how the partial delegation of interpretive, classificatory, and documentary tasks to AI agents transforms the regimes of evidence, validation, and responsibility in research. The project's hypothesis is that such systems do not replace the researcher but displace their methodological position: from direct and exclusive doing to the orientation, supervision, validation, and critique of distributed sociotechnical processes. Agency in research is thus understood as the result of a composition between human decisions, algorithmic operations, documentary curations, informational architectures, and audit protocols.
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Rosana Silva Moore Wedderburn · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Jefte Batista · Paulo F. C. Fonseca · Leticia Maria Costa da Nóbrega Cesarino · Jorge Barbosa · Pedro Moraes · Daniel de Sena Bastos · Alan Delazeri Mocellim · Daniel Romero
+The investigation is organized into three articulated axes. The first examines the technical and epistemological foundations of large language models, embeddings, RAG systems, topic modeling, named entity recognition, and knowledge graphs, considering that every research technique incorporates theoretical assumptions, classificatory decisions, and methodological choices. The second analyzes AI agents as devices for action, planning, review, and monitoring in complex documentary environments, with emphasis on digital archives, multi-platform ecosystems, heterogeneous collections, and large masses of data. The third develops a critique of data, tools, and digital archives, problematizing the illusion of raw data, the opacity of technical mediations, the effects of information capture and organization infrastructures, as well as the limits of the mathematization of meaning in computationally driven research.
 
-**Funders:** InternetLab · CNPq
+As a contribution, the project proposes a theoretical-methodological framework for the responsible, auditable, and epistemologically controlled use of AI agents in digital sociology, digital anthropology, digital history, and digital archival science. The ultimate objective is to offer conceptual and methodological instruments so that the participation of AI agents in knowledge production is not naturalized as neutral automation, but examined as a profound reconfiguration of the contemporary conditions of investigation in the social sciences and humanities.
 
----
+**Status:** Ongoing | **Students:** Undergraduate (10) / Master's (8) / PhD (6)
 
-### Telegram Observatory *(cooperação com AI For Society, University of Alberta)*
-*(2021 – 2024)*
-
-The Telegram social media environment is used extensively by extreme groups to communicate. We propose to develop the infrastructure at the U of Alberta that can follow specific Telegram channels in order to study communities, especially Alt-Right communities in the province. Further we propose to add search and analysis tools with AI capabilities to study the social media archives added.
-
-**Status:** Concluído | **Students:** Graduação (5) / Mestrado (3) / Doutorado (3)
-
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Geoffrey Rockwell
-
-**Funder:** AI for Society (University of Alberta)
+**Team:** Leonardo Fernandes Nascimento (PI) · Rosana Silva Moore Wedderburn · Bruno José Rodrigues Durães · Juciane Pereira de Jesus · Eric Brasil · Leticia Maria Costa da Nóbrega Cesarino · Daniel de Sena Bastos · Lidia Belas · Larissa Gualberto · Ricardo Sodré · Joyce Louback · Marcelo Freire Pereira de Souza
 
 ---
 
-### Ecossistema de desinformação e propaganda computacional no aplicativo Telegram
-*(2021 – 2021)*
+### Multi-platform ecosystems and attacks on health information integrity: impacts, dissemination patterns, and mitigation strategies
+*(2024 – Present)*
 
-Este projeto propõe estabelecer uma estrutura de mapeamento e análise multi-método de redes de extrema-direita no Telegram, onde recentemente observou-se um aumento no fluxo de usuários e na criação de grupos e canais. Visando monitorar possíveis atividades de propaganda computacional e operações coordenadas de influência, o projeto combina análises computacionais baseadas em linguística de corpus e NLP com uma abordagem qualitativa mista de análise de discurso e etnografia online.
+This project investigates how false, distorted, or inaccurate health information circulates, gains legitimacy, and negatively impacts public policies — especially childhood vaccination campaigns — within multi-platform digital ecosystems. The research adopts an interdisciplinary and methodologically mixed approach, combining complex network analysis, text mining, machine learning techniques, agent-based modeling, and multimodal linguistic analysis (text, image, video, and audio). It seeks to identify disinformation dissemination patterns, build monitoring tools such as interactive dashboards, and develop innovative health communication strategies. The initiative also includes actions aimed at scientific education, production of digital educational materials, and strengthening the capacity of health professionals, journalists, managers, and social movements to combat the infodemic. The project contributes to Brazil's Unified Health System (SUS) by supporting evidence-based decisions, strengthening the bond with the population, and subsidizing epidemiological surveillance and public health communication actions.
 
-**Status:** Concluído | **Students:** Graduação (12) / Mestrado (3) / Doutorado (4)
+**Status:** Ongoing | **Students:** Undergraduate (4) / Master's (3) / PhD (4)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Jéfte Batista de Oliveira · Rosana Silva Moore Wedderburn · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Paulo F. C. Fonseca · Leticia Maria Costa da Nóbrega Cesarino · Vítor Mussa Tavares Gomes
+**Team:** Leonardo Fernandes Nascimento (Co-PI) · Maria da Glória Lima Cruz Teixeira (PI) · Jéfte Batista de Oliveira · Rosana Silva Moore Wedderburn · Bruno José Rodrigues Durães · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Leticia Maria Costa da Nóbrega Cesarino · Daniel de Sena Bastos · Daniel Romero · Lidia Belas · Larissa Gualberto · Enzo Coelho Dias · Leonardo Thibau
 
 **Funder:** CNPq
 
 ---
 
-### Analisando a pandemia de Covid-19: mídias sociais, controvérsias científicas e desinformação
+### Digital Democracy: Analysis of disinformation ecosystems on Telegram during the 2022 Brazilian electoral process
+*(2022 – Present)*
+
+This project aims to establish a mapping framework for multi-platform ecosystems of Brazilian far-right groups on Telegram during the 2022 electoral process. The research adopts a mixed-methods perspective, articulating computational data analysis with socio-anthropological approaches. In a previous project, we analyzed the differences in dynamics between groups and channels, the prominence of users we call *talkatives*, and the significant presence of links to other mainstream social media platforms. In this second phase, the goal is to expand the collected data to include audio, video, and images shared in order to understand the narratives, values, grammars, and logics of action underlying users, groups, and channels.
+
+**Status:** Ongoing | **Students:** Undergraduate (8) / Master's (3) / PhD (6)
+
+**Team:** Leonardo Fernandes Nascimento (PI) · Rosana Silva Moore Wedderburn · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Jefte Batista · Paulo F. C. Fonseca · Leticia Maria Costa da Nóbrega Cesarino · Jorge Barbosa · Pedro Moraes · Daniel de Sena Bastos · Alan Delazeri Mocellim · Daniel Romero
+
+**Funders:** InternetLab · CNPq
+
+---
+
+### Telegram Observatory *(collaboration with AI For Society, University of Alberta)*
+*(2021 – 2024)*
+
+The Telegram social media environment is used extensively by extreme groups to communicate. We propose to develop the infrastructure at the U of Alberta that can follow specific Telegram channels in order to study communities, especially Alt-Right communities in the province. Further we propose to add search and analysis tools with AI capabilities to study the social media archives added.
+
+**Status:** Completed | **Students:** Undergraduate (5) / Master's (3) / PhD (3)
+
+**Team:** Leonardo Fernandes Nascimento (PI) · Geoffrey Rockwell
+
+**Funder:** AI for Society (University of Alberta)
+
+---
+
+### Disinformation ecosystem and computational propaganda on Telegram
+*(2021 – 2021)*
+
+This project proposes to establish a mapping and multi-method analysis framework for far-right networks on Telegram, where a recent increase in user flow and the creation of groups and channels has been observed. Aiming to monitor possible computational propaganda activities and coordinated influence operations, the project combines computational analyses based on corpus linguistics and NLP with a mixed qualitative approach of discourse analysis and online ethnography.
+
+**Status:** Completed | **Students:** Undergraduate (12) / Master's (3) / PhD (4)
+
+**Team:** Leonardo Fernandes Nascimento (PI) · Jéfte Batista de Oliveira · Rosana Silva Moore Wedderburn · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Paulo F. C. Fonseca · Leticia Maria Costa da Nóbrega Cesarino · Vítor Mussa Tavares Gomes
+
+**Funder:** CNPq
+
+---
+
+### Analyzing the COVID-19 pandemic: social media, scientific controversies, and disinformation
 *(2020 – 2024)*
 
-O objetivo da pesquisa é reunir, processar, analisar e compreender dados quantitativos e qualitativos de redes sociais digitais e jornais sobre a pandemia de COVID-19. As análises discutem temas em antropologia da saúde, sociologia digital e estudos sociais da ciência e estudos sobre ignorância (agnotologia), utilizando R, ATLAS.ti, Gephi, Voyant Tools, Iramuteq, entre outras ferramentas.
+The research aims to gather, process, analyze, and understand quantitative and qualitative data from digital social networks and newspapers about the COVID-19 pandemic. The analyses discuss themes in health anthropology, digital sociology, social studies of science, and ignorance studies (agnotology), using R, ATLAS.ti, Gephi, Voyant Tools, Iramuteq, among other tools.
 
-**Status:** Concluído | **Students:** Graduação (2) / Mestrado (2) / Doutorado (8)
+**Status:** Completed | **Students:** Undergraduate (2) / Master's (2) / PhD (8)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Rafaela Zorzanelli · Francisco Ortega · Mylena Sousa Alecrim · Rosana Silva Moore Wedderburn · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Jefte Batista · Paulo F. C. Fonseca · Leticia Maria Costa da Nóbrega Cesarino · Rafaela Rigoni
+**Team:** Leonardo Fernandes Nascimento (PI) · Rafaela Zorzanelli · Francisco Ortega · Mylena Sousa Alecrim · Rosana Silva Moore Wedderburn · Juciane Pereira de Jesus · Eric Brasil · Tarssio Barreto · Jefte Batista · Paulo F. C. Fonseca · Leticia Maria Costa da Nóbrega Cesarino · Rafaela Rigoni
 
 ---
 
-### Sociologia Digital: articulando CAQDAS, web scraping e big data
+### Digital Sociology: articulating CAQDAS, web scraping, and big data
 *(2019 – 2024)*
 
-Através das mais modernas técnicas de coleta e análise de dados (Atlas.ti, Nvivo, MAXQDA) aliadas à linguagem R de programação, a presente pesquisa explora e aprimora os usos de tais tecnologias para a pesquisa em ciências sociais, com bases de dados sobre imagens históricas, controvérsias públicas e a produção acadêmica das ciências sociais no Lattes.
+Through modern data collection and analysis techniques (Atlas.ti, Nvivo, MAXQDA) combined with the R programming language, this research explores and improves the use of such technologies for social science research, with databases on historical images, public controversies, and the academic output of the social sciences on the Lattes platform.
 
-**Status:** Concluído | **Students:** Graduação (2) / Mestrado (3) / Doutorado (2)
+**Status:** Completed | **Students:** Undergraduate (2) / Master's (3) / PhD (2)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Mylena Sousa Alecrim · Jéfte Batista de Oliveira · Patrícia da Silva Cerqueira · Juciane Pereira de Jesus · Marco Antonio Paranhos · Jorge Barbosa · Marcella Alencar
+**Team:** Leonardo Fernandes Nascimento (PI) · Mylena Sousa Alecrim · Jéfte Batista de Oliveira · Patrícia da Silva Cerqueira · Juciane Pereira de Jesus · Marco Antonio Paranhos · Jorge Barbosa · Marcella Alencar
 
 ---
 
-### Sociologia dos diagnósticos: o caso do TDAH
+### Sociology of diagnoses: the case of ADHD
 *(2017 – 2019)*
 
-O objetivo da pesquisa é descrever e analisar o processo de expansão e legitimação do diagnóstico do Transtorno do Déficit de Atenção e Hiperatividade (TDAH) no Brasil através da difusão na mídia impressa e online, utilizando ferramentas CAQDAS e banco de dados de matérias jornalísticas e vídeos do YouTube.
+The research aims to describe and analyze the process of expansion and legitimation of the Attention Deficit Hyperactivity Disorder (ADHD) diagnosis in Brazil through its diffusion in print and online media, using CAQDAS tools and databases of news articles and YouTube videos.
 
-**Status:** Concluído | **Students:** Graduação (3) / Mestrado (1)
+**Status:** Completed | **Students:** Undergraduate (3) / Master's (1)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Ive Cristine Pereira de Carvalho · Jéfte Batista de Oliveira · Juciane Pereira de Jesus · Gabriel Andrade
+**Team:** Leonardo Fernandes Nascimento (PI) · Ive Cristine Pereira de Carvalho · Jéfte Batista de Oliveira · Juciane Pereira de Jesus · Gabriel Andrade
 
 ---
 
-### Trabalho digital no século XXI: o caso Uber no Brasil
+### Digital labor in the 21st century: the case of Uber in Brazil
 *(2016 – 2018)*
 
-O presente projeto investiga a controvérsia em torno da chegada do Uber no Brasil articulando os argumentos sociológicos, econômicos e legais bem como a cobertura midiática do tema.
+This project investigates the controversy surrounding Uber's arrival in Brazil, articulating sociological, economic, and legal arguments as well as media coverage of the topic.
 
-**Status:** Concluído | **Students:** Graduação (6) / Mestrado (2) / Doutorado (2)
+**Status:** Completed | **Students:** Undergraduate (6) / Master's (2) / PhD (2)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Ive Cristine Pereira de Carvalho · Jéfte Batista de Oliveira
+**Team:** Leonardo Fernandes Nascimento (PI) · Ive Cristine Pereira de Carvalho · Jéfte Batista de Oliveira
 
 ---
 
-### África in the News: 140 anos da construção social do continente africano na mídia impressa brasileira
+### Africa in the News: 140 years of the social construction of the African continent in the Brazilian press
 *(2016 – 2017)*
 
-A partir da análise crítica do discurso das notícias sobre a África nos jornais *Folha de S. Paulo* e *O Estado de S. Paulo*, a pesquisa demonstra como as diferentes notícias combinaram-se para produzir representações racistas e colonialistas da África e dos africanos, usando web scraping e ATLAS.ti.
+Through critical discourse analysis of news about Africa in the newspapers *Folha de S. Paulo* and *O Estado de S. Paulo*, the research demonstrates how different news stories combined to produce racist and colonialist representations of Africa and Africans, using web scraping and ATLAS.ti.
 
-**Status:** Concluído | **Students:** Graduação (4)
+**Status:** Completed | **Students:** Undergraduate (4)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Ive Cristine Pereira de Carvalho
+**Team:** Leonardo Fernandes Nascimento (PI) · Ive Cristine Pereira de Carvalho
 
 ---
 
-### As visões multifacetadas da mídia impressa sobre a trajetória de 30 anos do MST (1984–2014)
+### The multifaceted views of the press on the 30-year trajectory of the MST (1984–2014)
 *(2015 – 2019)*
 
-Análise da cobertura da grande mídia brasileira (*Folha de S. Paulo*, *O Globo*, *Estado de S. Paulo*) acerca do Movimento dos Trabalhadores Sem Terra desde sua fundação em 1984 até 2014.
+Analysis of the coverage by major Brazilian media (*Folha de S. Paulo*, *O Globo*, *Estado de S. Paulo*) about the Landless Workers' Movement (MST) from its founding in 1984 to 2014.
 
-**Status:** Concluído | **Students:** Graduação (3)
+**Status:** Completed | **Students:** Undergraduate (3)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.)
+**Team:** Leonardo Fernandes Nascimento (PI)
 
 **Funders:** CNPq · FAPESB
 
 ---
 
-### Estudos da Cultura no Brasil: um mapa possível
+### Cultural studies in Brazil: a possible map
 *(2015 – 2019)*
 
-Mapeamento do perfil dos estudos da cultura no Brasil a partir dos trabalhos apresentados nas edições do Encontro de Estudos Multidisciplinares em Cultura (ENECULT).
+Mapping the profile of cultural studies in Brazil based on papers presented at the editions of the Meeting of Multidisciplinary Studies in Culture (ENECULT).
 
-**Status:** Concluído | **Students:** Doutorado (4)
+**Status:** Completed | **Students:** PhD (4)
 
-**Team:** Mariella Pitombo Vieira (Coord.) · Leonardo Fernandes Nascimento · Lindinalva Rubim · Delmira de Souza
-
----
-
-### Dengue: 140 anos da construção social de uma epidemia
-*(2015 – 2017)*
-
-Análise de 140 anos de cobertura jornalística relacionada à dengue nos três principais jornais impressos do país, descrevendo o entrelaçamento entre os discursos médicos e os das políticas públicas.
-
-**Status:** Concluído | **Students:** Graduação (2)
-
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Lara Rosa Meirelles Barros · Ive Cristine Pereira de Carvalho
+**Team:** Mariella Pitombo Vieira (PI) · Leonardo Fernandes Nascimento · Lindinalva Rubim · Delmira de Souza
 
 ---
 
-### O Programa Bolsa Família na mídia impressa brasileira: dez anos (2003–2013) de uma controvérsia pública
+### Dengue: 140 years of the social construction of an epidemic
 *(2015 – 2017)*
 
-Mapeamento de dez anos de debate público na mídia impressa brasileira sobre o Programa Bolsa Família, enfatizando valência, enquadramento, argumentos e representações nos jornais *Folha de S. Paulo*, *O Globo* e *Estado de S. Paulo*.
+Analysis of 140 years of news coverage related to dengue in the three main Brazilian newspapers, describing the intertwining of medical and public policy discourses.
 
-**Status:** Concluído | **Students:** Graduação (2) / Mestrado (1) / Doutorado (1)
+**Status:** Completed | **Students:** Undergraduate (2)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Ive Cristine Pereira de Carvalho · Jéfte Batista de Oliveira · Juciane Pereira de Jesus
+**Team:** Leonardo Fernandes Nascimento (PI) · Lara Rosa Meirelles Barros · Ive Cristine Pereira de Carvalho
+
+---
+
+### The Bolsa Família Program in the Brazilian press: ten years (2003–2013) of a public controversy
+*(2015 – 2017)*
+
+Mapping ten years of public debate in the Brazilian press about the Bolsa Família Program, emphasizing valence, framing, arguments, and representations in the newspapers *Folha de S. Paulo*, *O Globo*, and *Estado de S. Paulo*.
+
+**Status:** Completed | **Students:** Undergraduate (2) / Master's (1) / PhD (1)
+
+**Team:** Leonardo Fernandes Nascimento (PI) · Ive Cristine Pereira de Carvalho · Jéfte Batista de Oliveira · Juciane Pereira de Jesus
 
 **Funders:** CNPq · FAPESB
 
 ---
 
-### "Tornando-se uma mulher moderna": o absorvente feminino e os processos de civilização
+### "Becoming a modern woman": feminine sanitary pads and civilizing processes
 *(2015 – 2017)*
 
-Cem anos de matérias jornalísticas que descrevem a chegada do absorvente feminino no Brasil e as justificativas sanitárias e sociais para utilizá-lo, analisando a construção de uma "economia dos afetos" (Triebhaushalt) sobre como as mulheres deveriam lidar com a menstruação.
+One hundred years of news articles describing the arrival of feminine sanitary pads in Brazil and the sanitary and social justifications for their use, analyzing the construction of an "affective economy" (Triebhaushalt) regarding how women should deal with menstruation.
 
-**Status:** Concluído | **Students:** Graduação (2)
+**Status:** Completed | **Students:** Undergraduate (2)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Lara Rosa Meirelles Barros · Ive Cristine Pereira de Carvalho
+**Team:** Leonardo Fernandes Nascimento (PI) · Lara Rosa Meirelles Barros · Ive Cristine Pereira de Carvalho
 
 ---
 
-### TDAH: a polêmica em torno de um diagnóstico
+### ADHD: the controversy around a diagnosis
 *(2014 – 2019)*
 
-Descrição e análise do processo de expansão e legitimação do diagnóstico do TDAH no Brasil, a partir de banco de dados de matérias jornalísticas (áudio, vídeo, texto e imagens) analisadas com ferramentas CAQDAS.
+Description and analysis of the process of expansion and legitimation of the ADHD diagnosis in Brazil, based on databases of news articles (audio, video, text, and images) analyzed with CAQDAS tools.
 
-**Status:** Concluído | **Students:** Graduação (1)
+**Status:** Completed | **Students:** Undergraduate (1)
 
-**Team:** Leonardo Fernandes Nascimento (Coord.) · Lara Rosa Meirelles Barros
+**Team:** Leonardo Fernandes Nascimento (PI) · Lara Rosa Meirelles Barros
 
 ---
 
-### Desenvolvimento de um Sistema Sustentável de Monitoramento e Avaliação das Diretrizes Nacionais de Atenção Integral à Saúde
+### Development of a Sustainable Monitoring and Evaluation System for National Guidelines for Comprehensive Health Care
 *(2013)*
 
-Produção de evidências para subsidiar a atuação da Área de Atenção à Saúde do Adolescente e do Jovem (ASAJ/DAPES/SAS/MS), incidindo na implementação das Diretrizes Nacionais de Atenção Integral à Saúde do Adolescente e do Jovem.
+Production of evidence to support the work of the Adolescent and Youth Health Care Area (ASAJ/DAPES/SAS/MS), influencing the implementation of the National Guidelines for Comprehensive Adolescent and Youth Health Care.
 
-**Status:** Concluído | **Students:** Graduação (2) / Mestrado (1) / Doutorado (1)
+**Status:** Completed | **Students:** Undergraduate (2) / Master's (1) / PhD (1)
 
-**Team:** Marcelo Rasga Moreira (Coord.) · Leonardo Fernandes Nascimento · João Feres Júnior
+**Team:** Marcelo Rasga Moreira (PI) · Leonardo Fernandes Nascimento · João Feres Júnior
 
 ---
 
-### Pesquisa sobre a construção da identidade nas representações sobre autismo na mídia impressa brasileira
+### Research on the construction of identity in representations of autism in the Brazilian press
 *(2012 – 2017)*
 
-Mapeamento do entendimento público do autismo no Brasil a partir da análise narrativa das representações midiáticas, propondo o paradigma narrativo para pensar a construção da identidade autista e suas implicações políticas.
+Mapping the public understanding of autism in Brazil based on narrative analysis of media representations, proposing the narrative paradigm for thinking about the construction of autistic identity and its political implications.
 
-**Status:** Concluído | **Students:** Graduação (3) / Doutorado (1)
+**Status:** Completed | **Students:** Undergraduate (3) / PhD (1)
 
-**Team:** Francisco Ortega (Coord.) · Leonardo Fernandes Nascimento · Clarice Rios · Rafaela Zorzanelli
+**Team:** Francisco Ortega (PI) · Leonardo Fernandes Nascimento · Clarice Rios · Rafaela Zorzanelli
 
 ---
 
-### Monteiro Lobato e o politicamente correto
+### Monteiro Lobato and political correctness
 *(2011 – 2013)*
 
-Análise do corpus jornalístico (impresso e televisivo) em torno da denúncia à SEPPIR sobre conteúdo racista em *Caçadas de Pedrinho*, de Monteiro Lobato, visando compreender os processos de construção de controvérsias públicas no Brasil e o papel da mídia em formatá-las.
+Analysis of the journalistic corpus (print and television) surrounding the complaint to SEPPIR about racist content in Monteiro Lobato's *Caçadas de Pedrinho*, aiming to understand the processes of construction of public controversies in Brazil and the role of the media in shaping them.
 
-**Status:** Concluído | **Students:** Graduação (2) / Doutorado (1)
+**Status:** Completed | **Students:** Undergraduate (2) / PhD (1)
 
-**Team:** João Feres Júnior (Coord.) · Leonardo Fernandes Nascimento · Zena Winona Eisenberg
+**Team:** João Feres Júnior (PI) · Leonardo Fernandes Nascimento · Zena Winona Eisenberg

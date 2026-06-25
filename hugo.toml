@@ -75,7 +75,7 @@ PygmentsStyle      = "monokai"
 
   [[params.social]]
     name = "email"
-    url  = "mailto:leofn@ufba.br"
+    url  = "https://leofn.com/contact/"
 
   [[params.social]]
     name = "linkedin"

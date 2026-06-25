@@ -5,7 +5,7 @@ title: "CV"
 <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
 <div>
 <h1 style="margin:0 0 .25rem 0;">Leonardo Fernandes Nascimento</h1>
-<p style="margin:0;opacity:.75;">Computational Social Scientist · Published February 2026</p>
+<p style="margin:0;opacity:.75;">Computational Social Scientist · Last updated June 2026</p>
 </div>
 <a href="/cv/nascimento-cv.pdf" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ Download PDF</a>
 </div>
@@ -190,4 +190,4 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 
 ---
 
-*Last updated: February 2026*
+*Last updated: June 2026*
