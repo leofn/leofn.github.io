@@ -386,6 +386,30 @@ body { line-height: 1.75 !important; }
   text-decoration-thickness: 2px;
 }
 
+/* 13b. LANGUAGE SWITCHER */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .82rem;
+  margin-left: .5rem;
+}
+.lang-switch a {
+  color: var(--text-subtle) !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 500;
+  transition: color .15s;
+}
+.lang-switch a:hover { color: var(--accent) !important; }
+.lang-current {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
 /* 14. TAG BADGES */
 .page-tags { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:1.2rem; align-items:center; }
 .page-tags > p { margin:0; display:flex; flex-wrap:wrap; gap:.3rem; align-items:center; }

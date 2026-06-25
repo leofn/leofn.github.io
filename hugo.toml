@@ -3,6 +3,9 @@ title   = "Leonardo F. Nascimento"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
 enableRobotsTXT = true
 enableEmoji     = true
 
@@ -84,55 +87,112 @@ PygmentsStyle      = "monokai"
 [languages]
   [languages.en]
     weight    = 1
+    languageName = "English"
+    languageCode = "en-us"
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.en.params]
-    subtitle = "Computational Social Scientist at UFBA"
+    [languages.en.params]
+      subtitle = "Computational Social Scientist at UFBA"
 
-[menu]
-  [[menu.main]]
-    identifier = "cv"
-    name       = "CV"
-    url        = "/cv/"
-    weight     = 1
+  [languages.pt-br]
+    weight    = 2
+    languageName = "Português"
+    languageCode = "pt-br"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    [languages.pt-br.params]
+      subtitle = "Cientista Social Computacional na UFBA"
 
-  [[menu.main]]
-    identifier = "publications"
-    name       = "Publications"
-    url        = "/publications/"
-    weight     = 2
+[[languages.en.menu.main]]
+  identifier = "cv"
+  name       = "CV"
+  url        = "cv/"
+  weight     = 1
 
-  [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "/projects/"
-    weight     = 3
+[[languages.en.menu.main]]
+  identifier = "publications"
+  name       = "Publications"
+  url        = "publications/"
+  weight     = 2
 
-  [[menu.main]]
-    identifier = "talks"
-    name       = "Talks"
-    url        = "/talks/"
-    weight     = 4
+[[languages.en.menu.main]]
+  identifier = "projects"
+  name       = "Projects"
+  url        = "projects/"
+  weight     = 3
 
-  [[menu.main]]
-    identifier = "slides"
-    name       = "Slides"
-    url        = "/slides/"
-    weight     = 5
+[[languages.en.menu.main]]
+  identifier = "talks"
+  name       = "Talks"
+  url        = "talks/"
+  weight     = 4
 
-  [[menu.main]]
-    identifier = "teaching"
-    name       = "Teaching"
-    url        = "/teaching/"
-    weight     = 6
+[[languages.en.menu.main]]
+  identifier = "slides"
+  name       = "Slides"
+  url        = "slides/"
+  weight     = 5
 
-  [[menu.main]]
-    identifier = "press"
-    name       = "Press"
-    url        = "/press/"
-    weight     = 7
+[[languages.en.menu.main]]
+  identifier = "teaching"
+  name       = "Teaching"
+  url        = "teaching/"
+  weight     = 6
 
-  [[menu.main]]
-    identifier = "contact"
-    name       = "Contact"
-    url        = "/contact/"
-    weight     = 8
+[[languages.en.menu.main]]
+  identifier = "press"
+  name       = "Press"
+  url        = "press/"
+  weight     = 7
+
+[[languages.en.menu.main]]
+  identifier = "contact"
+  name       = "Contact"
+  url        = "contact/"
+  weight     = 8
+
+[[languages.pt-br.menu.main]]
+  identifier = "cv"
+  name       = "CV"
+  url        = "cv/"
+  weight     = 1
+
+[[languages.pt-br.menu.main]]
+  identifier = "publications"
+  name       = "Publicações"
+  url        = "publications/"
+  weight     = 2
+
+[[languages.pt-br.menu.main]]
+  identifier = "projects"
+  name       = "Projetos"
+  url        = "projects/"
+  weight     = 3
+
+[[languages.pt-br.menu.main]]
+  identifier = "talks"
+  name       = "Apresentações"
+  url        = "talks/"
+  weight     = 4
+
+[[languages.pt-br.menu.main]]
+  identifier = "slides"
+  name       = "Slides"
+  url        = "slides/"
+  weight     = 5
+
+[[languages.pt-br.menu.main]]
+  identifier = "teaching"
+  name       = "Ensino"
+  url        = "teaching/"
+  weight     = 6
+
+[[languages.pt-br.menu.main]]
+  identifier = "press"
+  name       = "Imprensa"
+  url        = "press/"
+  weight     = 7
+
+[[languages.pt-br.menu.main]]
+  identifier = "contact"
+  name       = "Contato"
+  url        = "contact/"
+  weight     = 8
