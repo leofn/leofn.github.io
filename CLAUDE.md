@@ -2,6 +2,13 @@
 
 Instruções de projeto para o Claude Code. Leia antes de qualquer modificação.
 
+## Skills do projeto
+
+Há skills versionadas em `.claude/skills/` que detalham os fluxos de trabalho — prefira-as:
+
+- **`edit-site`** — fluxo geral de edição (onde editar o quê, regras, build, commit, deploy).
+- **`sync-publications`** — sincronizar `content/publications/_index.md` com o Google Scholar e validar DOIs via Crossref.
+
 ## Stack
 
 | Camada | Tecnologia |
@@ -70,4 +77,14 @@ Push para `main` dispara o workflow automaticamente. Não há branch separada pa
 
 ## Idioma do conteúdo
 
-Todo o conteúdo das páginas deve estar em **inglês**, incluindo títulos de disciplinas e apresentações.
+Todo o conteúdo das páginas deve estar em **inglês**, incluindo títulos de disciplinas e apresentações. Exceção: títulos de publicações mantêm o idioma original da obra.
+
+## Links de contato e e-mail
+
+- Links externos (CV, contato) abrem em nova aba: `target="_blank" rel="noopener"`.
+- E-mail sempre **ofuscado** contra spam harvesting: `leofn3[at]gmail.com` em texto puro. Nunca usar `mailto:` nem `@` literal.
+
+## Publicações e DOIs
+
+- `content/publications/_index.md` é mantido em sincronia com o Google Scholar (`essj6yQAAAAJ`).
+- **Todo DOI deve ser verificado via Crossref antes de publicar** — já houve DOIs que davam 404 ou resolviam para outro artigo. Ver skill `sync-publications`.
