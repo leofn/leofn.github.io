@@ -101,6 +101,22 @@ PygmentsStyle      = "monokai"
     [languages.pt-br.params]
       subtitle = "Cientista Social Computacional na UFBA"
 
+  [languages.es]
+    weight    = 3
+    languageName = "Español"
+    languageCode = "es"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    [languages.es.params]
+      subtitle = "Cientista Social Computacional en la UFBA"
+
+  [languages.zh]
+    weight    = 4
+    languageName = "中文"
+    languageCode = "zh-cn"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    [languages.zh.params]
+      subtitle = "巴伊亚联邦大学计算社会科学家"
+
 [[languages.en.menu.main]]
   identifier = "cv"
   name       = "CV"
@@ -194,5 +210,102 @@ PygmentsStyle      = "monokai"
 [[languages.pt-br.menu.main]]
   identifier = "contact"
   name       = "Contato"
+  url        = "contact/"
+  weight     = 8
+# Spanish menu
+[[languages.es.menu.main]]
+  identifier = "cv"
+  name       = "CV"
+  url        = "cv/"
+  weight     = 1
+
+[[languages.es.menu.main]]
+  identifier = "publications"
+  name       = "Publicaciones"
+  url        = "publications/"
+  weight     = 2
+
+[[languages.es.menu.main]]
+  identifier = "projects"
+  name       = "Proyectos"
+  url        = "projects/"
+  weight     = 3
+
+[[languages.es.menu.main]]
+  identifier = "talks"
+  name       = "Charlas"
+  url        = "talks/"
+  weight     = 4
+
+[[languages.es.menu.main]]
+  identifier = "slides"
+  name       = "Diapositivas"
+  url        = "slides/"
+  weight     = 5
+
+[[languages.es.menu.main]]
+  identifier = "teaching"
+  name       = "Docencia"
+  url        = "teaching/"
+  weight     = 6
+
+[[languages.es.menu.main]]
+  identifier = "press"
+  name       = "Prensa"
+  url        = "press/"
+  weight     = 7
+
+[[languages.es.menu.main]]
+  identifier = "contact"
+  name       = "Contacto"
+  url        = "contact/"
+  weight     = 8
+
+# Chinese menu
+[[languages.zh.menu.main]]
+  identifier = "cv"
+  name       = "简历"
+  url        = "cv/"
+  weight     = 1
+
+[[languages.zh.menu.main]]
+  identifier = "publications"
+  name       = "出版物"
+  url        = "publications/"
+  weight     = 2
+
+[[languages.zh.menu.main]]
+  identifier = "projects"
+  name       = "项目"
+  url        = "projects/"
+  weight     = 3
+
+[[languages.zh.menu.main]]
+  identifier = "talks"
+  name       = "演讲"
+  url        = "talks/"
+  weight     = 4
+
+[[languages.zh.menu.main]]
+  identifier = "slides"
+  name       = "幻灯片"
+  url        = "slides/"
+  weight     = 5
+
+[[languages.zh.menu.main]]
+  identifier = "teaching"
+  name       = "教学"
+  url        = "teaching/"
+  weight     = 6
+
+[[languages.zh.menu.main]]
+  identifier = "press"
+  name       = "媒体"
+  url        = "press/"
+  weight     = 7
+
+[[languages.zh.menu.main]]
+  identifier = "contact"
+  name       = "联系"
   url        = "contact/"
   weight     = 8
