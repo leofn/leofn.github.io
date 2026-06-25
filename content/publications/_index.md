@@ -24,14 +24,14 @@ For a full and updated list, see my [Google Scholar](https://scholar.google.com/
 - Scheren, M. L., Rodrigues, V., & Nascimento, L. F. (2024). Métodos mistos para a antropologia digital: Um relato de experiência sobre a análise de grupos bolsonaristas na plataforma Telegram. *Horizontes Antropológicos*.
 - Wedderburn, R., Nascimento, L. F., & Jesus, J. P. de (2024). Representações meméticas de "nós e eles": Humor e discurso de ódio em chats do Telegram. *Aurora: Revista de Arte, Mídia e Política*, 17(49), 136–173.
 - Nascimento, L. F., Fonseca, P., & Cesarino, L. (2023). Públicos refratados: A atuação de grupos de extrema-direita brasileiros na plataforma Telegram. *Revista Internet & Sociedade*, 3(1), 29.
-- Fonseca, P., Nascimento, L. F., & Ribeiro, B. E. (2022). Demarcating patriotic science on digital platforms: COVID-19, chloroquine and the institutionalisation of ignorance in Brazil. *Science as Culture*, 31(4), 530–554. [DOI](https://doi.org/10.1080/09505431.2022.2062404)
-- Macêdo, P. F. C., Nepomuceno, C. M. M., Nascimento, L. F., et al. (2022). Weight stigma in the COVID-19 pandemic: A scoping review. *Journal of Eating Disorders*, 10(1), 44. [DOI](https://doi.org/10.1186/s40337-022-00616-8)
+- Fonseca, P., Nascimento, L. F., & Ribeiro, B. E. (2022). Demarcating patriotic science on digital platforms: COVID-19, chloroquine and the institutionalisation of ignorance in Brazil. *Science as Culture*, 31(4), 530–554. [DOI](https://doi.org/10.1080/09505431.2022.2105691)
+- Macêdo, P. F. C., Nepomuceno, C. M. M., Nascimento, L. F., et al. (2022). Weight stigma in the COVID-19 pandemic: A scoping review. *Journal of Eating Disorders*, 10(1), 44. [DOI](https://doi.org/10.1186/s40337-022-00563-4)
 - Brandão, M. F., Silva, G. T. R., & Nascimento, L. F. (2021). Panorama da imagem social da enfermeira divulgada na mídia impressa. *Acta Paulista de Enfermagem*, 34, eAPE002935.
 - Nascimento, L. F., Jesus, J. P. de, & Fonseca, P. (2021). Poder oracular e ecossistemas digitais de comunicação: A produção de zonas de ignorância durante a pandemia de COVID-19 no Brasil. *Revista Fronteiras*, 23(2).
 - Brasil, E., & Nascimento, L. F. (2020). História digital: Reflexões a partir da Hemeroteca Digital Brasileira e do uso de CAQDAS na reelaboração da pesquisa histórica. *Estudos Históricos (Rio de Janeiro)*, 33(69), 196–219.
 - Alves, P. C., & Nascimento, L. F. (2018). Health and traditional fishing in All Saints Bay, Brazil. *International Journal of Advances in Social Science and Humanities*.
 - Nascimento, L. F., Ortega, J., & Alecrim, M. (2018). "Não falo o que o povo quer, sou o que o povo quer": 30 anos (1987–2017) de pautas políticas de Jair Bolsonaro nos jornais brasileiros. *Plural: Revista de Ciências Sociais*, 25(1), 135–171.
-- Nascimento, L. F. (2016a). A sociologia digital: Um desafio para o século XXI. *Sociologias*, 18(41), 216–241. [DOI](https://doi.org/10.1590/15174522-018004104)
+- Nascimento, L. F. (2016a). A sociologia digital: Um desafio para o século XXI. *Sociologias*, 18(41), 216–241. [DOI](https://doi.org/10.1590/15174522-018004111)
 - Nascimento, L. F. (2016b). O caso Uber no Brasil: Um ensaio de sociologia digital. *Critical Reviews on Latin American Research (CROLAR)*, 5(1).
 - Feres Júnior, J., Eisenberg, Z., & Nascimento, L. F. (2015). Considerações sobre o politicamente correto: O caso das caçadas de Pedrinho. *Cadernos Imbondeiro*, 4(2), 23.
 - Nascimento, L. F. (2015). Digital sociology de Deborah Lupton. *Caderno CRH*, 28(75), 671–673.
@@ -62,6 +62,12 @@ For a full and updated list, see my [Google Scholar](https://scholar.google.com/
 - Nascimento, L. F., Fonseca, P., & Cesarino, L. (2020). "Quando se está morrendo afogado, até jacaré é tronco para se agarrar": Cloroquina e médicos em grupos de direita do Telegram. In *Series LAVITS COVID-19* (pp. 22–27).
 - Russi, P., & Nascimento, L. F. (2020). *Proposta e processos metodológicos*. Brasília: Instituto de Pesquisa Econômica Aplicada (Ipea).
 - Nascimento, L. F. (2017). Combinando webscraping em R e ATLAS.ti na pesquisa em ciências sociais: As possibilidades e desafios da sociologia digital. In *Anais do 18º Congresso Brasileiro de Sociologia*.
+
+---
+
+### Essays & Public Writing
+
+- Nascimento, L. F. (2026). A sociologia digital e suas interfaces: Humanidades digitais, ciência de dados e os desafios da IA generativa. *Biblioteca Virtual do Pensamento Social (BVPS)*, série "A Sociologia Digital e suas Interfaces" (curated by Richard Miskolci). [Link](https://blogbvps.com/2026/05/06/a-sociologia-digital-e-suas-interfaces-humanidades-digitais-ciencia-de-dados-e-os-desafios-da-ia-generativa-por-leonardo-nascimento/)
 
 ---
 
