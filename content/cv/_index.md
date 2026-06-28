@@ -22,7 +22,7 @@ title: "CV"
 | **ORCID** | <a href="https://orcid.org/0000-0003-2907-8338" target="_blank" rel="noopener">https://orcid.org/0000-0003-2907-8338</a> |
 | **Google Scholar** | <a href="https://scholar.google.com/citations?user=essj6yQAAAAJ" target="_blank" rel="noopener">https://scholar.google.com/citations?user=essj6yQAAAAJ</a> |
 | **Lattes** | <a href="http://lattes.cnpq.br/7141811368487014" target="_blank" rel="noopener">http://lattes.cnpq.br/7141811368487014</a> |
-| **LinkedIn** | <a href="https://www.linkedin.com/in/leofn-labhdufba/" target="_blank" rel="noopener">leofn-labhdufba</a> |
+| **LinkedIn** | <a href="https://www.linkedin.com/in/leofn-labhdufba/" target="_blank" rel="noopener">linkedin.com/in/leofn-labhdufba</a> |
 
 ---
 
@@ -110,6 +110,8 @@ Digital Sociology · Computational Social Science · Disinformation & Hate Speec
 
 | Year | Funder | Project |
 |------|--------|---------|
+| 2025–present | CNPq | AI Agency and Infrastructures for Computational Social Science (PI) |
+| 2024–present | CNPq | Health Information Integrity in Digital Ecosystems (Co-PI) |
 | 2022–present | CNPq (402940/2022-9) | Disinformation ecosystem on Telegram |
 | 2022 | InternetLab | Digital Democracy: Telegram during 2022 elections |
 
