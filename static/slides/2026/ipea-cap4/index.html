@@ -6,6 +6,39 @@
   <title>Ecossistema de Desinformação e Radicalização — Repercussões no Policymaking</title>
   <link rel="stylesheet" href="vendor/reveal.css">
   <link rel="stylesheet" href="theme.css">
+  <style>
+    /* --- extras específicos deste deck --- */
+    .research-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+    .research-card {
+      background:var(--c-paper); border:1px solid var(--c-line);
+      border-left:4px solid var(--c-blue-600); border-radius:10px; padding:16px 18px;
+    }
+    .research-card.accent { border-left-color:var(--c-accent); }
+    .research-card .rc-h { font-size:16px; font-weight:800; color:var(--c-blue-800); margin-bottom:8px; }
+    .research-card.accent .rc-h { color:var(--c-accent); }
+    .research-card .rc-b { font-size:15px; color:var(--c-ink); line-height:1.42; }
+    .research-card .rc-b ul { margin-top:4px; }
+    .research-card .rc-b li { font-size:14px; margin-bottom:6px; }
+
+    .phase-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px; }
+    .phase-card {
+      background:var(--c-paper); border:1px solid var(--c-line);
+      border-top:4px solid var(--c-blue-600); border-radius:10px; padding:14px 12px;
+    }
+    .phase-card.now { border-top-color:var(--c-accent); }
+    .phase-card .ph-yr { font-size:14px; font-weight:800; color:var(--c-blue-600); letter-spacing:0.04em; }
+    .phase-card.now .ph-yr { color:var(--c-accent); }
+    .phase-card .ph-lb { font-size:14px; color:var(--c-ink); margin-top:4px; line-height:1.3; }
+
+    .impact-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:16px; align-items:start; }
+    .impact-text p { font-size:17px; line-height:1.5; margin:0 0 14px; }
+    .quote-block {
+      background:var(--c-accent-soft); border-left:4px solid var(--c-accent);
+      border-radius:0 8px 8px 0; padding:14px 18px; margin-top:14px;
+      font-size:15px; color:var(--c-ink); line-height:1.42; font-style:italic;
+    }
+    .quote-block .qb-src { display:block; margin-top:6px; font-size:13px; color:var(--c-muted); font-style:normal; }
+  </style>
 </head>
 <body>
 <div class="reveal">
@@ -32,67 +65,86 @@
       </div>
     </section>
 
-    <!-- ============ 2 — HIPÓTESE E CONCEITO ============ -->
+    <!-- ============ 2 · A PESQUISA ============ -->
     <section class="content">
-      <div class="slide-kicker">Introdução · conceito-chave</div>
-      <h2 class="slide-title">Ecossistema multiplataforma de desinformação</h2>
+      <div class="slide-kicker">A pesquisa</div>
+      <h2 class="slide-title">Ecossistema multiplataforma de desinformação no Brasil</h2>
       <div class="slide-body">
-        <p style="font-size:21px;max-width:42em;margin-bottom:18px;">As dinâmicas de desinformação não se explicam apenas por disputas político-partidárias, mas resultam de um <strong>arranjo técnico-discursivo</strong> sustentado por arquiteturas algorítmicas, práticas comunicacionais e conflitos ideológicos que operam de forma articulada em <span class="hl-red">múltiplas escalas</span>.</p>
-        <div class="concept-grid c2">
-          <div class="concept-card accent">
-            <div class="cc-h">Hipótese central</div>
-            <div class="cc-b">A desinformação é uma <strong>alternativa total</strong> ao sistema institucional — impermeável aos controles e sanções disponíveis aos agentes do Estado. Foi o governo que teve que reagir, adaptando-se à lógica da desinformação, e não o contrário.</div>
+        <p style="font-size:19px;max-width:44em;margin-bottom:14px;">O projeto analisa os processos sociotécnicos que estruturam a <span class="hl-red">desinformação e radicalização política</span> no Brasil, com atenção às implicações para a produção e circulação de evidências em políticas públicas. Uma collaboration <strong>LABHDUFBA ↔ LABHDUFSC</strong>, com métodos mistos (qualitativo + quantitativo + NLP).</p>
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="rc-h">Objeto</div>
+            <div class="rc-b">Circulação coordenada de conteúdos entre <strong>Telegram, YouTube, Instagram, WhatsApp</strong> e plataformas sombrias — entrelaçando ataques à integridade da informação, estímulos à polarização e impactos no mundo offline.</div>
           </div>
-          <div class="concept-card">
-            <div class="cc-h">Ecossistema multiplataforma</div>
-            <div class="cc-b">Circulação coordenada de conteúdos entre redes sociais, apps de mensagens, sites alternativos e <strong>plataformas sombrias</strong> — entrelaçando ataques à integridade da informação e estímulos à polarização política com impactos no mundo offline.</div>
+          <div class="research-card accent">
+            <div class="rc-h">Hipótese central</div>
+            <div class="rc-b">A desinformação não se explica apenas por disputas político-partidárias, mas resulta de um <strong>arranjo técnico-discursivo</strong>: arquiteturas algorítmicas + práticas comunicacionais + conflitos ideológicos em múltiplas escalas.</div>
+          </div>
+          <div class="research-card">
+            <div class="rc-h">Métodos</div>
+            <div class="rc-b">
+              <ul>
+                <li>Coleta multiplataforma (Telegram, YouTube, Instagram)</li>
+                <li>Análise de conteúdo qualitativa (grounded theory)</li>
+                <li>NLP e modelagem de tópicos</li>
+                <li>Google Trends e séries temporais</li>
+              </ul>
+            </div>
+          </div>
+          <div class="research-card accent">
+            <div class="rc-h">Estudo de caso</div>
+            <div class="rc-b">O <strong>caso do Pix</strong> (jan/2025) como expressão exemplar: uma política pública capturada por circuitos de desinformação, gerando crise de confiança, retração econômica e resposta institucional reativa.</div>
           </div>
         </div>
-        <div class="callout accent">
-          <div class="ct-h">Implicação para o policymaking</div>
-          A desinformação incide sobre praticamente todas as etapas do ciclo de políticas públicas — da identificação do problema à implementação e avaliação —, ensejando inversões do percurso decisório antes que a política seja sequer debatida.
+        <div class="phase-row">
+          <div class="phase-card"><div class="ph-yr">2021–2024</div><div class="ph-lb">Mapeamento do ecossistema Telegram · grupos de extrema-direita</div></div>
+          <div class="phase-card now"><div class="ph-yr">2025–2026</div><div class="ph-lb">Caso do Pix · IN RFB 2.219 · desinformação sobre políticas econômicas</div></div>
+          <div class="phase-card"><div class="ph-yr">2026–2027</div><div class="ph-lb">Estruturas epistêmicas · frentes de intervenção · IA generativa</div></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 3 — CASO DO PIX ============ -->
+    <!-- ============ 3 · CASO DO PIX — CRONOLOGIA ============ -->
     <section class="content">
-      <div class="slide-kicker">Estudo de caso</div>
-      <h2 class="slide-title">O caso do Pix: cronologia de uma crise</h2>
+      <div class="slide-kicker">Estudo de caso · cronologia</div>
+      <h2 class="slide-title">O caso do Pix: de uma IN à crise informacional</h2>
       <div class="slide-body">
-        <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start;">
+        <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start;">
           <div>
-            <div class="concept-term" style="margin-bottom:10px;">IN RFB nº 2.219/2024</div>
-            <p style="font-size:16px;color:var(--c-muted);margin-bottom:14px;">Reporte obrigatório de movimentações > R$ 5 mil (PF) e R$ 15 mil (PJ) — sem introduzir novos tributos. Em poucos dias, a política foi capturada por circuitos de desinformação.</p>
+            <p style="font-size:16px;color:var(--c-muted);margin-bottom:12px;">Em <strong>1º de janeiro de 2025</strong>, entrou em vigor a <strong>IN RFB nº 2.219/2024</strong>: reporte de movimentações > R$ 5 mil (PF) e R$ 15 mil (PJ) — <em>sem novos tributos</em>. Em poucos dias, a política foi ressignificada como "taxação do Pix".</p>
             <div class="timeline">
               <div class="tl-event neutral">
                 <div class="tl-date">1º jan</div>
-                <div class="tl-text">IN nº 2.219/2024 entra em vigor</div>
+                <div class="tl-text">IN nº 2.219/2024 entra em vigor — reporte de movimentações</div>
               </div>
               <div class="tl-event danger">
-                <div class="tl-date">4–6 jan</div>
+                <div class="tl-date">4 jan</div>
+                <div class="tl-text"><strong>Dr. Amarildo 22</strong> posta vídeo no Instagram sobre fiscalização da Receita</div>
+              </div>
+              <div class="tl-event danger">
+                <div class="tl-date">6 jan</div>
                 <div class="tl-text"><strong>Senador Cleitinho</strong> reage: "é para taxar o Pix!"</div>
               </div>
               <div class="tl-event danger">
                 <div class="tl-date">8 jan</div>
-                <div class="tl-text"><strong>Deepfake de Haddad</strong>: imposto sobre pets, apostas e gestantes</div>
+                <div class="tl-text"><strong>Deepfake de Haddad</strong>: imposto sobre pets, apostas e gestantes. <strong>Kim Kataguiri</strong> viraliza no YouTube (500K views)</div>
               </div>
               <div class="tl-event danger">
                 <div class="tl-date">9 jan</div>
-                <div class="tl-text">Kim Kataguiri viraliza no YouTube (500K views)</div>
+                <div class="tl-text">Haddad desmente oficialmente — boatos persistem</div>
               </div>
               <div class="tl-event warning">
                 <div class="tl-date">14 jan</div>
-                <div class="tl-text"><strong>Nikolas Ferreira</strong>: 300 milhões de views em &lt;48h</div>
+                <div class="tl-text"><strong>Nikolas Ferreira</strong>: 300 milhões de views em &lt;48h no Instagram</div>
               </div>
               <div class="tl-event success">
                 <div class="tl-date">15 jan</div>
-                <div class="tl-text">Governo revoga a IN e edita MP garantindo gratuidade do Pix</div>
+                <div class="tl-text">Governo <strong>revoga a IN</strong> e edita MP garantindo gratuidade do Pix</div>
               </div>
             </div>
           </div>
           <div>
-            <div class="stat-grid" style="grid-template-columns:1fr;gap:14px;">
+            <div class="stat-grid" style="grid-template-columns:1fr;gap:12px;">
               <div class="stat accent">
                 <div class="st-num">10,9%</div>
                 <div class="st-lb">queda no volume de transações via Pix (4–10 jan) — maior retração dez–jan desde 2022. Puxada por pessoas físicas de baixa renda.</div>
@@ -105,92 +157,97 @@
                 <div class="st-num">300M</div>
                 <div class="st-lb">visualizações em &lt;48h — vídeo de Nikolas Ferreira no Instagram</div>
               </div>
+              <div class="stat">
+                <div class="st-num">1.767</div>
+                <div class="st-lb">pico de postagens/dia no Telegram (14 jan) — Google Trends em máximo histórico</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 4 — QUATRO PADRÕES EPISTÊMICOS ============ -->
+    <!-- ============ 4 · CASO DO PIX — ANÁLISE ============ -->
+    <section class="content">
+      <div class="slide-kicker">Estudo de caso · análise</div>
+      <h2 class="slide-title">Amplificação coordenada e cismogênese</h2>
+      <div class="slide-body">
+        <div class="impact-grid">
+          <div class="impact-text">
+            <p>O episódio materializou a dinâmica <span class="hl-red">cismogênica</span> da desinformação: feedback positivo entre discursos antagonistas, onde um polo aparece como espelho invertido do outro — <strong>bem vs. mal, povo vs. elite</strong>.</p>
+            <p>A propagação viral não dependeu de um único ator central. Emergiu da atuação distribuída de <strong>múltiplos pequenos hubs</strong> — políticos influenciadores, grupos de Telegram, canais de YouTube — em regime de <em>mídia recursiva</em> e reforço algorítmico.</p>
+            <p>O enquadramento conspiratório — governo vigiando, controlando, parasitando o cidadão — ativou uma <strong>atmosfera latente</strong> cultivada desde 2020: a vinculação do Pix à ideia de taxação, reativada em ciclos eleitorais sucessivos.</p>
+            <p>O Pix foi sentido não como política pública, mas como <span class="hl-red">alternativa libertária</span> ao Estado "socialista": baixo custo, tempo real, livre de impostos, viabilizando empreendedorismo informal e sonegação.</p>
+          </div>
+          <div>
+            <div class="stat-grid" style="grid-template-columns:1fr;gap:10px;">
+              <div class="stat accent">
+                <div class="st-num">−13%</div>
+                <div class="st-lb">transações permaneceram abaixo de dez/2024 até 18 jan — recuperação gradual só a partir daí</div>
+              </div>
+              <div class="stat warning">
+                <div class="st-num">91 grupos</div>
+                <div class="st-lb">+ 11 canais do YouTube circularam os vídeos de Nikolas — muitos com >10 mil inscritos</div>
+              </div>
+              <div class="stat">
+                <div class="st-num">1,7M</div>
+                <div class="st-lb">views no YouTube acumuladas até jun/2025 · 9M+ curtidas no Instagram em fev/2025</div>
+              </div>
+            </div>
+            <div class="quote-block">
+              "Não, o Pix não será taxado. Quem será taxado é você. […] qualquer dinheiro que você movimente em suas contas será cada vez mais monitorado e taxado nesse governo. […] Conclusão? Bora trabalhar, meus amigos, pois as lagostas dos ministros e as viagens da Janja não vão se pagar sozinhas."
+              <span class="qb-src">— mensagem viral no Telegram, jan/2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 · TEORIA (1 SLIDE) ============ -->
     <section class="content">
       <div class="slide-kicker">Estruturas epistêmicas</div>
       <h2 class="slide-title">Quatro padrões da desinformação</h2>
       <div class="slide-body">
-        <div class="concept-grid c2" style="margin-top:14px;">
+        <p style="font-size:17px;max-width:44em;margin-bottom:12px;">A desinformação não é apenas um desvio da verdade — é uma <span class="hl-red">estrutura epistêmica com coerência própria</span>, próxima do senso comum, que compete com o sistema de peritos (Cesarino, 2021; DiResta, 2024).</p>
+        <div class="concept-grid c2" style="margin-top:10px;">
           <div class="concept-card accent">
-            <div class="cc-h">1. Ambientes de crise permanente</div>
-            <div class="cc-b">Hiperaceleração temporal + economia da atenção. Semiótica conspiratória: sinais de inimigos ocultos. <strong>"O real é o que acontece em tempo real"</strong> (Chun). O sistema de peritos torna-se ilegítimo por ser "lento" e "mediado".</div>
+            <div class="cc-h">1. Crise permanente</div>
+            <div class="cc-b">Hiperaceleração + economia da atenção. <strong>"O real é o que acontece em tempo real"</strong> (Chun). O sistema de peritos torna-se ilegítimo por ser "lento" e "mediado".</div>
           </div>
           <div class="concept-card">
             <div class="cc-h">2. Topologia triádica</div>
-            <div class="cc-b">Retroalimentação entre <strong>usuários comuns</strong> (seguidores), <strong>algoritmos</strong> (plataformas) e <strong>novos intermediários</strong> (influenciadores). Inverte o sistema de peritos — novos mediadores legitimam-se na denúncia dos antigos.</div>
+            <div class="cc-b"><strong>Seguidores</strong> (eu-pistemologia) ↔ <strong>algoritmos</strong> (causalidades ocultas) ↔ <strong>influenciadores</strong> (novos mediadores). Legitimidade na denúncia dos antigos.</div>
           </div>
           <div class="concept-card amber">
-            <div class="cc-h">3. Espontaneísmo e senso comum</div>
-            <div class="cc-b"><strong>"Eu-pistemologia"</strong> (truth is in there) + causalidades ocultas (truth is out there). Desinformação = epistemologia de circuitos curtos do senso comum aplicada a fenômenos de circuitos longos do sistema de peritos.</div>
+            <div class="cc-h">3. Senso comum</div>
+            <div class="cc-b">Epistemologia de <strong>circuitos curtos</strong> aplicada a fenômenos de circuitos longos. "Fazer a própria pesquisa" (no Google, no ChatGPT) + "confiar no plano".</div>
           </div>
           <div class="concept-card accent">
             <div class="cc-h">4. Preempção e fatos afetivos</div>
-            <div class="cc-b">Lógica temporal não-linear: <strong>reagir antes de o inimigo agir</strong>. Evidências factuais adaptam-se a certezas afetivas. A notícia falsa não contradiz o fato afetivo: "poderia ter sido, ou ainda virá a ser". Temor de "ladeira escorregadia".</div>
+            <div class="cc-b"><strong>Reagir antes de o inimigo agir</strong>. A notícia falsa não contradiz o fato afetivo: "poderia ter sido, ou ainda virá a ser". Temor de "ladeira escorregadia".</div>
           </div>
+        </div>
+        <div class="callout" style="margin-top:12px;">
+          <div class="ct-h">Síntese</div>
+          A desinformação é uma <strong>alternativa total</strong> ao sistema institucional — impermeável aos controles do Estado. Foi o governo que reagiu, adaptando-se à lógica da desinformação, e não o contrário. A lógica <strong>preemptiva</strong> se antecipa ao ciclo de políticas públicas.
         </div>
       </div>
     </section>
 
-    <!-- ============ 5 — TOPOLOGIA TRIÁDICA ============ -->
-    <section class="content">
-      <div class="slide-kicker">Estruturas epistêmicas · padrão 2</div>
-      <h2 class="slide-title">Topologia triádica da desinformação</h2>
-      <div class="slide-body">
-        <div class="triad-diagram">
-          <div class="triad-old">
-            <div class="triad-title" style="font-size:14px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--c-blue-600);margin-bottom:12px;">Sistema de peritos</div>
-            <div class="old-node">
-              <div class="old-icon">🏛️</div>
-              <div class="old-label" style="font-size:13px;margin-top:4px;">Instituições</div>
-            </div>
-            <div class="old-sub">Ciência · Imprensa · Estado de Direito</div>
-            <div style="font-size:13px;color:var(--c-muted);margin-top:8px;font-style:italic;">Lógica da impessoalidade<br>Procedimentos · Normas<br>Evidências objetivas</div>
-          </div>
-          <div style="text-align:center;">
-            <div class="triad-title">Nova topologia epistêmica</div>
-            <div class="triad-triangle">
-              <div class="tn-node tn-top">
-                <div class="tn-icon">📢</div>
-                <div class="tn-label">Influenciadores</div>
-              </div>
-              <div class="tn-node tn-bl">
-                <div class="tn-icon">👥</div>
-                <div class="tn-label">Seguidores</div>
-              </div>
-              <div class="tn-node tn-br">
-                <div class="tn-icon">🤖</div>
-                <div class="tn-label">Algoritmos</div>
-              </div>
-            </div>
-            <div style="font-size:13px;color:var(--c-muted);margin-top:6px;font-style:italic;">"truth is in there" (eu-pistemologia)<br>+ "truth is out there" (causalidades ocultas)<br>→ novos mediadores capturam a confiança social</div>
-          </div>
-        </div>
-        <div class="callout accent" style="margin-top:14px;">
-          <div class="ct-h">O que muda</div>
-          O sistema de peritos seguia a lógica da impessoalidade — instituições, normas, procedimentos. Os novos mediadores seguem uma lógica de <strong>trocas, lealdade e afetos</strong>. A legitimidade repousa na denúncia e desmascaramento dos antigos: "o que a mídia e o governo não querem que você saiba".
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 6 — CONSIDERAÇÕES FINAIS ============ -->
+    <!-- ============ 6 · CONSIDERAÇÕES FINAIS ============ -->
     <section class="content">
       <div class="slide-kicker">Considerações finais</div>
-      <h2 class="slide-title">Frentes de intervenção</h2>
+      <h2 class="slide-title">Frentes de intervenção e próximos passos</h2>
       <div class="slide-body">
-        <p style="font-size:20px;max-width:42em;margin-bottom:16px;">O enfrentamento à desinformação sobre políticas públicas exige mais do que respostas institucionais pontuais ou checagem de fatos. É preciso reconhecer a desinformação como uma <span class="hl-red">forma estruturante da experiência política contemporânea</span>, enraizada em ecossistemas sociotécnicos que reorganizam as formas de ver, sentir e julgar o mundo.</p>
-        <div class="concept-grid c3" style="margin-top:14px;">
+        <p style="font-size:19px;max-width:42em;margin-bottom:14px;">O enfrentamento exige mais do que checagem de fatos. É preciso reconhecer a desinformação como <span class="hl-red">forma estruturante da experiência política contemporânea</span> e atuar na topologia triádica:</p>
+        <div class="concept-grid c3" style="margin-top:10px;">
           <div class="concept-card amber">
             <div class="cc-h">👥 Seguidores</div>
             <div class="cc-b">
               <ul>
                 <li>Educação midiática</li>
-                <li>Melhoria nos serviços digitais de governo</li>
+                <li>Serviços digitais de governo</li>
+                <li>Mediação por lideranças locais confiáveis</li>
               </ul>
             </div>
           </div>
@@ -199,7 +256,8 @@
             <div class="cc-b">
               <ul>
                 <li>Regulação de plataformas</li>
-                <li>Monitoramento com métodos mistos em tempo próximo ao real</li>
+                <li>Monitoramento com métodos mistos</li>
+                <li>Tempo próximo ao real</li>
               </ul>
             </div>
           </div>
@@ -207,15 +265,16 @@
             <div class="cc-h">📢 Influenciadores</div>
             <div class="cc-b">
               <ul>
-                <li>Refinamento da comunicação digital por gestores públicos</li>
-                <li>Competição por territórios digitais inteiros</li>
+                <li>Comunicação digital de gestores</li>
+                <li>Competição por territórios digitais</li>
+                <li>Estratégias além do online</li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="callout" style="margin-top:16px;">
-          <div class="ct-h">Estratégia</div>
-          Estratégias pedagógicas devem abandonar o tom professoral: <strong>escuta e diálogo</strong> com os cidadãos, reconstrução de laços de confiança, e disputa de sentidos no plano do cotidiano e do senso comum — terreno em que as verdades afetivas encontram mais aderência que a gramática objetiva do sistema de peritos.
+        <div class="callout accent" style="margin-top:14px;">
+          <div class="ct-h">Próximos passos da pesquisa</div>
+          A inflexão do <strong>segundo governo Trump (2025)</strong> indica maior permeabilidade das plataformas a discursos de extrema-direita e participação crescente de <strong>agentes de IA generativa</strong> nos ecossistemas de desinformação. Estratégias pedagógicas devem abandonar o tom professoral: <strong>escuta, diálogo e disputa de sentidos</strong> no plano do senso comum.
         </div>
       </div>
     </section>
