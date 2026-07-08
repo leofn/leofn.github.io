@@ -10,9 +10,9 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     html, body { background:#1a1f2e; font-family:'Inter',system-ui,sans-serif; overflow:hidden; }
     :root {
-      --cream:#F4F1E8; --navy:#164696; --royal:#5596D6; --light:#8FC4E8;
-      --ink:#1a1f2e; --muted:#5d6675; --line:#d8d4c8; --red:#B5453B; --amber:#B8860B;
-      --green:#2a7a4a; --head:'Oswald',sans-serif;
+      --cream:#F4F1E8; --navy:#0D3B7A; --royal:#3A7BD2; --light:#8FC4E8;
+      --ink:#1a1f2e; --muted:#4a5260; --line:#d0ccbe; --red:#A0392E; --amber:#8B6914;
+      --green:#1e6b3a; --head:'Oswald',sans-serif;
     }
     .deck { position:relative; width:100vw; height:100vh; }
     .slide {
@@ -24,112 +24,119 @@
       display:none; flex-direction:column; overflow:hidden;
     }
     .slide.active { display:flex; }
-    .kicker { font-family:var(--head); font-size:14px; font-weight:700; color:var(--royal); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px; }
-    .title { font-family:var(--head); font-weight:700; color:var(--navy); font-size:42px; line-height:1.05; text-transform:uppercase; letter-spacing:0.01em; margin-bottom:16px; }
-    .lead { font-size:22px; line-height:1.38; color:var(--ink); }
-    .body { font-size:18px; line-height:1.5; color:var(--ink); flex:1; }
+
+    /* TYPOGRAPHY */
+    .kicker { font-family:var(--head); font-size:14px; font-weight:700; color:var(--royal); text-transform:uppercase; letter-spacing:0.14em; margin-bottom:10px; }
+    .title { font-family:var(--head); font-weight:700; color:var(--navy); font-size:40px; line-height:1.08; text-transform:uppercase; letter-spacing:0.01em; margin-bottom:18px; }
+    .lead { font-size:21px; line-height:1.42; color:var(--ink); }
+    .body { font-size:18px; line-height:1.55; color:var(--ink); flex:1; display:flex; flex-direction:column; justify-content:center; }
     .hl-red { color:var(--red); font-weight:700; }
-    .hl { background:rgba(85,150,214,0.10); padding:1px 4px; border-radius:3px; font-weight:600; }
+    .hl { background:rgba(58,123,210,0.12); padding:1px 5px; border-radius:3px; font-weight:600; }
 
     /* COVER */
     .cover { padding:0; position:relative; justify-content:center; align-items:center; }
-    .cover-tag { position:absolute; top:40px; left:56px; font-family:var(--head); font-size:14px; font-weight:700; color:var(--royal); letter-spacing:0.12em; text-transform:uppercase; }
-    .cover-center { text-align:center; padding:0 100px; z-index:10; max-width:900px; }
-    .cover-center h1 { font-family:var(--head); font-weight:700; color:var(--navy); font-size:52px; line-height:1.02; text-transform:uppercase; letter-spacing:0.01em; margin-bottom:10px; }
-    .cover-sub { font-family:var(--head); font-size:18px; font-weight:500; color:var(--royal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:20px; }
-    .cover-tagline { font-size:16px; color:var(--navy); font-style:italic; max-width:30em; line-height:1.4; margin:0 auto 18px; }
-    .cover-authors { font-size:17px; color:var(--ink); line-height:1.8; font-weight:500; }
+    .cover-tag { position:absolute; top:36px; left:50%; transform:translateX(-50%); font-family:var(--head); font-size:14px; font-weight:700; color:var(--royal); letter-spacing:0.14em; text-transform:uppercase; }
+    .cover-center { text-align:center; padding:0 120px; z-index:10; max-width:880px; }
+    .cover-center h1 { font-family:var(--head); font-weight:700; color:var(--navy); font-size:54px; line-height:1.02; text-transform:uppercase; letter-spacing:0.015em; margin-bottom:12px; }
+    .cover-sub { font-family:var(--head); font-size:19px; font-weight:500; color:var(--royal); text-transform:uppercase; letter-spacing:0.10em; margin-bottom:24px; }
+    .cover-tagline { font-size:17px; color:var(--navy); font-style:italic; max-width:32em; line-height:1.45; margin:0 auto 28px; }
+    .cover-authors { font-size:17px; color:var(--ink); line-height:2.0; font-weight:500; }
     .cover-authors b { color:var(--navy); font-weight:700; }
-    .cover-book { font-size:14px; color:var(--muted); margin-top:12px; }
-    .cover-method { font-size:13px; color:var(--royal); font-style:italic; margin-top:10px; max-width:36em; margin-left:auto; margin-right:auto; line-height:1.4; }
-    .cover-qr { position:absolute; bottom:36px; display:flex; gap:60px; z-index:10; }
-    .cover-qr.left { left:56px; }
-    .cover-qr.right { right:56px; }
+    .cover-qr { position:absolute; bottom:32px; display:flex; gap:50px; z-index:10; }
+    .cover-qr.left { left:48px; }
+    .cover-qr.right { right:48px; }
     .qr-item { display:flex; flex-direction:column; align-items:center; }
-    .qr-item img { width:72px; height:72px; }
-    .qr-item .qr-lbl { font-family:var(--head); font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:4px; }
-    .cover-logos { position:absolute; bottom:36px; left:0; right:0; display:flex; justify-content:center; align-items:center; gap:40px; z-index:5; }
-    .cover-logos img { height:55px; }
+    .qr-item img { width:68px; height:68px; }
+    .qr-item .qr-lbl { font-family:var(--head); font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-top:5px; }
+    .cover-logos { position:absolute; bottom:32px; left:0; right:0; display:flex; justify-content:center; align-items:center; gap:36px; z-index:5; }
+    .cover-logos img { height:52px; }
     .cover-logos .lab-item { display:flex; flex-direction:column; align-items:center; }
-    .cover-logos .lab-label { font-family:var(--head); font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:3px; }
+    .cover-logos .lab-label { font-family:var(--head); font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-top:3px; }
 
     /* CONTENT */
-    .content { padding:48px 56px 52px; }
+    .content { padding:44px 56px 48px; }
 
     /* CARDS */
-    .grid { display:grid; gap:14px; }
+    .grid { display:grid; gap:16px; }
     .grid.c2 { grid-template-columns:1fr 1fr; }
     .grid.c3 { grid-template-columns:1fr 1fr 1fr; }
-    .card { background:#fff; border:1px solid var(--line); border-left:5px solid var(--royal); border-radius:8px; padding:16px 18px; }
+    .card { background:#fff; border:1px solid var(--line); border-left:5px solid var(--royal); border-radius:10px; padding:20px 22px; box-shadow:0 2px 8px rgba(13,59,122,0.06); }
     .card.red { border-left-color:var(--red); }
     .card.amber { border-left-color:var(--amber); }
     .card.green { border-left-color:var(--green); }
-    .card h3 { font-family:var(--head); font-size:18px; font-weight:700; color:var(--navy); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.03em; }
+    .card h3 { font-family:var(--head); font-size:18px; font-weight:700; color:var(--navy); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.03em; }
     .card.red h3 { color:var(--red); }
     .card.amber h3 { color:var(--amber); }
     .card.green h3 { color:var(--green); }
-    .card p { font-size:17px; color:var(--ink); line-height:1.42; }
-    .card ul { margin:4px 0 0 18px; font-size:17px; color:var(--ink); line-height:1.42; }
-    .card li { margin-bottom:5px; }
+    .card p { font-size:17px; color:var(--ink); line-height:1.48; }
+    .card ul { margin:6px 0 0 20px; font-size:17px; color:var(--ink); line-height:1.7; }
+    .card li { margin-bottom:6px; }
 
-    /* CALLOUT */
-    .callout { background:rgba(85,150,214,0.10); border-left:4px solid var(--royal); border-radius:0 8px 8px 0; padding:14px 20px; margin-top:14px; font-size:18px; color:var(--ink); line-height:1.42; }
-    .callout.red { background:rgba(181,69,59,0.08); border-left-color:var(--red); }
-    .callout .ct-h { font-family:var(--head); font-size:13px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px; }
-    .callout.red .ct-h { color:var(--red); }
+    /* CALLOUT — stronger visual weight */
+    .callout { background:var(--navy); color:#fff; border-radius:10px; padding:16px 22px; margin-top:18px; font-size:18px; line-height:1.42; }
+    .callout .ct-h { font-family:var(--head); font-size:13px; font-weight:700; color:var(--light); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px; }
+    .callout.red { background:var(--red); }
+    .callout.red .ct-h { color:rgba(255,255,255,0.8); }
+    .callout strong { color:#fff; }
 
     /* TIMELINE */
-    .steps .step { display:grid; grid-template-columns:30px 1fr; gap:12px; margin-bottom:10px; align-items:start; }
+    .steps .step { display:grid; grid-template-columns:30px 1fr; gap:12px; margin-bottom:12px; align-items:start; }
     .steps .num { width:28px; height:28px; border-radius:50%; background:var(--royal); color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px; }
     .steps .num.red { background:var(--red); }
     .steps .num.green { background:var(--green); }
     .steps .num.amber { background:var(--amber); }
-    .steps .txt { font-size:17px; color:var(--ink); line-height:1.4; }
+    .steps .txt { font-size:17px; color:var(--ink); line-height:1.42; }
     .steps .txt .d { font-weight:700; color:var(--navy); }
 
     /* BIG STATS */
-    .bignum { background:#fff; border:1px solid var(--line); border-left:5px solid var(--red); border-radius:8px; padding:14px 18px; margin-bottom:12px; display:flex; align-items:baseline; gap:16px; }
-    .bignum .n { font-family:var(--head); font-size:32px; font-weight:700; color:var(--red); line-height:1; min-width:90px; }
+    .bignum { background:#fff; border:1px solid var(--line); border-left:5px solid var(--red); border-radius:10px; padding:16px 20px; display:flex; align-items:baseline; gap:16px; box-shadow:0 2px 8px rgba(13,59,122,0.06); }
+    .bignum .n { font-family:var(--head); font-size:30px; font-weight:700; color:var(--red); line-height:1; min-width:80px; }
     .bignum .l { font-size:16px; color:var(--ink); line-height:1.35; }
     .bignum .sub { font-size:13px; color:var(--muted); display:block; margin-top:2px; }
     .bignum.blue { border-left-color:var(--royal); } .bignum.blue .n { color:var(--navy); }
-    .bignum.amber { border-left-color:var(--amber); } .bignum.amber .n { color:var(--amber); }
 
     /* FIGURES */
     .fig { text-align:center; }
-    .fig img { width:100%; border-radius:8px; border:1px solid var(--line); box-shadow:0 6px 18px rgba(22,70,150,0.10); display:block; }
+    .fig img { width:100%; border-radius:10px; border:1px solid var(--line); box-shadow:0 4px 14px rgba(13,59,122,0.08); display:block; }
     .fig .cap { font-size:13px; color:var(--muted); margin-top:6px; }
-    .fig.wide img { width:100%; }
 
     /* TWO COL */
-    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+    .two-col { display:grid; gap:24px; align-items:start; }
 
-    /* THANK YOU / CONTACT */
+    /* THANK YOU */
     .thanks { justify-content:center; align-items:center; text-align:center; }
-    .thanks h1 { font-family:var(--head); font-size:80px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.02em; margin-bottom:16px; }
-    .thanks .sub { font-size:20px; color:var(--royal); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:30px; }
-    .thanks .contact { font-size:18px; color:var(--ink); line-height:1.8; }
+    .thanks h1 { font-family:var(--head); font-size:82px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:0.02em; margin-bottom:18px; }
+    .thanks .sub { font-size:20px; color:var(--royal); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:28px; }
+    .thanks .info { font-size:17px; color:var(--muted); line-height:1.6; }
 
-    /* CONTACT SLIDE */
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:20px; max-width:900px; }
-    .contact-card { background:#fff; border:1px solid var(--line); border-top:4px solid var(--royal); border-radius:8px; padding:18px 14px; text-align:center; }
-    .contact-card h3 { font-family:var(--head); font-size:17px; font-weight:700; color:var(--navy); margin-bottom:6px; }
-    .contact-card .aff { font-size:13px; color:var(--royal); font-weight:600; margin-bottom:8px; }
+    /* CONTACT */
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-bottom:30px; }
+    .contact-card { background:#fff; border:1px solid var(--line); border-top:4px solid var(--royal); border-radius:10px; padding:22px 18px; text-align:center; box-shadow:0 2px 8px rgba(13,59,122,0.06); }
+    .contact-card h3 { font-family:var(--head); font-size:17px; font-weight:700; color:var(--navy); margin-bottom:8px; }
+    .contact-card .aff { font-size:13px; color:var(--royal); font-weight:600; margin-bottom:10px; }
     .contact-card .email { font-size:14px; color:var(--ink); }
     .contact-card .email a { color:var(--navy); text-decoration:none; }
 
+    /* METHODOLOGY */
+    .meth-flow { display:flex; align-items:center; gap:10px; justify-content:center; margin:14px 0; flex-wrap:wrap; }
+    .meth-box { background:#fff; border:2px solid var(--royal); border-radius:10px; padding:12px 18px; font-size:15px; font-weight:700; color:var(--navy); text-align:center; min-width:120px; }
+    .meth-box.qual { border-color:var(--amber); color:var(--amber); }
+    .meth-box.realtime { border-color:var(--red); color:var(--red); }
+    .meth-ar { color:var(--royal); font-size:22px; font-weight:700; }
+    .meth-detail { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+
     /* FOOTER */
-    .slide-footer { position:absolute; bottom:0; left:0; right:0; height:38px; display:flex; justify-content:space-between; align-items:center; padding:0 24px; background:var(--cream); border-top:1px solid var(--line); }
+    .slide-footer { position:absolute; bottom:0; left:0; right:0; height:36px; display:flex; justify-content:space-between; align-items:center; padding:0 24px; background:var(--cream); border-top:1px solid var(--line); }
     .slide-footer .ft-text { font-size:11px; color:var(--muted); }
-    .slide-footer .ft-logos { display:flex; align-items:center; gap:14px; }
-    .slide-footer .ft-logos img { height:26px; }
+    .slide-footer .ft-logos { display:flex; align-items:center; gap:12px; }
+    .slide-footer .ft-logos img { height:24px; }
 
     /* NAV */
     .nav { position:fixed; bottom:20px; right:20px; z-index:999; display:flex; align-items:center; gap:10px; background:rgba(26,31,46,0.85); color:#fff; padding:8px 16px; border-radius:24px; font-family:var(--head); font-size:14px; font-weight:700; }
     .nav button { background:none; border:none; color:#fff; font-size:20px; cursor:pointer; padding:2px 8px; border-radius:4px; }
     .nav button:hover { background:rgba(255,255,255,0.15); }
 
-    @media (max-width:768px) { .grid.c2,.grid.c3 { grid-template-columns:1fr; } .two-col { grid-template-columns:1fr; } .cover-center h1 { font-size:32px; } }
+    @media (max-width:768px) { .grid.c2,.grid.c3 { grid-template-columns:1fr; } .two-col { grid-template-columns:1fr; } .contact-grid { grid-template-columns:1fr; } .cover-center h1 { font-size:32px; } .meth-detail { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -147,14 +154,7 @@
         <b>Letícia Cesarino</b> · UFSC / LABHDUFSC<br>
         <b>Alisson Soares</b> · LABHDUFBA
       </div>
-      <div class="cover-book">
-        In: <b>Políticas Públicas Informadas por Evidências</b> · Ipea · 2026 · cap. 4
-      </div>
-      <div class="cover-method">
-        Dados coletados em tempo real · monitoramento multiplataforma (Telegram, Google Trends, X)
-      </div>
     </div>
-    <!-- QR Codes -->
     <div class="cover-qr left">
       <div class="qr-item">
         <img src="assets/qr_book.png" alt="QR livro">
@@ -167,20 +167,64 @@
         <div class="qr-lbl">Apresentação</div>
       </div>
     </div>
-    <!-- Logos centered at bottom -->
     <div class="cover-logos">
       <div class="lab-item"><img src="assets/logos/labhd_no_white_frame.png" alt="LABHD/UFBA"><div class="lab-label">LABHD · UFBA</div></div>
       <div class="lab-item"><img src="assets/logos/labhd_ufsc_logo.png" alt="LABHD/UFSC"><div class="lab-label">LABHD · UFSC</div></div>
     </div>
   </div>
 
-  <!-- ═══════════ 2 · O CASO DO PIX ═══════════ -->
+  <!-- ═══════════ 2 · METODOLOGIA ═══════════ -->
   <div class="slide content" data-slide="1">
-    <div class="kicker">Estudo de caso · ecossistema multiplataforma</div>
+    <div class="kicker">Metodologia</div>
+    <div class="title">Métodos computacionais e análise qualitativa</div>
+    <div class="body">
+      <p class="lead" style="max-width:42em;margin-bottom:16px;">Articulação de <span class="hl">métodos computacionais</span> e <span class="hl">análise qualitativa</span>, com <span class="hl-red">dados coletados em tempo real</span> durante a crise do Pix (jan/2025).</p>
+
+      <div class="meth-flow">
+        <div class="meth-box">Coleta em<br>tempo real</div>
+        <span class="meth-ar">→</span>
+        <div class="meth-box qual">Análise<br>qualitativa</div>
+        <span class="meth-ar">→</span>
+        <div class="meth-box realtime">Síntese<br>interdisciplinar</div>
+      </div>
+
+      <div class="meth-detail">
+        <div class="card">
+          <h3>Métodos computacionais</h3>
+          <ul>
+            <li>Monitoramento de <b>333 chats do Telegram</b> (9.360 mensagens)</li>
+            <li>Google Trends — buscas por "taxa do Pix" em tempo real</li>
+            <li>Coleta de posts no X e Instagram (viralização)</li>
+            <li>Análise de redes e métricas de engajamento</li>
+          </ul>
+        </div>
+        <div class="card amber">
+          <h3>Análise qualitativa</h3>
+          <ul>
+            <li>Análise discursiva de vídeos e postagens virais</li>
+            <li>Identificação de frames e teorias conspiratórias</li>
+            <li>Leitura fine-grained do ciclo policymaking × desinformação</li>
+            <li>Triangulação entre plataformas e fontes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout red">
+        <div class="ct-h">In: Koga et al. (org.)</div>
+        <strong>Políticas Públicas Informadas por Evidências</strong>, vol. 1 · Ipea · 2026 · cap. 4 · DOI: dx.doi.org/10.38116/9786556351001cap4
+      </div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 3 · O CASO DO PIX ═══════════ -->
+  <div class="slide content" data-slide="2">
+    <div class="kicker">Estudo de caso</div>
     <div class="title">O caso do Pix</div>
     <div class="body">
-      <p style="font-size:18px;color:var(--muted);margin-bottom:14px;font-style:italic;">Desinformação como ecossistema multiplataforma — dados coletados em tempo real, monitorando Telegram, Google Trends e X simultaneamente.</p>
-      <div class="two-col" style="grid-template-columns:0.85fr 1.15fr;gap:20px;">
+      <div class="two-col" style="grid-template-columns:0.85fr 1.15fr;gap:24px;">
         <div class="steps">
           <div class="step"><div class="num">1</div><div class="txt"><span class="d">1º jan</span> — IN RFB nº 2.219/2024: reporte de movimentações > R$ 5 mil (PF). <em>Sem novos tributos.</em></div></div>
           <div class="step"><div class="num red">2</div><div class="txt"><span class="d">6 jan</span> — Cleitinho ressignifica: "é para taxar o Pix!"</div></div>
@@ -188,18 +232,20 @@
           <div class="step"><div class="num red">4</div><div class="txt"><span class="d">14 jan</span> — Nikolas Ferreira: <b>300 mi de views em 48h</b></div></div>
           <div class="step"><div class="num green">5</div><div class="txt"><span class="d">15 jan</span> — Governo revoga a IN + MP do Pix</div></div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;gap:10px;">
-            <div class="bignum" style="flex:1;margin-bottom:0;"><div class="n">−10,9%</div><div class="l">queda nas transações Pix<br><span class="sub">puxada por pessoas de baixa renda</span></div></div>
-            <div class="bignum blue" style="flex:1;margin-bottom:0;"><div class="n">300M</div><div class="l">views em 48h<br><span class="sub">Nikolas Ferreira · Instagram</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;gap:12px;">
+            <div class="bignum" style="flex:1;"><div class="n">−10,9%</div><div class="l">queda nas transações Pix<br><span class="sub">puxada por pessoas de baixa renda</span></div></div>
+            <div class="bignum blue" style="flex:1;"><div class="n">300M</div><div class="l">views em 48h<br><span class="sub">Nikolas Ferreira · Instagram</span></div></div>
           </div>
-          <div class="fig" style="margin-top:0;">
+          <div class="fig">
             <img src="assets/chart_telegram.png" alt="Telegram" style="width:100%;height:auto;">
             <div class="cap">9.360 menções em 333 chats do Telegram · jan/2025</div>
           </div>
         </div>
       </div>
-      <div class="callout red">O governo <strong>adaptou-se à lógica da desinformação</strong> — não o contrário. A política reage, não conduz.</div>
+      <div class="callout red">
+        O governo <strong>adaptou-se à lógica da desinformação</strong> — não o contrário. A política reage, não conduz.
+      </div>
     </div>
     <div class="slide-footer">
       <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
@@ -207,57 +253,24 @@
     </div>
   </div>
 
-  <!-- ═══════════ 3 · ALTERNATIVA TOTAL ═══════════ -->
-  <div class="slide content" data-slide="2">
+  <!-- ═══════════ 4 · ALTERNATIVA TOTAL ═══════════ -->
+  <div class="slide content" data-slide="3">
     <div class="kicker">Tese central</div>
     <div class="title">Desinformação como "alternativa total"</div>
     <div class="body">
-      <p class="lead" style="max-width:42em;margin-bottom:20px;">Plataformas <span class="hl-red">competem com o sistema de peritos</span> (ciência, imprensa, Estado) pela produção legítima da verdade.</p>
-      <div class="grid c2" style="margin-bottom:auto;">
+      <p class="lead" style="max-width:44em;margin-bottom:22px;">Plataformas <span class="hl-red">competem com o sistema de peritos</span> (ciência, imprensa, Estado) pela produção legítima da verdade.</p>
+      <div class="grid c2">
         <div class="card red">
           <h3>Dinâmica cismogênica</h3>
-          <p>Polarização por <b>feedback positivo</b> entre polos antagonísticos. Cada lado radicaliza o outro em espiral ascendente.</p>
+          <p>Polarização por <b>feedback positivo</b> entre polos antagonísticos. Cada lado radicaliza o outro em espiral ascendente — a desconfiança é estrutural, não contingencial.</p>
         </div>
         <div class="card amber">
           <h3>Incide sobre todo o ciclo</h3>
-          <p>Interfere em todas as etapas do ciclo de políticas públicas — chegando a <b>revertê-lo</b> antes do debate e da implementação.</p>
+          <p>A desinformação <b>reverte o ciclo</b> de políticas públicas antes do debate e da implementação. A política é forçada a reagir, não a conduzir.</p>
         </div>
       </div>
-      <div class="callout red" style="margin-top:16px;">
-        <div class="ct-h">Preempção</div>
-        A desinformação <strong>reverte o ciclo antes do debate e da implementação</strong> — a política é forçada a reagir, não a conduzir.
-      </div>
-    </div>
-    <div class="slide-footer">
-      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
-      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
-    </div>
-  </div>
-
-  <!-- ═══════════ 4 · PADRÕES EPISTÊMICOS ═══════════ -->
-  <div class="slide content" data-slide="3">
-    <div class="kicker">Estruturas epistêmicas</div>
-    <div class="title">Quatro padrões epistêmicos</div>
-    <div class="body">
-      <div class="grid c2" style="gap:16px;">
-        <div class="card red">
-          <h3>1. Ambientes de crise permanente</h3>
-          <p>"O real é o que acontece em tempo real." Peritos tornam-se ilegítimos — lentos, mediados, suspeitos.</p>
-        </div>
-        <div class="card">
-          <h3>2. Topologia triádica</h3>
-          <p>Seguidores, algoritmos e influenciadores em retroalimentação. Novos mediadores legitimam-se na denúncia dos antigos.</p>
-        </div>
-        <div class="card amber">
-          <h3>3. Espontaneísmo</h3>
-          <p>"Circuitos curtos" do senso comum aplicados a fenômenos complexos. "Fazer a própria pesquisa" como imperativo.</p>
-        </div>
-        <div class="card red">
-          <h3>4. Preempção e fatos afetivos</h3>
-          <p>A notícia falsa "poderia ter sido, ou ainda virá a ser". O fato afetivo não se contradiz com a correção factual.</p>
-        </div>
-      </div>
-      <div class="callout red" style="margin-top:14px;">
+      <div class="callout" style="margin-top:22px;">
+        <div class="ct-h">Síntese</div>
         O erro factual não explica tudo; a <strong>confiança social em novos mediadores</strong> é decisiva.
       </div>
     </div>
@@ -267,15 +280,48 @@
     </div>
   </div>
 
-  <!-- ═══════════ 5 · IMPLICAÇÕES ═══════════ -->
+  <!-- ═══════════ 5 · PADRÕES EPISTÊMICOS ═══════════ -->
   <div class="slide content" data-slide="4">
+    <div class="kicker">Estruturas epistêmicas</div>
+    <div class="title">Quatro padrões epistêmicos</div>
+    <div class="body">
+      <div class="grid c2" style="gap:18px;margin-bottom:auto;">
+        <div class="card red">
+          <h3>1. Ambientes de crise permanente</h3>
+          <p>"O real é o que acontece em tempo real." Peritos tornam-se ilegítimos — lentos, mediados, suspeitos.</p>
+        </div>
+        <div class="card">
+          <h3>2. Topologia triádica</h3>
+          <p>Seguidores, algoritmos e influenciadores em retroalimentação. Novos mediadores legitimam-se na denúncia dos antigos.</p>
+        </div>
+        <div class="card amber">
+          <h3>3. Eu-pistemologia</h3>
+          <p>"Circuitos curtos" do senso comum aplicados a fenômenos complexos. "Fazer a própria pesquisa" como imperativo.</p>
+        </div>
+        <div class="card red">
+          <h3>4. Preempção e fatos afetivos</h3>
+          <p>A notícia falsa "poderia ter sido, ou ainda virá a ser". O fato afetivo não se contradiz com a correção factual.</p>
+        </div>
+      </div>
+      <div class="callout">
+        O erro factual não explica tudo; a <strong>confiança social em novos mediadores</strong> é decisiva.
+      </div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6 · O QUE FAZER ═══════════ -->
+  <div class="slide content" data-slide="5">
     <div class="kicker">Implicações para o policymaking</div>
     <div class="title">O que fazer?</div>
     <div class="body">
-      <p class="lead" style="max-width:42em;margin-bottom:16px;">Checagem de fatos é <span class="hl-red">insuficiente</span>: desinformação é forma estruturante da política contemporânea.</p>
-      <div class="grid c3">
+      <p class="lead" style="max-width:44em;margin-bottom:20px;">Checagem de fatos é <span class="hl-red">insuficiente</span>: desinformação é forma estruturante da política contemporânea.</p>
+      <div class="grid c3" style="margin-bottom:auto;">
         <div class="card amber">
-          <h3>👥 Seguidores</h3>
+          <h3>Seguidores</h3>
           <ul>
             <li>Educação midiática</li>
             <li>Mediadores com confiança local</li>
@@ -283,7 +329,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3>🤖 Algoritmos</h3>
+          <h3>Algoritmos</h3>
           <ul>
             <li>Regulação de plataformas</li>
             <li>Monitoramento em tempo quase real</li>
@@ -291,7 +337,7 @@
           </ul>
         </div>
         <div class="card red">
-          <h3>📢 Comunicação</h3>
+          <h3>Comunicação</h3>
           <ul>
             <li>Comunicação digital pública</li>
             <li>Escuta e disputa de sentidos</li>
@@ -310,14 +356,12 @@
     </div>
   </div>
 
-  <!-- ═══════════ 6 · OBRIGADO ═══════════ -->
-  <div class="slide thanks" data-slide="5">
+  <!-- ═══════════ 7 · OBRIGADO ═══════════ -->
+  <div class="slide thanks" data-slide="6">
     <div style="position:relative;z-index:10;text-align:center;">
       <h1>OBRIGADO!</h1>
       <div class="sub">Ecossistema de Desinformação e Radicalização · Ipea 2026</div>
-      <div style="font-size:17px;color:var(--muted);margin-bottom:20px;">
-        Capítulo 4 · Políticas Públicas Informadas por Evidências
-      </div>
+      <div class="info">Capítulo 4 · Políticas Públicas Informadas por Evidências</div>
     </div>
     <div class="cover-logos" style="bottom:40px;">
       <div class="lab-item"><img src="assets/logos/labhd_no_white_frame.png" alt="LABHD/UFBA"><div class="lab-label">LABHD · UFBA</div></div>
@@ -325,11 +369,11 @@
     </div>
   </div>
 
-  <!-- ═══════════ 7 · CONTATOS ═══════════ -->
-  <div class="slide content" data-slide="6">
+  <!-- ═══════════ 8 · CONTATOS ═══════════ -->
+  <div class="slide content" data-slide="7">
     <div class="kicker">Contato · agradecimentos</div>
     <div class="title" style="font-size:36px;">Autores</div>
-    <div class="body" style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;">
+    <div class="body">
       <div class="contact-grid">
         <div class="contact-card">
           <h3>Leonardo F. Nascimento</h3>
@@ -347,9 +391,9 @@
           <div class="email"><a href="mailto:alisson.soares@ufba.br">alisson.soares@ufba.br</a></div>
         </div>
       </div>
-      <div style="margin-top:30px;text-align:center;max-width:600px;">
+      <div style="text-align:center;max-width:640px;margin:0 auto;">
         <div style="font-family:var(--head);font-size:14px;font-weight:700;color:var(--royal);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Agradecemos</div>
-        <div style="font-size:16px;color:var(--ink);line-height:1.6;">
+        <div style="font-size:16px;color:var(--ink);line-height:1.7;">
           Ao LABHDUFBA e LABHDUFSC · à equipe de pesquisa em tempo real ·<br>
           ao Ipea e aos organizadores do volume ·<br>
           e aos pareceristas anônimos que contribuíram com o capítulo.
@@ -366,7 +410,7 @@
 
 <div class="nav">
   <button onclick="prev()">‹</button>
-  <span id="counter">1 / 7</span>
+  <span id="counter">1 / 8</span>
   <button onclick="next()">›</button>
 </div>
 
