@@ -6,243 +6,398 @@
   <title>Ecossistema de Desinformação e Radicalização — Ipea 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/reveal.css">
-  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* ═══ RESET ═══ */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { background:#1a1f2e; font-family:'Inter',system-ui,sans-serif; overflow:hidden; }
+
+    /* ═══ SLIDE DECK ═══ */
+    .deck { position:relative; width:100vw; height:100vh; overflow:hidden; }
+    .slide {
+      position:absolute; top:50%; left:50%;
+      width:1280px; height:720px;
+      transform:translate(-50%,-50%) scale(1);
+      transform-origin:center center;
+      background:#F4F1E8;
+      display:none;
+      flex-direction:column;
+      overflow:hidden;
+    }
+    .slide.active { display:flex; }
+
+    /* ═══ PALETTE ═══ */
+    :root {
+      --cream:#F4F1E8; --navy:#164696; --royal:#5596D6; --light:#8FC4E8;
+      --ink:#1a1f2e; --muted:#5d6675; --line:#d8d4c8; --red:#B5453B; --amber:#B8860B;
+      --head:'Oswald',sans-serif;
+    }
+
+    /* ═══ TYPOGRAPHY ═══ */
+    .kicker { font-family:var(--head); font-size:13px; font-weight:700; color:var(--royal); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px; }
+    .title  { font-family:var(--head); font-weight:700; color:var(--navy); font-size:36px; line-height:1.05; text-transform:uppercase; letter-spacing:0.01em; margin-bottom:12px; }
+    .lead   { font-size:20px; line-height:1.4; color:var(--ink); }
+    .body   { font-size:16px; line-height:1.48; color:var(--ink); flex:1; }
+    .hl-red { color:var(--red); font-weight:700; }
+    .hl     { background:rgba(85,150,214,0.10); padding:1px 4px; border-radius:3px; font-weight:600; }
+
+    /* ═══ COVER SLIDE ═══ */
+    .cover { padding:0; position:relative; }
+    .cover-art {
+      position:absolute; top:0; right:0; width:560px; height:420px;
+      pointer-events:none;
+    }
+    .cover-art img { width:100%; height:100%; object-fit:contain; }
+    .cover-tag {
+      position:absolute; top:40px; left:56px;
+      font-family:var(--head); font-size:14px; font-weight:700;
+      color:var(--royal); letter-spacing:0.12em; text-transform:uppercase;
+    }
+    .cover-center {
+      position:absolute; top:240px; left:0; right:0;
+      text-align:center; padding:0 80px; z-index:10;
+    }
+    .cover-center h1 {
+      font-family:var(--head); font-weight:700; color:var(--navy);
+      font-size:50px; line-height:1.02; text-transform:uppercase;
+      letter-spacing:0.01em; margin-bottom:10px;
+    }
+    .cover-sub {
+      font-family:var(--head); font-size:18px; font-weight:500;
+      color:var(--royal); text-transform:uppercase; letter-spacing:0.08em;
+      margin-bottom:20px;
+    }
+    .cover-tagline {
+      font-size:16px; color:var(--navy); font-style:italic;
+      max-width:28em; line-height:1.4; margin:0 auto 24px;
+    }
+    .cover-authors {
+      font-family:var(--head); font-size:17px; font-weight:700;
+      color:var(--royal); text-transform:uppercase; letter-spacing:0.06em;
+      margin-bottom:8px;
+    }
+    .cover-book {
+      font-size:13px; color:var(--muted); line-height:1.5;
+    }
+    .cover-logos {
+      position:absolute; bottom:36px; left:0; right:0;
+      display:flex; justify-content:center; align-items:center; gap:32px;
+      z-index:10;
+    }
+    .cover-logos img { height:65px; }
+    .cover-logos .lab-label {
+      font-family:var(--head); font-size:11px; font-weight:700;
+      color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;
+      text-align:center; margin-top:4px;
+    }
+    .cover-logos .lab-item { display:flex; flex-direction:column; align-items:center; }
+
+    /* ═══ CONTENT SLIDES ═══ */
+    .content { padding:50px 56px 60px; }
+    .content .body { margin-top:4px; }
+
+    /* ═══ CARDS ═══ */
+    .grid { display:grid; gap:12px; }
+    .grid.c2 { grid-template-columns:1fr 1fr; }
+    .grid.c3 { grid-template-columns:1fr 1fr 1fr; }
+    .card {
+      background:#fff; border:1px solid var(--line); border-left:5px solid var(--royal);
+      border-radius:8px; padding:14px 16px;
+    }
+    .card.red    { border-left-color:var(--red); }
+    .card.amber  { border-left-color:var(--amber); }
+    .card.green  { border-left-color:#2a7a4a; }
+    .card h3 {
+      font-family:var(--head); font-size:16px; font-weight:700;
+      color:var(--navy); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.03em;
+    }
+    .card.red h3   { color:var(--red); }
+    .card.amber h3 { color:var(--amber); }
+    .card.green h3 { color:#2a7a4a; }
+    .card p  { font-size:15px; color:var(--ink); line-height:1.38; }
+    .card ul { margin:4px 0 0 16px; font-size:15px; color:var(--ink); line-height:1.4; }
+    .card li { margin-bottom:4px; }
+
+    /* ═══ CALLOUT ═══ */
+    .callout {
+      background:rgba(85,150,214,0.10); border-left:4px solid var(--royal);
+      border-radius:0 8px 8px 0; padding:12px 18px; margin-top:14px;
+      font-size:16px; color:var(--ink); line-height:1.4;
+    }
+    .callout.red { background:rgba(181,69,59,0.08); border-left-color:var(--red); }
+    .callout .ct-h {
+      font-family:var(--head); font-size:13px; font-weight:700;
+      color:var(--navy); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;
+    }
+    .callout.red .ct-h { color:var(--red); }
+
+    /* ═══ STATS ═══ */
+    .bignum {
+      background:#fff; border:1px solid var(--line); border-left:5px solid var(--red);
+      border-radius:8px; padding:12px 16px; margin-bottom:10px;
+      display:flex; align-items:baseline; gap:14px;
+    }
+    .bignum .n { font-family:var(--head); font-size:30px; font-weight:700; color:var(--red); line-height:1; }
+    .bignum .l { font-size:14px; color:var(--ink); line-height:1.3; }
+    .bignum.blue  { border-left-color:var(--royal); } .bignum.blue .n  { color:var(--navy); }
+    .bignum.amber { border-left-color:var(--amber); } .bignum.amber .n { color:var(--amber); }
+    .bignum .sub { font-size:12px; color:var(--muted); }
+
+    /* ═══ TIMELINE ═══ */
+    .steps .step { display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:7px; align-items:start; }
+    .steps .num { width:26px; height:26px; border-radius:50%; background:var(--royal); color:#fff; font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+    .steps .num.red    { background:var(--red); }
+    .steps .num.green  { background:#2a7a4a; }
+    .steps .num.amber  { background:var(--amber); }
+    .steps .txt { font-size:15px; color:var(--ink); line-height:1.35; }
+    .steps .txt .d { font-weight:700; color:var(--navy); }
+
+    /* ═══ CYCLE DIAGRAM ═══ */
+    .cycle { display:flex; align-items:center; gap:4px; justify-content:center; margin-top:10px; }
+    .cycle .cs { background:#fff; border:1px solid var(--line); border-radius:6px; padding:7px 12px; font-size:14px; font-weight:700; color:var(--navy); }
+    .cycle .ar { color:var(--royal); font-size:18px; }
+    .cycle-banner {
+      background:var(--red); color:#fff; border-radius:6px; padding:6px 14px;
+      font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em;
+      display:inline-block; margin-top:8px;
+    }
+
+    /* ═══ FIGURES ═══ */
+    .fig { text-align:center; }
+    .fig img { width:100%; border-radius:8px; border:1px solid var(--line); box-shadow:0 6px 18px rgba(22,70,150,0.10); display:block; }
+    .fig .cap { font-size:13px; color:var(--muted); margin-top:6px; }
+
+    /* ═══ TWO-COLUMN ═══ */
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+    .two-col.wide-right { grid-template-columns:1fr 1.1fr; }
+    .two-col.wide-left  { grid-template-columns:1.1fr 1fr; }
+
+    /* ═══ FOOTER ═══ */
+    .slide-footer {
+      position:absolute; bottom:0; left:0; right:0; height:36px;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:0 24px; background:var(--cream); border-top:1px solid var(--line);
+    }
+    .slide-footer .ft-text { font-size:11px; color:var(--muted); }
+    .slide-footer .ft-logos { display:flex; align-items:center; gap:12px; }
+    .slide-footer .ft-logos img { height:24px; }
+
+    /* ═══ NAV ═══ */
+    .nav {
+      position:fixed; bottom:20px; right:20px; z-index:999;
+      display:flex; align-items:center; gap:8px;
+      background:rgba(26,31,46,0.85); color:#fff; padding:8px 14px; border-radius:24px;
+      font-family:var(--head); font-size:14px; font-weight:700;
+    }
+    .nav button {
+      background:none; border:none; color:#fff; font-size:18px; cursor:pointer; padding:2px 6px; border-radius:4px;
+    }
+    .nav button:hover { background:rgba(255,255,255,0.15); }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width:768px) {
+      .grid.c2, .grid.c3 { grid-template-columns:1fr; }
+      .two-col { grid-template-columns:1fr; }
+      .cover-center h1 { font-size:32px; }
+    }
+  </style>
 </head>
 <body>
-<div class="reveal">
-  <div class="slides">
+<div class="deck" id="deck">
 
-    <!-- ═══════════ 1 · CAPA (poster BRASA) ═══════════ -->
-    <section data-state="cover" class="slide-cover">
-      <!-- Illustration: sun + buildings -->
-      <div style="position:absolute;top:0;right:0;width:520px;height:380px;opacity:0.85;pointer-events:none;">
-        <img src="assets/cover_illustration.png" style="width:100%;height:100%;object-fit:contain;">
-      </div>
-
-      <!-- Top tag -->
-      <div class="cover-tag" style="position:absolute;top:36px;left:56px;text-align:left;font-family:var(--f-head);font-size:14px;font-weight:700;color:var(--c-royal);letter-spacing:0.12em;text-transform:uppercase;">
-        Capítulo 4 · Ipea 2026
-      </div>
-
-      <!-- Center content -->
-      <div style="position:relative;z-index:10;margin-top:300px;width:100%;">
-        <h1>ECOSSISTEMA DE<br>DESINFORMAÇÃO<br>E RADICALIZAÇÃO</h1>
-        <p class="cover-sub">Repercussões no policymaking</p>
-
-        <div class="cover-tagline" style="margin-top:24px;">
-          "A desinformação não apenas perturba políticas públicas; ela disputa com o Estado a produção legítima da verdade."
-        </div>
-
-        <div class="cover-authors" style="margin-top:28px;">
-          LEONARDO NASCIMENTO • LETÍCIA CESARINO • ALISSON SOARES
-        </div>
-
-        <div class="cover-book" style="margin-top:14px;">
-          LABHDUFBA • LABHDUFSC • CADE • UFBA • UFSC • UFMG<br>
-          In: Koga et al. (org.), <b>Políticas Públicas Informadas por Evidências</b>, vol. 1 · Ipea · 2026
-        </div>
-      </div>
-
-      <!-- Logos -->
-      <div class="cover-logos" style="margin-top:auto;padding-top:24px;position:relative;z-index:10;">
-        <img class="labhd-logo" src="assets/logos/labhd_no_white_frame.png" alt="LABHD/UFBA" style="height:70px;">
-        <img src="assets/logos/labhd_ufsc_logo.png" alt="LABHD/UFSC" style="height:70px;">
-      </div>
-    </section>
-
-    <!-- ═══════════ 2 · TESE CENTRAL ═══════════ -->
-    <section class="content">
-      <div class="slide-kicker">Tese do capítulo</div>
-      <h2 class="slide-title">Desinformação como ecossistema</h2>
-      <div class="slide-body">
-        <p class="lead" style="font-size:22px;max-width:38em;margin-bottom:14px;">O caso do Pix revela uma dinâmica <span class="hl-red">sociotécnica acelerada</span> — que produz efeitos antes da estabilização institucional.</p>
-        <div class="concept-grid c2" style="margin-top:8px;">
-          <div class="concept-card">
-            <div class="cc-h">Multiplataforma</div>
-            <div class="cc-b">Circula entre aplicativos, redes e buscadores.</div>
-          </div>
-          <div class="concept-card accent">
-            <div class="cc-h">Afetiva</div>
-            <div class="cc-b">Mobiliza medo, urgência e desconfiança institucional.</div>
-          </div>
-          <div class="concept-card amber">
-            <div class="cc-h">Acelerada</div>
-            <div class="cc-b">Produz efeitos antes da resposta estatal.</div>
-          </div>
-          <div class="concept-card accent">
-            <div class="cc-h">Preemptiva</div>
-            <div class="cc-b">Interfere em todas as etapas do ciclo decisório.</div>
-          </div>
-        </div>
-        <!-- Policy cycle diagram -->
-        <div style="margin-top:16px;text-align:center;">
-          <div style="font-size:13px;font-weight:700;color:var(--c-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Ciclo de políticas públicas sob pressão</div>
-          <div class="cycle-row" style="justify-content:center;">
-            <div class="cycle-step">Problema</div><span class="cycle-arrow">→</span>
-            <div class="cycle-step">Agenda</div><span class="cycle-arrow">→</span>
-            <div class="cycle-step">Decisão</div><span class="cycle-arrow">→</span>
-            <div class="cycle-step">Implementação</div><span class="cycle-arrow">→</span>
-            <div class="cycle-step">Avaliação</div>
-          </div>
-          <div style="margin-top:8px;">
-            <span class="cycle-banner">⚠ Desinformação preemptiva em todo o ciclo</span>
-          </div>
-        </div>
-        <div class="callout accent" style="margin-top:14px;">
-          A política é forçada a reagir à lógica da desinformação — <strong>e não o contrário</strong>.
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ 3 · CASO PIX — CRONOLOGIA + GRÁFICO ═══════════ -->
-    <section class="content">
-      <div class="slide-kicker">Estudo de caso · cronologia</div>
-      <h2 class="slide-title">O Pix sob disputa</h2>
-      <div class="slide-body">
-        <p style="font-size:16px;color:var(--c-muted);margin-bottom:10px;">Uma norma administrativa foi ressignificada como ameaça existencial: taxação, vigilância e controle estatal.</p>
-        <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:start;">
-          <div>
-            <div class="step-list">
-              <div class="sl-item"><div class="sl-num">1</div><div class="sl-text"><span class="date">1 jan</span> — IN RFB nº 2.219: reporte de movimentações > R$ 5 mil. <em>Sem novo tributo.</em></div></div>
-              <div class="sl-item"><div class="sl-num danger">2</div><div class="sl-text"><span class="date">4–6 jan</span> — Vídeo inicial + reação política: "é para taxar o Pix!"</div></div>
-              <div class="sl-item"><div class="sl-num danger">3</div><div class="sl-text"><span class="date">8–9 jan</span> — Deepfake de Haddad + desmentidos oficiais</div></div>
-              <div class="sl-item"><div class="sl-num danger">4</div><div class="sl-text"><span class="date">14 jan</span> — Vídeo viral de Nikolas Ferreira (300M views)</div></div>
-              <div class="sl-item"><div class="sl-num success">5</div><div class="sl-text"><span class="date">15 jan</span> — Revogação da IN + MP garantindo gratuidade</div></div>
-              <div class="sl-item"><div class="sl-num warning">6</div><div class="sl-text"><span class="date">18 jan+</span> — Recuperação gradual das transações</div></div>
-            </div>
-          </div>
-          <div>
-            <div class="fig">
-              <img src="assets/chart_telegram.png" alt="Postagens no Telegram mencionando Pix em jan/2025">
-              <div class="cap">Menções ao "Pix" em 333 chats do Telegram — 9.360 mensagens em jan/2025</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ 4 · EVIDÊNCIAS + TRENDS ═══════════ -->
-    <section class="content">
-      <div class="slide-kicker">Estudo de caso · impactos e evidências</div>
-      <h2 class="slide-title">A desinformação tem efeito real</h2>
-      <div class="slide-body">
-        <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:start;">
-          <div>
-            <div class="fig">
-              <img src="assets/chart_trends.png" alt="Google Trends — buscas por Pix 2020-2025">
-              <div class="cap">Google Trends: pico histórico em jan/2025 — superando lançamento (2020) e eleições (2022)</div>
-            </div>
-            <div class="callout" style="margin-top:12px;font-size:15px;">
-              <div class="ct-h">Janela crítica</div>
-              A controvérsia concentra-se em poucos dias, exigindo monitoramento próximo ao tempo real.
-            </div>
-          </div>
-          <div>
-            <div class="big-stat">
-              <div class="bs-num">300M</div>
-              <div class="bs-lb">views em <48h<br><span style="font-size:13px;color:var(--c-muted);">vídeo de Nikolas Ferreira no Instagram</span></div>
-            </div>
-            <div class="big-stat blue">
-              <div class="bs-num">9.360</div>
-              <div class="bs-lb">mensagens no Telegram<br><span style="font-size:13px;color:var(--c-muted);">333 chats · 203 grupos + 130 canais</span></div>
-            </div>
-            <div class="big-stat amber">
-              <div class="bs-num">−10,9%</div>
-              <div class="bs-lb">queda no volume de transações<br><span style="font-size:13px;color:var(--c-muted);">4–10 jan · maior retração dez–jan desde 2022</span></div>
-            </div>
-            <div class="big-stat">
-              <div class="bs-num">−13%</div>
-              <div class="bs-lb">transações abaixo de dez/2024<br><span style="font-size:13px;color:var(--c-muted);">até 18 jan · recuperação gradual após</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ 5 · TEORIA (1 SLIDE) ═══════════ -->
-    <section class="content">
-      <div class="slide-kicker">Estruturas epistêmicas</div>
-      <h2 class="slide-title">Por que a desinformação funciona?</h2>
-      <div class="slide-body">
-        <p style="font-size:19px;max-width:42em;margin-bottom:12px;">Porque ela organiza uma forma <span class="hl-red">coerente de ver, sentir e julgar</span> o mundo — mesmo divergindo do sistema de peritos.</p>
-        <div class="concept-grid c2" style="margin-top:8px;">
-          <div class="concept-card accent">
-            <div class="cc-h">1. Crise permanente</div>
-            <div class="cc-b">O tempo real vira prova de verdade. Peritos tornam-se ilegítimos — "lentos" e "mediados".</div>
-          </div>
-          <div class="concept-card">
-            <div class="cc-h">2. Topologia triádica</div>
-            <div class="cc-b">Seguidores ↔ algoritmos ↔ influenciadores. Novos mediadores legitimam-se na denúncia dos antigos.</div>
-          </div>
-          <div class="concept-card amber">
-            <div class="cc-h">3. Senso comum</div>
-            <div class="cc-b">Circuitos curtos para causalidades longas. "Fazer a própria pesquisa" + "confiar no plano".</div>
-          </div>
-          <div class="concept-card accent">
-            <div class="cc-h">4. Preempção</div>
-            <div class="cc-b">Age-se antes de a ameaça se confirmar. A notícia falsa não contradiz o fato afetivo.</div>
-          </div>
-        </div>
-        <div class="callout accent" style="margin-top:12px;">
-          O erro factual não explica tudo; a <strong>confiança social em novos mediadores</strong> é decisiva.
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ 6 · CONCLUSÃO ═══════════ -->
-    <section class="content">
-      <div class="slide-kicker">Implicações para o policymaking</div>
-      <h2 class="slide-title">Frentes de intervenção</h2>
-      <div class="slide-body">
-        <p style="font-size:19px;max-width:42em;margin-bottom:12px;">Checagem de fatos é necessária, mas <span class="hl-red">insuficiente</span>. O desafio é reconhecer a desinformação como forma estruturante da experiência política.</p>
-        <div class="concept-grid c3" style="margin-top:8px;">
-          <div class="concept-card amber">
-            <div class="cc-h">👥 Seguidores</div>
-            <div class="cc-b"><ul><li>Educação midiática</li><li>Serviços digitais melhores</li><li>Mediadores locais</li></ul></div>
-          </div>
-          <div class="concept-card">
-            <div class="cc-h">🤖 Algoritmos</div>
-            <div class="cc-b"><ul><li>Regulação de plataformas</li><li>Monitoramento misto</li><li>Tempo quase real</li></ul></div>
-          </div>
-          <div class="concept-card accent">
-            <div class="cc-h">📢 Influenciadores</div>
-            <div class="cc-b"><ul><li>Comunicação pública</li><li>Territórios digitais</li><li>Escuta e diálogo</li></ul></div>
-          </div>
-        </div>
-        <div class="callout accent" style="margin-top:14px;">
-          <div class="ct-h">Mensagem final</div>
-          Políticas públicas informadas por evidências precisam também ser <strong>políticas de mediação</strong>: pedagógicas, territoriais, digitais e responsivas à temporalidade das plataformas.
-        </div>
-      </div>
-    </section>
-
-  </div><!-- /.slides -->
-
-  <footer class="deck-footer">
-    <div class="foot-left"><b>Ecossistema de Desinformação e Radicalização</b> — Ipea 2026</div>
-    <div class="foot-logos">
-      <img src="assets/logos/labhd_no_white_frame.png" alt="LABHD/UFBA" style="height:26px;">
-      <img src="assets/logos/labhd_ufsc_logo.png" alt="LABHD/UFSC" style="height:26px;">
+  <!-- ═══════════ 1 · CAPA ═══════════ -->
+  <div class="slide cover active" data-slide="0">
+    <div class="cover-art">
+      <img src="assets/cover_illustration.png" alt="">
     </div>
-  </footer>
+    <div class="cover-tag">Capítulo 4 · Ipea 2026</div>
+    <div class="cover-center">
+      <h1>ECOSSISTEMA DE<br>DESINFORMAÇÃO<br>E RADICALIZAÇÃO</h1>
+      <div class="cover-sub">Repercussões no policymaking</div>
+      <div class="cover-tagline">
+        "A desinformação não apenas perturba políticas públicas; ela disputa com o Estado a produção legítima da verdade."
+      </div>
+      <div class="cover-authors">LEONARDO NASCIMENTO • LETÍCIA CESARINO • ALISSON SOARES</div>
+      <div class="cover-book">
+        LABHDUFBA • LABHDUFSC • CADE • UFBA • UFSC • UFMG<br>
+        In: Koga et al. (org.), <b>Políticas Públicas Informadas por Evidências</b>, vol. 1 · Ipea · 2026
+      </div>
+    </div>
+    <div class="cover-logos">
+      <div class="lab-item">
+        <img src="assets/logos/labhd_no_white_frame.png" alt="LABHD/UFBA">
+        <div class="lab-label">LABHD · UFBA</div>
+      </div>
+      <div class="lab-item">
+        <img src="assets/logos/labhd_ufsc_logo.png" alt="LABHD/UFSC">
+        <div class="lab-label">LABHD · UFSC</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 2 · TESE CENTRAL ═══════════ -->
+  <div class="slide content" data-slide="1">
+    <div class="kicker">Tese do capítulo</div>
+    <div class="title">Desinformação como ecossistema</div>
+    <div class="body">
+      <p class="lead" style="max-width:38em;margin-bottom:14px;">O caso do Pix revela uma dinâmica <span class="hl-red">sociotécnica acelerada</span> — que produz efeitos antes da estabilização institucional.</p>
+      <div class="grid c2">
+        <div class="card"><h3>Multiplataforma</h3><p>Circula entre aplicativos, redes e buscadores.</p></div>
+        <div class="card red"><h3>Afetiva</h3><p>Mobiliza medo, urgência e desconfiança institucional.</p></div>
+        <div class="card amber"><h3>Acelerada</h3><p>Produz efeitos antes da resposta estatal.</p></div>
+        <div class="card red"><h3>Preemptiva</h3><p>Interfere em todas as etapas do ciclo decisório.</p></div>
+      </div>
+      <div style="text-align:center;margin-top:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Ciclo de políticas públicas sob pressão</div>
+        <div class="cycle">
+          <div class="cs">Problema</div><span class="ar">→</span>
+          <div class="cs">Agenda</div><span class="ar">→</span>
+          <div class="cs">Decisão</div><span class="ar">→</span>
+          <div class="cs">Implementação</div><span class="ar">→</span>
+          <div class="cs">Avaliação</div>
+        </div>
+        <div style="margin-top:6px;"><span class="cycle-banner">⚠ Desinformação preemptiva em todo o ciclo</span></div>
+      </div>
+      <div class="callout red">A política é forçada a reagir à lógica da desinformação — <strong>e não o contrário</strong>.</div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 3 · CASO PIX — CRONOLOGIA ═══════════ -->
+  <div class="slide content" data-slide="2">
+    <div class="kicker">Estudo de caso · cronologia</div>
+    <div class="title">O Pix sob disputa</div>
+    <div class="body">
+      <p style="font-size:15px;color:var(--muted);margin-bottom:10px;">Uma norma administrativa foi ressignificada como ameaça existencial: taxação, vigilância e controle estatal.</p>
+      <div class="two-col">
+        <div class="steps">
+          <div class="step"><div class="num">1</div><div class="txt"><span class="d">1 jan</span> — IN RFB nº 2.219: reporte de movimentações > R$ 5 mil. <em>Sem novo tributo.</em></div></div>
+          <div class="step"><div class="num red">2</div><div class="txt"><span class="d">4–6 jan</span> — Vídeo inicial + reação política: "é para taxar o Pix!"</div></div>
+          <div class="step"><div class="num red">3</div><div class="txt"><span class="d">8–9 jan</span> — Deepfake de Haddad + desmentidos oficiais</div></div>
+          <div class="step"><div class="num red">4</div><div class="txt"><span class="d">14 jan</span> — Vídeo viral de Nikolas Ferreira (300M views)</div></div>
+          <div class="step"><div class="num green">5</div><div class="txt"><span class="d">15 jan</span> — Revogação da IN + MP garantindo gratuidade</div></div>
+          <div class="step"><div class="num amber">6</div><div class="txt"><span class="d">18 jan+</span> — Recuperação gradual das transações</div></div>
+        </div>
+        <div class="fig">
+          <img src="assets/chart_telegram.png" alt="Postagens no Telegram">
+          <div class="cap">Menções ao "Pix" em 333 chats do Telegram — 9.360 mensagens em jan/2025</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 4 · IMPACTOS + TRENDS ═══════════ -->
+  <div class="slide content" data-slide="3">
+    <div class="kicker">Estudo de caso · impactos e evidências</div>
+    <div class="title">A desinformação tem efeito real</div>
+    <div class="body">
+      <div class="two-col wide-left">
+        <div>
+          <div class="fig">
+            <img src="assets/chart_trends.png" alt="Google Trends">
+            <div class="cap">Google Trends: pico histórico em jan/2025 — superando lançamento (2020) e eleições (2022)</div>
+          </div>
+          <div class="callout" style="margin-top:10px;font-size:15px;">
+            <div class="ct-h">Janela crítica</div>
+            A controvérsia concentra-se em poucos dias, exigindo monitoramento próximo ao tempo real.
+          </div>
+        </div>
+        <div>
+          <div class="bignum"><div class="n">300M</div><div class="l">views em &lt;48h<br><span class="sub">vídeo de Nikolas Ferreira no Instagram</span></div></div>
+          <div class="bignum blue"><div class="n">9.360</div><div class="l">mensagens no Telegram<br><span class="sub">333 chats · 203 grupos + 130 canais</span></div></div>
+          <div class="bignum amber"><div class="n">−10,9%</div><div class="l">queda no volume de transações<br><span class="sub">4–10 jan · maior retração dez–jan desde 2022</span></div></div>
+          <div class="bignum"><div class="n">−13%</div><div class="l">transações abaixo de dez/2024<br><span class="sub">até 18 jan · recuperação gradual após</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 5 · TEORIA ═══════════ -->
+  <div class="slide content" data-slide="4">
+    <div class="kicker">Estruturas epistêmicas</div>
+    <div class="title">Por que a desinformação funciona?</div>
+    <div class="body">
+      <p class="lead" style="max-width:42em;margin-bottom:14px;">Porque ela organiza uma forma <span class="hl-red">coerente de ver, sentir e julgar</span> o mundo — mesmo divergindo do sistema de peritos.</p>
+      <div class="grid c2">
+        <div class="card red"><h3>1. Crise permanente</h3><p>O tempo real vira prova de verdade. Peritos tornam-se ilegítimos — "lentos" e "mediados".</p></div>
+        <div class="card"><h3>2. Topologia triádica</h3><p>Seguidores ↔ algoritmos ↔ influenciadores. Novos mediadores legitimam-se na denúncia dos antigos.</p></div>
+        <div class="card amber"><h3>3. Senso comum</h3><p>Circuitos curtos para causalidades longas. "Fazer a própria pesquisa" + "confiar no plano".</p></div>
+        <div class="card red"><h3>4. Preempção</h3><p>Age-se antes de a ameaça se confirmar. A notícia falsa não contradiz o fato afetivo.</p></div>
+      </div>
+      <div class="callout red">O erro factual não explica tudo; a <strong>confiança social em novos mediadores</strong> é decisiva.</div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6 · CONCLUSÃO ═══════════ -->
+  <div class="slide content" data-slide="5">
+    <div class="kicker">Implicações para o policymaking</div>
+    <div class="title">Frentes de intervenção</div>
+    <div class="body">
+      <p class="lead" style="max-width:42em;margin-bottom:14px;">Checagem de fatos é necessária, mas <span class="hl-red">insuficiente</span>. O desafio é reconhecer a desinformação como forma estruturante da experiência política.</p>
+      <div class="grid c3">
+        <div class="card amber"><h3>👥 Seguidores</h3><ul><li>Educação midiática</li><li>Serviços digitais melhores</li><li>Mediadores locais</li></ul></div>
+        <div class="card"><h3>🤖 Algoritmos</h3><ul><li>Regulação de plataformas</li><li>Monitoramento misto</li><li>Tempo quase real</li></ul></div>
+        <div class="card red"><h3>📢 Influenciadores</h3><ul><li>Comunicação pública</li><li>Territórios digitais</li><li>Escuta e diálogo</li></ul></div>
+      </div>
+      <div class="callout red">
+        <div class="ct-h">Mensagem final</div>
+        Políticas públicas informadas por evidências precisam também ser <strong>políticas de mediação</strong>: pedagógicas, territoriais, digitais e responsivas à temporalidade das plataformas.
+      </div>
+    </div>
+    <div class="slide-footer">
+      <div class="ft-text">Ecossistema de Desinformação e Radicalização — Ipea 2026</div>
+      <div class="ft-logos"><img src="assets/logos/labhd_no_white_frame.png" alt=""><img src="assets/logos/labhd_ufsc_logo.png" alt=""></div>
+    </div>
+  </div>
+
 </div>
 
-<script src="vendor/reveal.js"></script>
+<!-- NAV -->
+<div class="nav">
+  <button onclick="prev()">‹</button>
+  <span id="counter">1 / 6</span>
+  <button onclick="next()">›</button>
+</div>
+
 <script>
-  Reveal.initialize({
-    width: 1280, height: 720, margin: 0.04,
-    minScale: 0.2, maxScale: 1.6, hash: true,
-    slideNumber: 'c/t', transition: 'fade', transitionSpeed: 'fast',
-    controlsTutorial: false
-  });
-  function updateChrome() {
-    const s = Reveal.getCurrentSlide();
-    const bare = s && s.classList.contains('slide-cover');
-    document.querySelector('.reveal').classList.toggle('no-chrome', !!bare);
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  const counter = document.getElementById('counter');
+
+  function show(n) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[n].classList.add('active');
+    current = n;
+    counter.textContent = (n + 1) + ' / ' + total;
+    // Scale to fit viewport
+    const scale = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+    slides[n].style.transform = 'translate(-50%,-50%) scale(' + scale + ')';
   }
-  Reveal.on('ready', updateChrome);
-  Reveal.on('slidechanged', updateChrome);
+  function next() { if (current < total - 1) show(current + 1); }
+  function prev() { if (current > 0) show(current - 1); }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') next();
+    if (e.key === 'ArrowLeft') prev();
+  });
+
+  window.addEventListener('resize', () => show(current));
+  show(0);
 </script>
 </body>
 </html>
