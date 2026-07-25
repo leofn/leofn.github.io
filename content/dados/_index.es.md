@@ -17,4 +17,3 @@ Conjuntos de datos abiertos, dashboards y experimentos de datos de mi investigac
 ## Colecciones Digitales
 
 - **[Terreiros da Bahia](https://labhdufba.github.io/terreiro-map/)** — Mapa interactivo de espacios religiosos afro-brasileños en Bahia, construido con datos OpenStreetMap/Overpass y MapLibre GL JS.
-- **[OJS Brazil Harvest](https://github.com/LABHDUFBA/ojs-brazil-harvest)** — Recolección de metadatos de portales OJS brasileños vía protocolo OAI-PMH. Recolección en curso.

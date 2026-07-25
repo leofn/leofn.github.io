@@ -17,4 +17,3 @@ date: 2026-07-24
 ## 数字合集
 
 - **[巴伊亚Terreiros](https://labhdufba.github.io/terreiro-map/)** — 巴伊亚非裔巴西宗教场所交互式地图，使用OpenStreetMap/Overpass数据和MapLibre GL JS构建。
-- **[OJS Brazil Harvest](https://github.com/LABHDUFBA/ojs-brazil-harvest)** — 通过OAI-PMH协议从巴西OJS门户采集元数据。持续采集中。

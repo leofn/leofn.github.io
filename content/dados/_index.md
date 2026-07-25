@@ -17,4 +17,3 @@ Open datasets, dashboards, and data experiments from my research and the LABHD-U
 ## Digital Collections
 
 - **[Terreiros da Bahia](https://labhdufba.github.io/terreiro-map/)** — Interactive map of Afro-Brazilian religious spaces (terreiros de candomblé) in Bahia, built with OpenStreetMap/Overpass data and MapLibre GL JS.
-- **[OJS Brazil Harvest](https://github.com/LABHDUFBA/ojs-brazil-harvest)** — Metadata harvesting from Brazilian Open Journal Systems (OJS) portals via OAI-PMH protocol. Ongoing collection.
