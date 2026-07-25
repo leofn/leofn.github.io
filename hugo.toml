@@ -136,34 +136,40 @@ PygmentsStyle      = "monokai"
   weight     = 3
 
 [[languages.en.menu.main]]
+  identifier = "dados"
+  name       = "Data"
+  url        = "dados/"
+  weight     = 4
+
+[[languages.en.menu.main]]
   identifier = "talks"
   name       = "Talks"
   url        = "talks/"
-  weight     = 4
+  weight     = 5
 
 [[languages.en.menu.main]]
   identifier = "slides"
   name       = "Slides"
   url        = "slides/"
-  weight     = 5
+  weight     = 6
 
 [[languages.en.menu.main]]
   identifier = "teaching"
   name       = "Teaching"
   url        = "teaching/"
-  weight     = 6
+  weight     = 7
 
 [[languages.en.menu.main]]
   identifier = "press"
   name       = "Press"
   url        = "press/"
-  weight     = 7
+  weight     = 8
 
 [[languages.en.menu.main]]
   identifier = "contact"
   name       = "Contact"
   url        = "contact/"
-  weight     = 8
+  weight     = 9
 
 [[languages.pt-br.menu.main]]
   identifier = "cv"
@@ -184,34 +190,40 @@ PygmentsStyle      = "monokai"
   weight     = 3
 
 [[languages.pt-br.menu.main]]
+  identifier = "dados"
+  name       = "Dados"
+  url        = "dados/"
+  weight     = 4
+
+[[languages.pt-br.menu.main]]
   identifier = "talks"
   name       = "Apresentações"
   url        = "talks/"
-  weight     = 4
+  weight     = 5
 
 [[languages.pt-br.menu.main]]
   identifier = "slides"
   name       = "Slides"
   url        = "slides/"
-  weight     = 5
+  weight     = 6
 
 [[languages.pt-br.menu.main]]
   identifier = "teaching"
   name       = "Ensino"
   url        = "teaching/"
-  weight     = 6
+  weight     = 7
 
 [[languages.pt-br.menu.main]]
   identifier = "press"
   name       = "Imprensa"
   url        = "press/"
-  weight     = 7
+  weight     = 8
 
 [[languages.pt-br.menu.main]]
   identifier = "contact"
   name       = "Contato"
   url        = "contact/"
-  weight     = 8
+  weight     = 9
 # Spanish menu
 [[languages.es.menu.main]]
   identifier = "cv"
@@ -232,34 +244,40 @@ PygmentsStyle      = "monokai"
   weight     = 3
 
 [[languages.es.menu.main]]
+  identifier = "dados"
+  name       = "Datos"
+  url        = "dados/"
+  weight     = 4
+
+[[languages.es.menu.main]]
   identifier = "talks"
   name       = "Charlas"
   url        = "talks/"
-  weight     = 4
+  weight     = 5
 
 [[languages.es.menu.main]]
   identifier = "slides"
   name       = "Diapositivas"
   url        = "slides/"
-  weight     = 5
+  weight     = 6
 
 [[languages.es.menu.main]]
   identifier = "teaching"
   name       = "Docencia"
   url        = "teaching/"
-  weight     = 6
+  weight     = 7
 
 [[languages.es.menu.main]]
   identifier = "press"
   name       = "Prensa"
   url        = "press/"
-  weight     = 7
+  weight     = 8
 
 [[languages.es.menu.main]]
   identifier = "contact"
   name       = "Contacto"
   url        = "contact/"
-  weight     = 8
+  weight     = 9
 
 # Chinese menu
 [[languages.zh.menu.main]]
@@ -281,31 +299,37 @@ PygmentsStyle      = "monokai"
   weight     = 3
 
 [[languages.zh.menu.main]]
+  identifier = "dados"
+  name       = "数据"
+  url        = "dados/"
+  weight     = 4
+
+[[languages.zh.menu.main]]
   identifier = "talks"
   name       = "演讲"
   url        = "talks/"
-  weight     = 4
+  weight     = 5
 
 [[languages.zh.menu.main]]
   identifier = "slides"
   name       = "幻灯片"
   url        = "slides/"
-  weight     = 5
+  weight     = 6
 
 [[languages.zh.menu.main]]
   identifier = "teaching"
   name       = "教学"
   url        = "teaching/"
-  weight     = 6
+  weight     = 7
 
 [[languages.zh.menu.main]]
   identifier = "press"
   name       = "媒体"
   url        = "press/"
-  weight     = 7
+  weight     = 8
 
 [[languages.zh.menu.main]]
   identifier = "contact"
   name       = "联系"
   url        = "contact/"
-  weight     = 8
+  weight     = 9
