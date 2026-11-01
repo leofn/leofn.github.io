@@ -5,9 +5,12 @@ title: "CV"
 <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
 <div>
 <h1 style="margin:0 0 .25rem 0;">Leonardo Fernandes Nascimento</h1>
-<p style="margin:0;opacity:.75;">Científico social computacional · Ultima actualizacion junio de 2026</p>
+<p style="margin:0;opacity:.75;">Científico social computacional · Última actualización: noviembre de 2026</p>
 </div>
-<a href="/cv/nascimento-cv.pdf" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ Descargar PDF</a>
+<div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+<a href="/cv/nascimento-cv-en.pdf" target="_blank" rel="noopener" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ PDF en inglés</a>
+<a href="/cv/nascimento-cv-pt.pdf" target="_blank" rel="noopener" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ PDF en portugués</a>
+</div>
 </div>
 
 ---

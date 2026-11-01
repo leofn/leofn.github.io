@@ -5,9 +5,12 @@ title: "CV"
 <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
 <div>
 <h1 style="margin:0 0 .25rem 0;">Leonardo Fernandes Nascimento</h1>
-<p style="margin:0;opacity:.75;">Cientista Social Computacional · Última atualização: junho de 2026</p>
+<p style="margin:0;opacity:.75;">Cientista Social Computacional · Última atualização: novembro de 2026</p>
 </div>
-<a href="/cv/nascimento-cv.pdf" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ Baixar PDF</a>
+<div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+<a href="/cv/nascimento-cv-pt.pdf" target="_blank" rel="noopener" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ PDF em português</a>
+<a href="/cv/nascimento-cv-en.pdf" target="_blank" rel="noopener" download style="display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.25rem;border:1px solid currentColor;border-radius:4px;text-decoration:none;color:inherit;font-size:.95rem;">⬇ PDF em inglês</a>
+</div>
 </div>
 
 ---
