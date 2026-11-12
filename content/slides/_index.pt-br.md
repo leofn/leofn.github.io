@@ -10,6 +10,9 @@ title: "Slides"
 - [**Social-RAG: um pipeline RAG para pesquisa em ciência social computacional**](/slides/2026/social-rag/)  
   LABHDUFBA (maio de 2026)
 
+- [**IA, sociedade e delegação — Liu + Arruda & Moreno**](/slides/2026/ia-sociedade-delegacao/)  
+  Grupo de leitura LABHDUFBA (ago. 2026)
+
 ## 2025
 
 - [**Ecossistema multiplataforma de desinformação e radicalização: o caso do Telegram no Brasil (2020–2025)**](/slides/2025/ipea-telegram/)  
